@@ -1,1 +1,0 @@
-# MaxCDN API docs
