@@ -206,10 +206,6 @@ params={'email':'name43@domain.com','password':'password','firstname':'Given','l
 api.post('/clients/{id}/users.json',data=params )</pre>
   </div>
     <div class="tab-pane" id="perl6">
-    <pre>
-my @params = {firstname => 'Perl', lastname => 'User', email => 'user@domain.com', password => 'testpwd'};
-$api->post("/users.json", @params);</pre>
-<h3>Reseller API</h3>
 <pre>
 my @params = {firstname => 'Perl', lastname => 'User', email => 'user@domain.com', password => 'testpwd'};
 $api->post("/clients/{id}/users.json", @params);</pre>
@@ -311,10 +307,6 @@ id = '33706'
 api.get('/clients/{id}/users.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python7">
-    <pre>
-id = '33706'
-api.get('/users.json/'+id)</pre>
-<h3>Reseller API</h3>
 <pre>
 id = '33706'
 api.get('/clients/{id}/users.json/' + id)</pre>
@@ -430,9 +422,6 @@ api.put('/clients/{id}/users.json/' + id,params)
 </pre>
   </div>
   <div class="tab-pane" id="python8">
-    <pre>
-api.put('/users.json/'+id,params={'firstname': 'name'})</pre>
-<h3>Reseller API</h3>
 <pre>
 api.put('/clients/{id}/users.json/'+id,params={'firstname': 'name'})</pre>
   </div>
@@ -443,11 +432,6 @@ my @params = ('lastname=Test');
 $api->put("/clients/{id}/users.json/" . $id, @params);</pre>
   </div>
   <div class="tab-pane" id="php8">
-    <pre>
-$id = '33941';
-$params =  array("firstname"=>"Billy");
-$api->put('/users.json/'.$id,$params);</pre>
-<h3>Reseller API</h3>
 <pre>
 $id = '33941';
 $params =  array("firstname"=>"Billy");
