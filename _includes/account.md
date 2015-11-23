@@ -38,9 +38,6 @@ Parameter | Description |
   <div class="tab-pane active" id="ruby1">
     <pre>
 api.get("/account.json")</pre>
-<h3>Reseller API</h3>
-<pre>
-api.get("/clients/{id}/account.json")</pre>
   </div>
   <div class="tab-pane" id="python1">
     <pre>api.get("/account.json")</pre>

@@ -3000,12 +3000,6 @@ zoneId = '96182'
 domainId = '79320'
 params = {"custom_domain":"cdn.somenewdomain40.com"}
 api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
-<h3>Reseller API</h3>
-<pre>
-zoneId = '96182'
-domainId = '79320'
-params = {"custom_domain":"cdn.somenewdomain40.com"}
-api.put('/clients/{id}/zones/push/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl38">
     <pre>
@@ -3177,9 +3171,6 @@ api.get('/zones/vod.json')</pre>
   <div class="tab-pane" id="python40">
     <pre>
 api.get('/zones/vod.json')</pre>
-<h3>Reseller API</h3>
-<pre>
-api.get('/clients/{id}/zones/vod.json')</pre>
   </div>
     <div class="tab-pane" id="perl40">
     <pre>
@@ -3400,9 +3391,6 @@ Parameter | Description |
   <div class="tab-pane active" id="ruby42">
     <pre>
 api.get('/zones/vod.json/count')</pre>
-<h3>Reseller API</h3>
-<pre>
-api.get('/clients/{id}/zones/vod.json/count')</pre>
   </div>
   <div class="tab-pane" id="python42">
     <pre>
@@ -3891,10 +3879,6 @@ Parameter | Description |
     <pre>
 id = '97794'
 api.get('/zones/vod/'+id+'/customdomains.json')</pre>
-<h3>Reseller API</h3>
-<pre>
-id = '97794'
-api.get('/clients/{id}/zones/vod/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python48">
     <pre>
@@ -4025,91 +4009,6 @@ Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
 string cdtype = Console.ReadLine();
 
 api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre>
-
-<pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre><pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
-</pre>
-<h3>Reseller API</h3>
-<pre>
-Console.Write("Zone Id: \n");
-int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain: \n");
-string dat = Console.ReadLine();
-Console.Write("Type: (vod-rtmp, vod-pseudo, vod-direct, or vod-ftp)\n");
-string cdtype = Console.ReadLine();
-
-api.Post("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
 </pre>
   </div>
   <div class="tab-pane" id="response49">
@@ -4426,11 +4325,6 @@ Get the SSL certificate for the specified {zone_type} and
 id = '96061'
 type = 'pull'
 api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
-<h3>Reseller API</h3>
-<pre>
-id = '96061'
-type = 'pull'
-api.get('/clients/{id}/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python61">
     <pre>
@@ -4543,14 +4437,6 @@ ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END C
 ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
 params = {"ssl_crt"=> ssl_crt,"ssl_key"=> ssl_key}
 api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
-<h3>Reseller API</h3>
-<pre>
-id = '96061'
-type = 'pull'
-ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
-ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
-params = {"ssl_crt"=> ssl_crt,"ssl_key"=> ssl_key}
-api.post('/clients/{id}/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python62">
     <pre>
@@ -4560,14 +4446,6 @@ ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END C
 ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
 params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
 api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
-<h3>Reseller API</h3>
-<pre>
-id = '96061'
-type = 'pull'
-ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
-ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
-params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
-api.post('/clients/{id}/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
     <div class="tab-pane" id="perl62">
     <pre>
@@ -4702,14 +4580,6 @@ ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END C
 ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
 params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
 api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
-<h3>Reseller API</h3>
-<pre>
-id = '96061'
-type = 'pull'
-ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
-ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
-params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
-api.put('/clients/{id}/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
     <div class="tab-pane" id="perl63">
     <pre>
@@ -5148,12 +5018,6 @@ $id = '96061';
 $upstream_id = '123';
 $params = array("upstream_id"=>"93013","server"=>"http://somedomain.net","port"=>"80");
 $api->put('/zones/' . $type . '/' . $id . '/upstream.json/' . $upstream_id, $params);</pre>
-<h3>Reseller API</h3>
-<pre>$type = 'pull';
-$id = '96061';
-$upstream_id = '123';
-$params = array("upstream_id"=>"93013","server"=>"http://somedomain.net","port"=>"80");
-$api->put('/clients/{id}/zones/' . $type . '/' . $id . '/upstream.json/' . $upstream_id, $params);</pre>
   </div>
   <div class="tab-pane" id="node67">
   <pre>
