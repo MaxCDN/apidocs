@@ -28,7 +28,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab5">
-  <li class=""><a href="#ruby5" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby5" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python5" data-toggle='tab'>Python</a></li>
   <li><a href="#perl5" data-toggle='tab'>Perl</a></li>
   <li><a href="#php5" data-toggle='tab'>PHP</a></li>
@@ -184,7 +184,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab6">
-  <li class=""><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python6" data-toggle='tab'>Python</a></li>
   <li><a href="#perl6" data-toggle='tab'>Perl</a></li>
   <li><a href="#php6" data-toggle='tab'>PHP</a></li>
@@ -290,7 +290,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab7">
-  <li class=""><a href="#ruby7" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby7" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python7" data-toggle='tab'>Python</a></li>
   <li><a href="#perl7" data-toggle='tab'>Perl</a></li>
   <li><a href="#php7" data-toggle='tab'>PHP</a></li>
@@ -400,7 +400,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab8">
-  <li class=""><a href="#ruby8" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby8" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python8" data-toggle='tab'>Python</a></li>
   <li><a href="#perl8" data-toggle='tab'>Perl</a></li>
   <li><a href="#php8" data-toggle='tab'>PHP</a></li>
@@ -495,7 +495,7 @@ Deletes a user specified by the {user_id} parameter
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab9">
-  <li class=""><a href="#ruby9" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby9" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python9" data-toggle='tab'>Python</a></li>
   <li><a href="#perl9" data-toggle='tab'>Perl</a></li>
   <li><a href="#php9" data-toggle='tab'>PHP</a></li>
