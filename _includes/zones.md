@@ -4898,35 +4898,35 @@ Parameter | Description |
     <pre>
 type = 'pull'
 id = '96061'
-params = {"server"=> "http://cdn.somedomain.com","server"=> "http://cdn.somedomain.com","port"=> "80"}
+params = {"server"=> "http://cdn.somedomain.com","port"=> "80"}
 api.post('/zones/'+type+'/'+id+'/upstream.json', params)</pre>
   </div>
   <div class="tab-pane" id="python66">
     <pre>
 type = 'pull'
 id = '96061'
-params = {"server": "http://cdn.somedomain.com","server": "http://cdn.somedomain.com","port": "80"}
+params = {"server": "http://cdn.somedomain.com","port": "80"}
 api.post('/zones/'+type+'/'+id+'/upstream.json', params)</pre>
   </div>
     <div class="tab-pane" id="perl66">
     <pre>
 my $id = 96061;
 my $type = "pull";
-my @params = {server => 'http://cdn.somedomain.com', server => 'http://cdn.somedomain.com', port => '80'};
+my @params = {server => 'http://cdn.somedomain.com', port => '80'};
 $api->post("/zones/" . $type . "/" . $id . "/upstream.json", @params);</pre>
   </div>
   <div class="tab-pane" id="php66">
     <pre>
 $type = 'pull';
 $id = '96061';
-$params = array("server"=>"http://cdn.somedomain.com","server"=>"http://cdn.somedomain.com","port"=>"80");
+$params = array("server"=>"http://cdn.somedomain.com","port"=>"80");
 $api->post('/zones/'.$type.'/'.$id.'/upstream.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node66">
   <pre>
 var type = 'pull'
 var id = '96061'
-api.post('/zones/' + type + '/' + id + '/upstream.json', { server: 'http://cdn.somedomain.com', server: 'http://cdn.somedomain.com', port: '80' }, function(err, response) {
+api.post('/zones/' + type + '/' + id + '/upstream.json', {server: 'http://cdn.somedomain.com', port: '80' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4937,7 +4937,7 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 Console.Write("Zone type: \n");
 string type = Console.ReadLine();
 
-api.Post("/zones/" + type + "/" + zoneID + "/upstream.json", "server=http://cdn.somedomain.com&server=http://cdn.somedomain.com&port=80");
+api.Post("/zones/" + type + "/" + zoneID + "/upstream.json", "server=http://cdn.somedomain.com&port=80");
 </pre>
   </div>
   <div class="tab-pane" id="response66">
