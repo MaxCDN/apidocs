@@ -1,3 +1,7 @@
 input[type="text"]	{
 	height: 34px !important;
 }
+
+.path	{
+	font: 12px/25px "DejaVuSansMonoBook";
+}
