@@ -5,4 +5,7 @@ input[type="text"]	{
 .path	{
 	word-break: break-all;
 	font: 12px/25px "DejaVuSansMonoBook";
+	color: #4C5059;
+	pointer-events: none;
+	cursor: default;
 }
