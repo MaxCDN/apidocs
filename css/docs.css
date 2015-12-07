@@ -2,8 +2,7 @@ input[type="text"]	{
 	height: 34px !important;
 }
 
-/*
-.url.GET .http_method, .url.DELETE .http_method, .url.DELETE .http_method, .url.PUT .http_method, .url.ENABLE .http_method, .url.DISABLE .http_method {
-	font: bold 10px/25px "DejaVuSansMonoBook";
+.path	{
+	word-break: break-all;
+	font: 12px/25px "DejaVuSansMonoBook";
 }
-*/
