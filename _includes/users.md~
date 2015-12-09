@@ -184,7 +184,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab6">
-  <li class="acive"><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python6" data-toggle='tab'>Python</a></li>
   <li><a href="#perl6" data-toggle='tab'>Perl</a></li>
   <li><a href="#php6" data-toggle='tab'>PHP</a></li>

@@ -38,7 +38,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane" id="ruby5">
+	<div class="tab-pane active" id="ruby5">
 		<pre>api.get('/users.json')</pre>
 	</div>
 
@@ -194,7 +194,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane" id="ruby6">
+	<div class="tab-pane active" id="ruby6">
 		<pre>params={"email"=>"name44@domain.com","password"=>"password","firstname"=>"Given","lastname"=>"Family"}
 api.post('/users.json',params )</pre>
 	</div>
@@ -300,7 +300,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane" id="ruby7">
+	<div class="tab-pane active" id="ruby7">
 		<pre>id = '33706'
 api.get('/users.json/'+id)</pre>
 	</div>
@@ -410,7 +410,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-  	<div class="tab-pane" id="ruby8">
+  	<div class="tab-pane active" id="ruby8">
   		<pre>id = '33706'
 params={'firstname'=> 'name'}
 api.put('/users.json/'+id,params)</pre>
