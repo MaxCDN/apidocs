@@ -103,11 +103,11 @@ Layouts can be found in the `_layouts` folder. Default ones are:
 1. Install git (if you don't have it installed already)
 2. Navigate to the local folder where you would like to store the project, clone the repository and edit it locally:
 
-	`$ git clone https://github.com/MaxCDN/apidocs.git`
+`$ git clone https://github.com/MaxCDN/apidocs.git`
 
 3. Ensure that all upcoming commits are made in `gh-pages` branch:
 
-	`$ git checkout gh-pages`
+`$ git checkout gh-pages`
 
 ## Workflow
 
@@ -117,12 +117,12 @@ When performing any kind of changes (adding/removing text, editing CSS and simil
 
 ### Switching to master branch
 
-	`$ git checkout master`
+`$ git checkout master`
 
 ### Merging the changes into gh-pages
 
-	`$ git checkout gh-pages`
-	`$ git merge master`
+`$ git checkout gh-pages`
+`$ git merge master`
 
 ## Adding content
 
@@ -149,9 +149,9 @@ permalink: /relative/path
 
 4. Push on Git
 
-	`$ git add .`
-	`$ git commit -m 'comment'`
-	`$ git push`
+`$ git add .`
+`$ git commit -m 'comment'`
+`$ git push`
 
 ### Page content
 
@@ -177,7 +177,7 @@ uses highlighted style for the previous row
 
 ##### Includes
 
-	`{% include modulename.ext %}` (file should be in _includes folder)
+`{% include modulename.ext %}` (file should be in _includes folder)
 
 #### Sidebar
 
@@ -280,11 +280,11 @@ In case the content should be reverted to one of the previous revisions, follow 
 3. Locate the desired revision and copy it’s hash from the right. In the example the hash is `e57638e`
 4. Make sure that the changes are made to gh-pages:
 
-	`$ git checkout gh-pages`
+$ git checkout gh-pages
 
 5. Initiate reset using the hash of the selected revision:
 
-	`$ git reset e57638e`
+$ git reset e57638e
 
 ## Preview
 
