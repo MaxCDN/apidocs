@@ -7,54 +7,42 @@
 Docs page uses `default.html` template. The file structure is as follows:
 
 **Head**
+
+```
 /_includes
-
 |-- header.html (page meta)
-
 |-- includes.html (CSS/font refs)
-
+```
 
 **Content**
 
 Page title, page content, main containers and rows are written here.
 
+```
 /_includes
-
 |-- navbar.html (Logo and navigation)
-
 |-- sidebar.html (sidebar for non-reseller clients)
-
 |-- docs.md (complete content of the page)
-
 |-- footer.html (JS files)
-
+```
 **docs.md (page content)**
 
 Markdown file which contains the complete content. Content which is written in Markdown is labeled as [Index].
 
+```
 [Index]
-
 [Overview]
-
 [Support]
-
 [Changelog]
-
 /_includes
-
 |-- authentication.md
-
 |-- account.md
-
 |-- zones.md
-
 |-- reports.md
-
 |-- rawlogs.md
-
 |-- originshield.md
-
 |-- ssl.md
+```
 
 ### /reseller
 
@@ -62,56 +50,43 @@ Reseller page uses `page.html` template. The file structure is as follows:
 
 **Head**
 
+```
 /_includes
-
 |-- header.html (page meta)
-
 |-- includes.html (CSS/font refs)
-
+```
 
 **Content**
 
 Page title, main containers and rows are written here.
 
+```
 /_includes
-
 |-- navbar.html (Logo and navigation)
-
 |-- sidebar-reseller.html (sidebar for reseller clients)
-
 |-- reseller.md (complete content of the page)
-
 |-- footer.html (JS files)
+```
 
 **reseller.md (page content)**
 
 Markdown file which contains the complete content. Content which is written in Markdown is labeled as [Index].
 
+```
 [Index]
-
 [Overview]
-
 [Support]
-
 [Changelog]
-
 /_includes
-
 |-- authentication.md
-
 |-- account.md
-
 |-- zones.md
-
 |-- reports.md
-
 |-- rawlogs.md
-
 |-- originshield.md
-
 |-- ssl.md
-
 |-- clients.md
+```
 
 ## Layouts
 
@@ -192,7 +167,8 @@ Page content should be added to the corresponding .md files (docs.md or reseller
 
 #### Tables
 	
-	`Column 1 Content | Column 2 Content | Column 3 Content | --- | --- | ---`
+	```Column 1 Content | Column 2 Content | Column 3 Content | 
+	--- | --- | ---```
 	
 uses highlighted style for the previous row
 
