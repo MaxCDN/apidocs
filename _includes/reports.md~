@@ -2447,7 +2447,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby89">
     <pre>reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
-api.get('/clients/{id}/reports/filesizes.json' + reportType)</pre>
+api.get('/reports/filesizes.json' + reportType)</pre>
 
   </div>
   <div class="tab-pane" id="python89">

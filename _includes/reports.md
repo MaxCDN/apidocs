@@ -2744,7 +2744,7 @@ api.Get("/reports/" + zoneType + "/filesizes.json" + reportType);
 </div>
 
 
-## List File Sizes by Zone Id
+## List File Sizes by Zone Type and Zone ID
 
 Gets request statistics for the specified {zone_type} and
 {zone_id} based on file size ranges
