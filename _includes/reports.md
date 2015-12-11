@@ -2447,7 +2447,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby89">
     <pre>reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
-api.get('/clients/{id}/reports/filesizes.json' + reportType)</pre>
+api.get('/reports/filesizes.json' + reportType)</pre>
 
   </div>
   <div class="tab-pane" id="python89">
@@ -2744,7 +2744,7 @@ api.Get("/reports/" + zoneType + "/filesizes.json" + reportType);
 </div>
 
 
-## List File Sizes by Zone Id
+## List File Sizes by Zone Type and Zone ID
 
 Gets request statistics for the specified {zone_type} and
 {zone_id} based on file size ranges

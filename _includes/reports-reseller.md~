@@ -942,7 +942,7 @@ int nodeID = Convert.ToInt32(Console.ReadLine());
 
 api.Get("/clients/{id}/reports/nodes.json/" + nodeID);
 </pre>
-  </div
+  </div>
   <div class="tab-pane" id="response75">
     <pre>
 {

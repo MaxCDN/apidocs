@@ -1496,10 +1496,6 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby81">
-    <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
-api.get('/reports/statuscodes.json'+reportType)</pre>
-<h3>Reseller API</h3>
 <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/clients/{id}/reports/statuscodes.json'+reportType)</pre>

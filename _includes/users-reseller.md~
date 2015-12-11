@@ -6,7 +6,7 @@ Returns a list of all users on the specified account
 
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
-<span class="path">https://rws.maxcdn.com/{companyalias}/users.json</span></div>
+<span class="path">https://rws.maxcdn.com/{companyalias}/clients/{id}/users.json</span></div>
 </div>
 
 ### Response Parameters
@@ -150,7 +150,7 @@ Creates a new user on the specified account
 
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
-<span class="path">https://rws.maxcdn.com/{companyalias}/users.json</span></div>
+<span class="path">https://rws.maxcdn.com/{companyalias}/clients/{id}/users.json</span></div>
 </div>
 
 ### Accepted Request Parameters
@@ -277,7 +277,7 @@ Gets a user specified by the {user_id} parameter
 
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
-<span class="path">https://rws.maxcdn.com/{companyalias}/users.json/{user_id}</span></div>
+<span class="path">https://rws.maxcdn.com/{companyalias}/clients/{id}/users.json/{user_id}</span></div>
 </div>
 
 ### Response Parameters
@@ -384,7 +384,7 @@ Updates a user specified by the {user_id} parameter
 
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
-<span class="path">https://rws.maxcdn.com/{companyalias}/users.json/{user_id}</span></div>
+<span class="path">https://rws.maxcdn.com/{companyalias}/clients/{id}/users.json/{user_id}</span></div>
 </div>
 
 ### Accepted Request Parameters
@@ -510,7 +510,7 @@ Deletes a user specified by the {user_id} parameter
 
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
-<span class="path">https://rws.maxcdn.com/{companyalias}/users.json/{user_id}</span></div>
+<span class="path">https://rws.maxcdn.com/{companyalias}/clients/{id}/users.json/{user_id}</span></div>
 </div>
 
 

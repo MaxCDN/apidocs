@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Index
 
 * [Overview](#overview)
@@ -106,5 +110,3 @@
 {% include originshield.md %}
 
 {% include ssl.md %}
-
-{% include clients.md %}

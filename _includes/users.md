@@ -28,7 +28,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab5">
-  <li class=""><a href="#ruby5" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby5" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python5" data-toggle='tab'>Python</a></li>
   <li><a href="#perl5" data-toggle='tab'>Perl</a></li>
   <li><a href="#php5" data-toggle='tab'>PHP</a></li>
@@ -38,7 +38,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane" id="ruby5">
+	<div class="tab-pane active" id="ruby5">
 		<pre>api.get('/users.json')</pre>
 	</div>
 
@@ -184,7 +184,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab6">
-  <li class=""><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python6" data-toggle='tab'>Python</a></li>
   <li><a href="#perl6" data-toggle='tab'>Perl</a></li>
   <li><a href="#php6" data-toggle='tab'>PHP</a></li>
@@ -194,7 +194,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane" id="ruby6">
+	<div class="tab-pane active" id="ruby6">
 		<pre>params={"email"=>"name44@domain.com","password"=>"password","firstname"=>"Given","lastname"=>"Family"}
 api.post('/users.json',params )</pre>
 	</div>
@@ -290,7 +290,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab7">
-  <li class=""><a href="#ruby7" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby7" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python7" data-toggle='tab'>Python</a></li>
   <li><a href="#perl7" data-toggle='tab'>Perl</a></li>
   <li><a href="#php7" data-toggle='tab'>PHP</a></li>
@@ -300,7 +300,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane" id="ruby7">
+	<div class="tab-pane active" id="ruby7">
 		<pre>id = '33706'
 api.get('/users.json/'+id)</pre>
 	</div>
@@ -400,7 +400,7 @@ Parameter | Description |
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab8">
-  <li class=""><a href="#ruby8" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby8" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python8" data-toggle='tab'>Python</a></li>
   <li><a href="#perl8" data-toggle='tab'>Perl</a></li>
   <li><a href="#php8" data-toggle='tab'>PHP</a></li>
@@ -410,7 +410,7 @@ Parameter | Description |
 </ul>
 
 <div class="tab-content">
-  	<div class="tab-pane" id="ruby8">
+  	<div class="tab-pane active" id="ruby8">
   		<pre>id = '33706'
 params={'firstname'=> 'name'}
 api.put('/users.json/'+id,params)</pre>
@@ -495,7 +495,7 @@ Deletes a user specified by the {user_id} parameter
 ### Code Samples
 
 <ul class="nav nav-tabs" id="myTab9">
-  <li class=""><a href="#ruby9" data-toggle='tab'>Ruby</a></li>
+  <li class="active"><a href="#ruby9" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python9" data-toggle='tab'>Python</a></li>
   <li><a href="#perl9" data-toggle='tab'>Perl</a></li>
   <li><a href="#php9" data-toggle='tab'>PHP</a></li>

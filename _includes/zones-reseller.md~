@@ -117,9 +117,6 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby11">
-    <pre>
-api.get('/zones.json/summary')</pre>
-<h3>Reseller API</h3>
 <pre>
 api.get('/clients/{id}/zones.json/summary')</pre>
   </div>

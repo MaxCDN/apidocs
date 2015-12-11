@@ -117,9 +117,6 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby11">
-    <pre>
-api.get('/zones.json/summary')</pre>
-<h3>Reseller API</h3>
 <pre>
 api.get('/clients/{id}/zones.json/summary')</pre>
   </div>
@@ -1440,18 +1437,6 @@ id = '97167'
 api.purge('/clients/{id}/zones/pull.json/165013/cache', ['/file1.txt','/file2.txt'])</pre>
   </div>
     <div class="tab-pane" id="perl21">
-  <pre>
-#Purge Zone
-$api->delete("/zones/pull.json/165013/cache");
-
-#Purge File
-my @params = ("%2Frankings%2Fhotlist%2Fi%2F500w%2F2.jpg");
-$api->delete("/zones/pull.json/165013/cache", @params);
-
-#Purge Files
-my @params = ("%2Frankings%2Fhotlist%2Fi%2F500w%2F2.jpg", "%2F_index%2Ff_mdcdb.html");
-$api->delete("/zones/pull.json/165013/cache", @params);</pre>
-<h3>Reseller API</h3>
 <pre>
 #Purge Zone
 $api->delete("/clients/{id}/zones/pull.json/165013/cache");

@@ -7,71 +7,111 @@
 Docs page uses `default.html` template. The file structure is as follows:
 
 **Head**
-	/_includes
-	|-- header.html (page meta)
-	|-- includes.html (CSS/font refs)
+/_includes
+
+|-- header.html (page meta)
+
+|-- includes.html (CSS/font refs)
+
 
 **Content**
 
 Page title, page content, main containers and rows are written here.
-	/_includes
-	|-- navbar.html (Logo and navigation)
-	|-- sidebar.html (sidebar for non-reseller clients)
-	|-- docs.md (complete content of the page)
-	|-- footer.html (JS files)
+
+/_includes
+
+|-- navbar.html (Logo and navigation)
+
+|-- sidebar.html (sidebar for non-reseller clients)
+
+|-- docs.md (complete content of the page)
+
+|-- footer.html (JS files)
 
 **docs.md (page content)**
 
 Markdown file which contains the complete content. Content which is written in Markdown is labeled as [Index].
 
 [Index]
+
 [Overview]
+
 [Support]
+
 [Changelog]
-	/_includes
-	|-- authentication.md
-	|-- account.md
-	|-- zones.md
-	|-- reports.md
-	|-- rawlogs.md
-	|-- originshield.md
-	|-- ssl.md
+
+/_includes
+
+|-- authentication.md
+
+|-- account.md
+
+|-- zones.md
+
+|-- reports.md
+
+|-- rawlogs.md
+
+|-- originshield.md
+
+|-- ssl.md
 
 ### /reseller
 
 Reseller page uses `page.html` template. The file structure is as follows:
 
 **Head**
-	/_includes
-	|-- header.html (page meta)
-	|-- includes.html (CSS/font refs)
+
+/_includes
+
+|-- header.html (page meta)
+
+|-- includes.html (CSS/font refs)
+
 
 **Content**
 
 Page title, main containers and rows are written here.
-	/_includes
-	|-- navbar.html (Logo and navigation)
-	|-- sidebar-reseller.html (sidebar for reseller clients)
-	|-- reseller.md (complete content of the page)
-	|-- footer.html (JS files)
+
+/_includes
+
+|-- navbar.html (Logo and navigation)
+
+|-- sidebar-reseller.html (sidebar for reseller clients)
+
+|-- reseller.md (complete content of the page)
+
+|-- footer.html (JS files)
 
 **reseller.md (page content)**
 
 Markdown file which contains the complete content. Content which is written in Markdown is labeled as [Index].
 
 [Index]
+
 [Overview]
+
 [Support]
+
 [Changelog]
-	/_includes
-	|-- authentication.md
-	|-- account.md
-	|-- zones.md
-	|-- reports.md
-	|-- rawlogs.md
-	|-- originshield.md
-	|-- ssl.md
-	|-- clients.md
+
+/_includes
+
+|-- authentication.md
+
+|-- account.md
+
+|-- zones.md
+
+|-- reports.md
+
+|-- rawlogs.md
+
+|-- originshield.md
+
+|-- ssl.md
+
+|-- clients.md
 
 ## Layouts
 
@@ -88,11 +128,11 @@ Layouts can be found in the `_layouts` folder. Default ones are:
 1. Install git (if you don't have it installed already)
 2. Navigate to the local folder where you would like to store the project, clone the repository and edit it locally:
 
-	$ git clone https://github.com/MaxCDN/apidocs.git
+	`$ git clone https://github.com/MaxCDN/apidocs.git`
 
 3. Ensure that all upcoming commits are made in `gh-pages` branch:
 
-	$ git checkout gh-pages
+	`$ git checkout gh-pages`
 
 ## Workflow
 
@@ -102,12 +142,12 @@ When performing any kind of changes (adding/removing text, editing CSS and simil
 
 ### Switching to master branch
 
-	$ git checkout master
+	`$ git checkout master`
 
 ### Merging the changes into gh-pages
 
-	$ git checkout gh-pages
-	$ git merge master
+	`$ git checkout gh-pages`
+	`$ git merge master`
 
 ## Adding content
 
@@ -134,9 +174,9 @@ permalink: /relative/path
 
 4. Push on Git
 
-	$ git add .
-	$ git commit -m 'comment'
-	$ git push
+	`$ git add .`
+	`$ git commit -m 'comment'`
+	`$ git push`
 
 ### Page content
 
@@ -144,21 +184,21 @@ Page content should be added to the corresponding .md files (docs.md or reseller
 
 #### Markdown syntax
 ##### Standard tags
-	# - h1
-	## - h2
-	### - h3
-	content(#link) - Link
-	Paragraph - No markup
+	`#` - h1
+	`##` - h2
+	`###` - h3
+	`content(#link)` - Link
+	`Paragraph` - No markup
 
 #### Tables
 	
-	Column 1 Content | Column 2 Content | Column 3 Content | --- | --- | ---
+	`Column 1 Content | Column 2 Content | Column 3 Content | --- | --- | ---`
 	
 uses highlighted style for the previous row
 
 ##### Includes
 
-	{% include modulename.ext %} (file should be in _includes folder)
+	`{% include modulename.ext %}` (file should be in _includes folder)
 
 #### Sidebar
 
@@ -261,11 +301,11 @@ In case the content should be reverted to one of the previous revisions, follow 
 3. Locate the desired revision and copy it’s hash from the right. In the example the hash is `e57638e`
 4. Make sure that the changes are made to gh-pages:
 
-	$ git checkout gh-pages
+	`$ git checkout gh-pages`
 
 5. Initiate reset using the hash of the selected revision:
 
-	$ git reset e57638e
+	`$ git reset e57638e`
 
 ## Preview
 
