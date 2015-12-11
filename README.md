@@ -122,6 +122,7 @@ When performing any kind of changes (adding/removing text, editing CSS and simil
 ### Merging the changes into gh-pages
 
 `$ git checkout gh-pages`
+
 `$ git merge master`
 
 ## Adding content
@@ -150,7 +151,9 @@ permalink: /relative/path
 4. Push on Git
 
 `$ git add .`
+
 `$ git commit -m 'comment'`
+
 `$ git push`
 
 ### Page content
@@ -161,9 +164,13 @@ Page content should be added to the corresponding .md files (docs.md or reseller
 ##### Standard tags
 
 `#` - h1
+
 `##` - h2
+
 `###` - h3
+
 `content(#link)` - Link
+
 `Paragraph` - No markup
 
 #### Tables
@@ -280,11 +287,11 @@ In case the content should be reverted to one of the previous revisions, follow 
 3. Locate the desired revision and copy it’s hash from the right. In the example the hash is `e57638e`
 4. Make sure that the changes are made to gh-pages:
 
-$ git checkout gh-pages
+`$ git checkout gh-pages`
 
 5. Initiate reset using the hash of the selected revision:
 
-$ git reset e57638e
+`$ git reset e57638e`
 
 ## Preview
 
