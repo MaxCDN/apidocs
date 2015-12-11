@@ -159,16 +159,19 @@ Page content should be added to the corresponding .md files (docs.md or reseller
 
 #### Markdown syntax
 ##### Standard tags
-	`#` - h1
-	`##` - h2
-	`###` - h3
-	`content(#link)` - Link
-	`Paragraph` - No markup
+
+`#` - h1
+`##` - h2
+`###` - h3
+`content(#link)` - Link
+`Paragraph` - No markup
 
 #### Tables
 	
-	```Column 1 Content | Column 2 Content | Column 3 Content | 
-	--- | --- | ---```
+```
+Column 1 Content | Column 2 Content | Column 3 Content | 
+--- | --- | ---
+```
 	
 uses highlighted style for the previous row
 
