@@ -138,7 +138,7 @@ Creates a new client on the specified account
 <tr> 
 	<td>account_owner</td> 
 	<td> - </td> 
-	<td><span class="label important">required</span><br /> A JSON Encoded Array including 'email', 'firstname', 'lastname', 'password', 'phone', 'order_status (active)</td> 
+	<td><span class="label important">required</span><br /> A JSON Encoded Array including 'email', 'firstname', 'lastname', 'password', 'phone'</td> 
 	<td>
 		Account Owner Information:
 		<br/>
@@ -149,7 +149,6 @@ Creates a new client on the specified account
 			<li>'lastname' - Account Owner's Last Name</li>
 			<li>'password' - Account's Password</li>
 			<li>'phone' - Account Owner's Phone Number</li>
-			<li>'order_status' - Status of the Account (hard coded to 'active')</li>
 		</ul>
 
 	</td> 
@@ -171,12 +170,6 @@ Creates a new client on the specified account
 	<td>'0'</td> 
 	<td><span class="label important">required</span><br /></td> 
 	<td>Hard Code this to not generate an invoice with the parameter '0'</td> 
-</tr>
-<tr> 
-	<td>order_status</td> 
-	<td>'active'</td> 
-	<td><span class="label important">required</span><br /></td> 
-	<td>Hard Code this to active with 'Active'</td> 
 </tr>
 
 </table>
