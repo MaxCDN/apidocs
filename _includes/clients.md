@@ -213,8 +213,7 @@ account_owner={
             "lastname"=>"Last Name",
             "email"=>"E-Mail",
             "phone"=>"1234567890", 
-            "password"=>"password", 
-            "order_status"=>"Active"
+            "password"=>"password"
         }
         
         address={
@@ -244,8 +243,7 @@ account_owner={
             'lastname':'Last Name',
             'email':'E-Mail',
             'phone':'1234567890', 
-            'password':'password', 
-            'order_status':'Active'
+            'password':'password' 
         }
         
         address = {
@@ -275,8 +273,7 @@ account_owner={
             "lastname"=>"Last Name",
             "email"=>"E-Mail",
             "phone"=>"1234567890", 
-            "password"=>"password", 
-            "order_status"=>"Active"
+            "password"=>"password"
         }
         
         my @address = {
@@ -307,8 +304,7 @@ $account_owner = array(
             'lastname'  => 'doe',
             'email'     => 'johndoe@gmail.com',
             'phone'     => '555-555-5555',
-            'password'  => 'testpass',
-            'order_status'    => 'active'
+            'password'  => 'testpass'
         );
         
         
@@ -339,8 +335,7 @@ var account_owner = [
         lastname:'Last Name',
         email:'E-Mail',
         phone:'1234567890', 
-        password:'password', 
-        order_status:'active'
+        password:'password'
     ];
     
     var address = [ 
@@ -373,8 +368,7 @@ var account_owner = [
         lastname:'Last Name',
         email:'E-Mail',
         phone:'1234567890', 
-        password:'password', 
-        order_status:'active'
+        password:'password'
     ];
     var jsonSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             string account_owner = jsonSerializer.Serialize(account_owner);
