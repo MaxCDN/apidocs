@@ -20,6 +20,7 @@ Returns a list of all zones on the specified account
 	<li><a href="#php10" data-toggle='tab'>PHP</a></li>
 	<li><a href="#node10" data-toggle='tab'>Node</a></li>
 	<li><a href="#csharp10" data-toggle='tab'>.NET/C#</a></li>
+	<li><a href="#java10" data-toggle='tab'>Java</a></li>
 	<li><a href="#response10" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -54,6 +55,10 @@ api.get('/zones.json', function(err, response) {
 api.Get("/zones/pull.json");
 </pre>
   </div>
+   <div class="tab-pane" id="java10">
+  <pre>MaxCDNObject response = api.get("/zones.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response10">
     <pre>
 {
@@ -112,6 +117,7 @@ Parameter | Description |
   <li><a href="#php11" data-toggle='tab'>PHP</a></li>
   <li><a href="#node11" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp11" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java11" data-toggle='tab'>Java</a></li>
   <li><a href="#response11" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -143,7 +149,11 @@ api.get('/zones.json/summary', function(err, response) {
 api.Get("/zones.json/summary");
 </pre>
   </div>
-  <div class="tab-pane" id="response11">
+  <div class="tab-pane" id="java11">
+  <pre>MaxCDNObject response = api.get("/zones.json/summary");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response11">
     <pre>
 {
     "code": 200,
@@ -182,6 +192,7 @@ Parameter | Description |
   <li><a href="#php12" data-toggle='tab'>PHP</a></li>
   <li><a href="#node12" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp12" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java12" data-toggle='tab'>Java</a></li>
   <li><a href="#response12" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -213,7 +224,11 @@ api.get('/zones.json/count', function(err, response) {
 api.Get("/zones.json/count");
 </pre>
   </div>
-  <div class="tab-pane" id="response12">
+  <div class="tab-pane" id="java12">
+  <pre>MaxCDNObject response = api.get("/zones.json/count");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response12">
     <pre>
 {
   "code":200,"data":
@@ -280,6 +295,7 @@ Parameter | Description |
   <li><a href="#php13" data-toggle='tab'>PHP</a></li>
   <li><a href="#node13" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp13" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java13" data-toggle='tab'>Java</a></li>
   <li><a href="#response13" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -311,7 +327,11 @@ api.get('/zones/pull.json', function(err, response) {
 api.Post("/zones/pull.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response13">
+  <div class="tab-pane" id="java13">
+  <pre>MaxCDNObject response = api.get("/zones/pull.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response13">
     <pre>
 {
     "code": 200,
@@ -496,6 +516,7 @@ Parameter | Description |
   <li><a href="#php14" data-toggle='tab'>PHP</a></li>
   <li><a href="#node14" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp14" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java14" data-toggle='tab'>Java</a></li>
   <li><a href="#response14" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -536,7 +557,12 @@ string url = Console.ReadLine();
 api.Post("/zones/pull.json", "url=" + url + "&name=" + ZoneName);
 </pre>
   </div>
-  <div class="tab-pane" id="response14">
+  <div class="tab-pane" id="java14">
+  <pre>MaxCDNRequest data = MaxCDN.newRequest("name", "cdn").append("url", "http://domain.com");
+MaxCDNObject response = api.post("/zones/pull.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response14">
     <pre>
 {
     "code": 201,
@@ -611,6 +637,7 @@ Parameter | Description |
   <li><a href="#php15" data-toggle='tab'>PHP</a></li>
   <li><a href="#node15" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp15" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java15" data-toggle='tab'>Java</a></li>
   <li><a href="#response15" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -642,7 +669,11 @@ api.get('/zones/pull.json/count', function(err, response) {
 api.Get("/zones/pull.json/count");
 </pre>
   </div>
-  <div class="tab-pane" id="response15">
+  <div class="tab-pane" id="java15">
+  <pre>MaxCDNObject response = api.get("/zones/pull.json/count");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response15">
     <pre>
 {
   "code":200,"data":
@@ -708,6 +739,7 @@ Parameter | Description |
   <li><a href="#php16" data-toggle='tab'>PHP</a></li>
   <li><a href="#node16" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp16" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java16" data-toggle='tab'>Java</a></li>
   <li><a href="#response16" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -747,7 +779,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Get("/zones/pull.json/" + id);
 </pre>
   </div>
-  <div class="tab-pane" id="response16">
+  <div class="tab-pane" id="java16">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.get("/zones/pull.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response16">
     <pre>
 {
     "code": 200,
@@ -884,6 +921,7 @@ Parameter | Description |
   <li><a href="#php17" data-toggle='tab'>PHP</a></li>
   <li><a href="#node17" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp17" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java17" data-toggle='tab'>Java</a></li>
   <li><a href="#response17" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -932,7 +970,13 @@ string val = Console.ReadLine();
 api.Put("/zones/pull.json/" + zoneID, prop + "=" + val);
 </pre>
   </div>
-  <div class="tab-pane" id="response17">
+  <div class="tab-pane" id="java17">
+  <pre>String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("label", "New label"); 
+MaxCDNObject response = api.put("/zones/pull.json/"+zoneId, data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response17">
     <pre>
 {
     "code": 200,
@@ -1002,6 +1046,7 @@ Enables additional locations on a pull zone specified by the {zone_id} parameter
   <li><a href="#php17-1" data-toggle='tab'>PHP</a></li>
   <li><a href="#node17-1" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp17-1" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java17-1" data-toggle='tab'>Java</a></li>
   <li><a href="#response17-1" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1041,7 +1086,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Post("/zones/pull/" + id + "/flex.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response17-1">
+  <div class="tab-pane" id="java17-1">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.post("/zones/pull/"+zoneId+"/flex.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response17-1">
     <pre>
 {
   "code":200
@@ -1069,6 +1119,7 @@ Disables additional locations on a pull zone specified by the {zone_id} paramete
   <li><a href="#php17-2" data-toggle='tab'>PHP</a></li>
   <li><a href="#node17-2" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp17-2" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java17-2" data-toggle='tab'>Java</a></li>
   <li><a href="#response17-2" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1108,7 +1159,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Delete("/zones/pull/" + id + "/flex.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response17-2">
+  <div class="tab-pane" id="java17-2">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.delete("/zones/pull/"+zoneId+"/flex.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response17-2">
     <pre>
 {
   "code":200
@@ -1135,6 +1191,7 @@ Deletes a pull zone specified by the {zone_id} parameter
   <li><a href="#php18" data-toggle='tab'>PHP</a></li>
   <li><a href="#node18" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp18" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java18" data-toggle='tab'>Java</a></li>
   <li><a href="#response18" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1174,7 +1231,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Delete("/zones/pull.json/" + id);
 </pre>
   </div>
-  <div class="tab-pane" id="response18">
+<div class="tab-pane" id="java18">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.delete("/zones/pull.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response18">
     <pre>
 {
   "code":200
@@ -1201,6 +1263,7 @@ Enables a pull zone specified by the {zone_id} parameter
   <li><a href="#php19" data-toggle='tab'>PHP</a></li>
   <li><a href="#node19" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp19" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java19" data-toggle='tab'>Java</a></li>
   <li><a href="#response19" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1240,7 +1303,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/pull/" + id + "/enable.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response19">
+  <div class="tab-pane" id="java19">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.put("/zones/pull/"+zoneId+"/enable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response19">
     <pre>
 {
   "code":200
@@ -1268,6 +1336,7 @@ Disables a pull zone specified by the {zone_id} parameter
   <li><a href="#php20" data-toggle='tab'>PHP</a></li>
   <li><a href="#node20" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp20" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java20" data-toggle='tab'>Java</a></li>
   <li><a href="#response20" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1307,7 +1376,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/pull/" + id + "/disable.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response20">
+  <div class="tab-pane" id="java20">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.put("/zones/pull/"+zoneId+"/disable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response20">
     <pre>
 {
   "code":200
@@ -1339,6 +1413,7 @@ Parameter | Default Value | Validation | Description |
   <li><a href="#php21" data-toggle='tab'>PHP</a></li>
   <li><a href="#node21" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp21" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java21" data-toggle='tab'>Java</a></li>
   <li><a href="#response21" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1468,6 +1543,23 @@ switch (ptype){
 }
 </pre>
   </div>
+  <div class="tab-pane" id="java21">
+  <pre>//Purge zone
+String zoneId = "100200";
+MaxCDNObject response = api.delete("/zones/pull.json/cache"+zoneId);        
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+//Purge single file
+String zoneId = "100200";
+String[] file = {"/file.txt"};
+MaxCDNObject response = api.delete("/zones/pull.json/"+zoneId+"/cache?file="+file[0]);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+               
+//Purge more files at once
+String zoneId = "100200";
+String[] file = {"/file_1.txt", "/file_2.txt"};
+MaxCDNObject response = api.delete("/zones/pull.json/"+zoneId+"/cache?file="+file[0]+"&file="+file[1]);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response21">
     <pre>
 {
@@ -1505,6 +1597,7 @@ Parameter | Description |
   <li><a href="#php22" data-toggle='tab'>PHP</a></li>
   <li><a href="#node22" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp22" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java22" data-toggle='tab'>Java</a></li>
   <li><a href="#response22" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1545,7 +1638,12 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 Console.Write(api.Get("/zones/pull/" + zoneID + "/customdomains.json"));
 </pre>
   </div>
-  <div class="tab-pane" id="response22">
+  <div class="tab-pane" id="java22">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.get("/zones/pull/"+zoneId+"/customdomains.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response22">
     <pre>
 {
     "code": 200,
@@ -1599,6 +1697,7 @@ Parameter | Description |
   <li><a href="#php23" data-toggle='tab'>PHP</a></li>
   <li><a href="#node23" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp23" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java23" data-toggle='tab'>Java</a></li>
   <li><a href="#response23" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1644,7 +1743,13 @@ string dat = Console.ReadLine();
 api.Post("/zones/pull/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat);
 </pre>
   </div>
-  <div class="tab-pane" id="response23">
+  <div class="tab-pane" id="java23">
+  <pre>String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com");
+MaxCDNObject response = api.post("/zones/pull/"+zoneId+"/customdomains.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response23">
     <pre>
 {
     "code": 201,
@@ -1687,6 +1792,7 @@ Parameter | Description |
   <li><a href="#php24" data-toggle='tab'>PHP</a></li>
   <li><a href="#node24" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp24" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java24" data-toggle='tab'>Java</a></li>
   <li><a href="#response24" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1734,7 +1840,13 @@ int domainId = Convert.ToInt32(Console.ReadLine());
 api.Get("/zones/pull/" + zoneID + "/customdomains.json/" + domainId);
 </pre>
   </div>
-  <div class="tab-pane" id="response24">
+  <div class="tab-pane" id="java24">
+  <pre>String zoneId = "100200";
+String domainId = "287431";
+MaxCDNObject response = api.get("/zones/pull/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response24">
     <pre>
 {
     "code": 200,
@@ -1785,6 +1897,7 @@ Parameter | Description |
   <li><a href="#php25" data-toggle='tab'>PHP</a></li>
   <li><a href="#node25" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp25" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java25" data-toggle='tab'>Java</a></li>
   <li><a href="#response25" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1837,7 +1950,14 @@ string cdname = Console.ReadLine();
 api.Put("/zones/pull/" + zoneID + "/customdomains.json/" + domainId, "custom_domain=" + cdname);
 </pre>
   </div>
-  <div class="tab-pane" id="response25">
+  <div class="tab-pane" id="java25">
+  <pre>String zoneId = "100200";
+String domainId = "287790";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain","cdn456.domain.com"); 
+MaxCDNObject response = api.put("/zones/pull/"+zoneId+"/customdomains.json/"+domainId, data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response25">
     <pre>
 {
     "code": 200,
@@ -1873,6 +1993,7 @@ Deletes a custom domain specified by the {zone_id} and
   <li><a href="#php26" data-toggle='tab'>PHP</a></li>
   <li><a href="#node26" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp26" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java26" data-toggle='tab'>Java</a></li>
   <li><a href="#response26" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1913,13 +2034,19 @@ api.delete('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, function
   <pre>
 Console.Write("Zone ID: \n");
 int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Doamin Id to Edit: \n");
+Console.Write("Custom Domain Id to Delete: \n");
 int domainId = Convert.ToInt32(Console.ReadLine());
 
 api.Delete("/zones/pull/" + zoneID + "/customdomains.json/" + domainId);
 </pre>
   </div>
-  <div class="tab-pane" id="response26">
+  <div class="tab-pane" id="java26">
+  <pre>String zoneId = "100200";
+String domainId = "287431";
+MaxCDNObject response = api.delete("/zones/pull/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response26">
     <pre>
 {
   "code":200
@@ -1963,6 +2090,7 @@ Parameter | Description |
   <li><a href="#php27" data-toggle='tab'>PHP</a></li>
   <li><a href="#node27" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp27" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java27" data-toggle='tab'>Java</a></li>
   <li><a href="#response27" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1994,7 +2122,11 @@ api.get('/zones/push.json', function(err, response) {
 api.Get("/zones/push.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response27">
+  <div class="tab-pane" id="java27">
+  <pre>MaxCDNObject response = api.get("/zones/push.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response27">
     <pre>
 {
     "code": 200,
@@ -2103,6 +2235,7 @@ Parameter | Description |
   <li><a href="#php28" data-toggle='tab'>PHP</a></li>
   <li><a href="#node28" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp28" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java28" data-toggle='tab'>Java</a></li>
   <li><a href="#response28" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2143,7 +2276,12 @@ string password = Console.ReadLine();
 api.Post("/zones/push.json", "name=" + ZoneName + "&password=" + password);
 </pre>
   </div>
-  <div class="tab-pane" id="response28">
+  <div class="tab-pane" id="java28">
+  <pre>MaxCDNRequest data = MaxCDN.newRequest("name", "newpush").append("password", "pass1234");
+MaxCDNObject response = api.post("/zones/push.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response28">
     <pre>
 {
     "code": 201,
@@ -2200,6 +2338,7 @@ Parameter | Description |
   <li><a href="#php29" data-toggle='tab'>PHP</a></li>
   <li><a href="#node29" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp29" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java29" data-toggle='tab'>Java</a></li>
   <li><a href="#response29" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2234,7 +2373,11 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Get("/zones/push.json/" + id);
 </pre>
   </div>
-  <div class="tab-pane" id="response29">
+  <div class="tab-pane" id="java29">
+  <pre>MaxCDNObject response = api.get("/zones/push.json/count");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response29">
     <pre>
 {
     "code": 200,
@@ -2281,6 +2424,7 @@ Parameter | Description |
   <li><a href="#php30" data-toggle='tab'>PHP</a></li>
   <li><a href="#node30" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp30" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java30" data-toggle='tab'>Java</a></li>
   <li><a href="#response30" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2318,7 +2462,12 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 api.Get("/zones/push.json/" + zoneID);
 </pre>
   </div>
-  <div class="tab-pane" id="response30">
+  <div class="tab-pane" id="java30">
+	 <pre>String zoneId = "100200";
+MaxCDNObject response = api.get("/zones/push.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response30">
     <pre>
 {
     "code": 200,
@@ -2396,6 +2545,7 @@ Parameter | Description |
   <li><a href="#php31" data-toggle='tab'>PHP</a></li>
   <li><a href="#node31" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp31" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java31" data-toggle='tab'>Java</a></li>
   <li><a href="#response31" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2443,6 +2593,12 @@ string val = Console.ReadLine();
 api.Put("/zones/push.json/" + zoneID, prop + "=" + val);
 </pre>
   </div>
+  <div class="tab-pane" id="java31">
+  <pre>String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("label", "newpush");
+MaxCDNObject response = api.put("/zones/push.json/"+zoneId, data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response31">
     <pre>
 {
@@ -2494,6 +2650,7 @@ Deletes a push zone specified by the {zone_id} parameter
   <li><a href="#php32" data-toggle='tab'>PHP</a></li>
   <li><a href="#node32" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp32" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java32" data-toggle='tab'>Java</a></li>
   <li><a href="#response32" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2533,7 +2690,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Delete("/zones/push.json/" + id);
 </pre>
   </div>
-  <div class="tab-pane" id="response32">
+  <div class="tab-pane" id="java32">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.delete("/zones/push.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response32">
     <pre>
 {
   "code":200
@@ -2560,6 +2722,7 @@ Enables a push zone specified by the {zone_id} parameter
   <li><a href="#php33" data-toggle='tab'>PHP</a></li>
   <li><a href="#node33" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp33" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java33" data-toggle='tab'>Java</a></li>
   <li><a href="#response33" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2599,6 +2762,11 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/push/" + id + "/enable.json");
 </pre>
   </div>
+  <div class="tab-pane" id="java33">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.put("/zones/push/"+zoneId+"/enable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response33">
     <pre>
 {
@@ -2627,6 +2795,7 @@ Disables a push zone specified by the {zone_id} parameter
   <li><a href="#php34" data-toggle='tab'>PHP</a></li>
   <li><a href="#node34" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp34" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java34" data-toggle='tab'>Java</a></li>
   <li><a href="#response34" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2666,7 +2835,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/push/" + id + "/disable.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response34">
+  <div class="tab-pane" id="java34">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.put("/zones/push/"+zoneId+"/disable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response34">
     <pre>
 {
   "code":200
@@ -2704,6 +2878,7 @@ Parameter | Description |
   <li><a href="#php35" data-toggle='tab'>PHP</a></li>
   <li><a href="#node35" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp35" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java35" data-toggle='tab'>Java</a></li>
   <li><a href="#response35" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2743,7 +2918,12 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 Console.Write(api.Get("/zones/push/" + zoneID + "/customdomains.json"));
 </pre>
   </div>
-  <div class="tab-pane" id="response35">
+  <div class="tab-pane" id="java35">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.get("/zones/push/"+zoneId+"/customdomains.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response35">
     <pre>
 {
     "code": 200,
@@ -2797,6 +2977,7 @@ Parameter | Description |
   <li><a href="#php36" data-toggle='tab'>PHP</a></li>
   <li><a href="#node36" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp36" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java36" data-toggle='tab'>Java</a></li>
   <li><a href="#response36" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2842,7 +3023,13 @@ string dat = Console.ReadLine();
 api.Post("/zones/push/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat);
 </pre>
   </div>
-  <div class="tab-pane" id="response36">
+  <div class="tab-pane" id="java36">
+  <pre>String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com");
+MaxCDNObject response = api.post("/zones/push/"+zoneId+"/customdomains.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response36">
     <pre>
 {
     "code": 201,
@@ -2887,6 +3074,7 @@ Parameter | Description |
   <li><a href="#php37" data-toggle='tab'>PHP</a></li>
   <li><a href="#node37" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp37" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java37" data-toggle='tab'>Java</a></li>
   <li><a href="#response37" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2933,7 +3121,13 @@ int domainId = Convert.ToInt32(Console.ReadLine());
 api.Get("/zones/push/" + zoneID + "/customdomains.json/" + domainId);
 </pre>
   </div>
-  <div class="tab-pane" id="response37">
+  <div class="tab-pane" id="java37">
+  <pre>String zoneId = "100200";
+String domainId = "287434";
+MaxCDNObject response = api.get("/zones/push/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response37">
     <pre>
 {
     "code": 200,
@@ -2983,6 +3177,7 @@ Parameter | Description |
   <li><a href="#php38" data-toggle='tab'>PHP</a></li>
   <li><a href="#node38" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp38" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java38" data-toggle='tab'>Java</a></li>
   <li><a href="#response38" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3036,7 +3231,14 @@ string cdname = Console.ReadLine();
 api.Put("/zones/push/" + zoneID + "/customdomains.json/" + domainId, "custom_domain=" + cdname);
 </pre>
   </div>
-  <div class="tab-pane" id="response38">
+  <div class="tab-pane" id="java38">
+  <pre>String zoneId = "100200";
+String domainId = "288862";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdn3.newdomain.com");
+MaxCDNObject response = api.put("/zones/push/"+zoneId+"/customdomains.json/"+domainId, data);  
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response38">
     <pre>
 {
     "code": 200,
@@ -3073,6 +3275,7 @@ Deletes a custom domain specified by the {zone_id} and
   <li><a href="#php39" data-toggle='tab'>PHP</a></li>
   <li><a href="#node39" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp39" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java39" data-toggle='tab'>Java</a></li>
   <li><a href="#response39" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3119,7 +3322,13 @@ int domainId = Convert.ToInt32(Console.ReadLine());
 api.Delete("/zones/push/" + zoneID + "/customdomains.json/" + domainId);
 </pre>
   </div>
-  <div class="tab-pane" id="response39">
+  <div class="tab-pane" id="java39">
+  <pre>String zoneId = "100200";
+String domainId = "287434";
+MaxCDNObject response = api.delete("/zones/push/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response39">
     <pre>
 {
   "code":200
@@ -3160,6 +3369,7 @@ Parameter | Description |
   <li><a href="#php40" data-toggle='tab'>PHP</a></li>
   <li><a href="#node40" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp40" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java40" data-toggle='tab'>Java</a></li>
   <li><a href="#response40" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3191,7 +3401,11 @@ api.get('/zones/vod.json', function(err, response) {
 api.Get("/zones/vod.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response40">
+  <div class="tab-pane" id="java40">
+  <pre>MaxCDNObject response = api.get("/zones/vod.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response40">
     <pre>
 {
     "code": 200,
@@ -3289,6 +3503,7 @@ Parameter | Description |
   <li><a href="#php41" data-toggle='tab'>PHP</a></li>
   <li><a href="#node41" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp41" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java41" data-toggle='tab'>Java</a></li>
   <li><a href="#response41" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3329,7 +3544,12 @@ string password = Console.ReadLine();
 api.Post("/zones/vod.json", "name=" + ZoneName + "&password=" + password);
 </pre>
   </div>
-  <div class="tab-pane" id="response41">
+  <div class="tab-pane" id="java41">
+  <pre>MaxCDNRequest data = MaxCDN.newRequest("name", "newvod").append("password", "pass1234");
+MaxCDNObject response = api.post("/zones/vod.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response41">
     <pre>
 {
     "code": 201,
@@ -3384,6 +3604,7 @@ Parameter | Description |
   <li><a href="#php42" data-toggle='tab'>PHP</a></li>
   <li><a href="#node42" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp42" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java42" data-toggle='tab'>Java</a></li>
   <li><a href="#response42" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3415,7 +3636,11 @@ api.get('/zones/vod.json/count', function(err, response) {
 api.Get("/zones/vod.json/count");
 </pre>
   </div>
-  <div class="tab-pane" id="response42">
+  <div class="tab-pane" id="java42">
+  <pre>MaxCDNObject response = api.get("/zones/vod.json/count");
+	  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response42">
     <pre>
 {
     "code": 200,
@@ -3457,6 +3682,7 @@ Parameter | Description |
   <li><a href="#php43" data-toggle='tab'>PHP</a></li>
   <li><a href="#node43" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp43" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java43" data-toggle='tab'>Java</a></li>
   <li><a href="#response43" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3496,7 +3722,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Get("/zones/vod.json/" + id);
 </pre>
   </div>
-  <div class="tab-pane" id="response43">
+  <div class="tab-pane" id="java43">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.get("/zones/vod.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response43">
     <pre>
 {
     "code": 200,
@@ -3566,6 +3797,7 @@ Parameter | Description |
   <li><a href="#php44" data-toggle='tab'>PHP</a></li>
   <li><a href="#node44" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp44" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java44" data-toggle='tab'>Java</a></li>
   <li><a href="#response44" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3613,7 +3845,13 @@ string val = Console.ReadLine();
 api.Put("/zones/vod.json/" + zoneID, prop + "=" + val);
 </pre>
   </div>
-  <div class="tab-pane" id="response44">
+  <div class="tab-pane" id="java44">
+  <pre>String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("label", "cdn3.newdomain.com");
+MaxCDNObject response = api.put("/zones/vod.json/"+zoneId, data);  
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response44">
     <pre>
 {
     "code": 200,
@@ -3662,6 +3900,7 @@ Deletes a VOD zone specified by the {zone_id} parameter
   <li><a href="#php45" data-toggle='tab'>PHP</a></li>
   <li><a href="#node45" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp45" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java45" data-toggle='tab'>Java</a></li>
   <li><a href="#response45" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3701,7 +3940,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Delete("/zones/vod.json/" + id);
 </pre>
   </div>
-  <div class="tab-pane" id="response45">
+  <div class="tab-pane" id="java45">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.delete("/zones/vod.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response45">
     <pre>
 {
   "code":200
@@ -3728,6 +3972,7 @@ Enables a VOD zone specified by the {zone_id} parameter
   <li><a href="#php46" data-toggle='tab'>PHP</a></li>
   <li><a href="#node46" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp46" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java46" data-toggle='tab'>Java</a></li>
   <li><a href="#response46" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3767,7 +4012,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/vod/" + id + "/enable.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response46">
+  <div class="tab-pane" id="java46">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.put("/zones/vod/"+zoneId+"/enable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response46">
     <pre>
 {
   "code":200
@@ -3794,6 +4044,7 @@ Disables a VOD zone specified by the {zone_id} parameter
   <li><a href="#php47" data-toggle='tab'>PHP</a></li>
   <li><a href="#node47" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp47" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java47" data-toggle='tab'>Java</a></li>
   <li><a href="#response47" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3833,7 +4084,12 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/vod/" + id + "/disable.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response47">
+  <div class="tab-pane" id="java47">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.put("/zones/vod/"+zoneId+"/disable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response47">
     <pre>
 {
   "code":200
@@ -3871,6 +4127,7 @@ Parameter | Description |
   <li><a href="#php48" data-toggle='tab'>PHP</a></li>
   <li><a href="#node48" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp48" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java48" data-toggle='tab'>Java</a></li>
   <li><a href="#response48" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3910,7 +4167,12 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 Console.Write(api.Get("/zones/vod/" + zoneID + "/customdomains.json"));
 </pre>
   </div>
-  <div class="tab-pane" id="response48">
+  <div class="tab-pane" id="java48">
+  <pre>String zoneId = "100200";
+MaxCDNObject response = api.get("/zones/vod/"+zoneId+"/customdomains.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response48">
     <pre>
 {
     "code": 200,
@@ -3964,6 +4226,7 @@ Parameter | Description |
   <li><a href="#php49" data-toggle='tab'>PHP</a></li>
   <li><a href="#node49" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp49" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java49" data-toggle='tab'>Java</a></li>
   <li><a href="#response49" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4011,7 +4274,13 @@ string cdtype = Console.ReadLine();
 api.Post("/zones/vod/" + zoneID + "/customdomains.json", dat="custom_domain=" + dat + "&type=" + cdtype);
 </pre>
   </div>
-  <div class="tab-pane" id="response49">
+  <div class="tab-pane" id="java49">
+  <pre>String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com").append("type", "vod-rtmp");
+MaxCDNObject response = api.post("/zones/vod/"+zoneId+"/customdomains.json", data));
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response49">
     <pre>
 {
     "code": 201,
@@ -4055,6 +4324,7 @@ Parameter | Description |
   <li><a href="#php50" data-toggle='tab'>PHP</a></li>
   <li><a href="#node50" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp50" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java50" data-toggle='tab'>Java</a></li>
   <li><a href="#response50" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4101,7 +4371,13 @@ int domainId = Convert.ToInt32(Console.ReadLine());
 api.Get"/zones/vod/" + zoneID + "/customdomains.json/" + domainId);
 </pre>
   </div>
-  <div class="tab-pane" id="response50">
+  <div class="tab-pane" id="java50">
+  <pre>String zoneId = "100200";
+String domainId = "287438";
+MaxCDNObject response = api.get("/zones/vod/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response50">
     <pre>
 {
     "code": 200,
@@ -4151,6 +4427,7 @@ Parameter | Description |
   <li><a href="#php51" data-toggle='tab'>PHP</a></li>
   <li><a href="#node51" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp51" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java51" data-toggle='tab'>Java</a></li>
   <li><a href="#response51" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4203,7 +4480,14 @@ string cdname = Console.ReadLine();
 api.Put("/zones/vod/" + zoneID + "/customdomains.json/" + domainId, "custom_domain=" + cdname);
 </pre>
   </div>
-  <div class="tab-pane" id="response51">
+  <div class="tab-pane" id="java51">
+  <pre>String zoneId = "100200";
+String domainId = "288865";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdn5.newdomain.com");
+MaxCDNObject response = api.put("/zones/vod/"+zoneId+"/customdomains.json/"+domainId, data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response51">
     <pre>
 {
     "code": 200,
@@ -4240,6 +4524,7 @@ Deletes a custom domain specified by the {zone_id} and
   <li><a href="#php52" data-toggle='tab'>PHP</a></li>
   <li><a href="#node52" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp52" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java52" data-toggle='tab'>Java</a></li>
   <li><a href="#response52" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4280,13 +4565,19 @@ api.delete('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(
   <pre>
 Console.Write("Zone ID: \n");
 int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Custom Domain Id to Edit: \n");
+Console.Write("Custom Domain Id to Delete: \n");
 int domainId = Convert.ToInt32(Console.ReadLine());
 
 api.Delete("/zones/vod/" + zoneID + "/customdomains.json/" + domainId);
 </pre>
   </div>
-  <div class="tab-pane" id="response52">
+  <div class="tab-pane" id="java52">
+  <pre>String zoneId = "100200";
+String domainId = "287434";
+MaxCDNObject response = api.delete("/zones/vod/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response52">
     <pre>
 {
   "code":200
@@ -4316,6 +4607,7 @@ Get the SSL certificate for the specified {zone_type} and
   <li><a href="#php61" data-toggle='tab'>PHP</a></li>
   <li><a href="#node61" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp61" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java61" data-toggle='tab'>Java</a></li>
   <li><a href="#response61" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4362,7 +4654,13 @@ string type = Console.ReadLine();
 api.Get("/zones/" + type + "/" + zoneID + "/ssl.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response61">
+  <div class="tab-pane" id="java61">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNObject response = api.get("/zones/"+zoneType+"/"+zoneId+"/ssl.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response61">
     <pre>
 {
   "code":201,
@@ -4425,6 +4723,7 @@ Parameter | Description |
   <li><a href="#php62" data-toggle='tab'>PHP</a></li>
   <li><a href="#node62" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp62" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java62" data-toggle='tab'>Java</a></li>
   <li><a href="#response62" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4498,7 +4797,16 @@ key = "-----BEGIN RSA PRIVATE KEY-----\n" + key + "\n-----END RSA PRIVATE KEY---
 api.Post("/zones/" + type + "/" + zoneId + "/ssl.json", dat="ssl_crt=" + cert + "&ssl_key=" + key);
 </pre>
   </div>
-  <div class="tab-pane" id="response62">
+  <div class="tab-pane" id="java62">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
+MaxCDNObject response = api.post("/zones/"+zoneType+"/"+zoneId+"/ssl.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response62">
     <pre>
 {
   "code":201,
@@ -4559,6 +4867,7 @@ Parameter | Description |
   <li><a href="#php63" data-toggle='tab'>PHP</a></li>
   <li><a href="#node63" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp63" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java63" data-toggle='tab'>Java</a></li>
   <li><a href="#response63" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4630,7 +4939,16 @@ key = "-----BEGIN RSA PRIVATE KEY-----\n" + key + "\n-----END RSA PRIVATE KEY---
 api.Put("/zones/" + type + "/" + zoneId + "/ssl.json", dat="ssl_crt=" + cert + "&ssl_key=" + key);
 </pre>
   </div>
-  <div class="tab-pane" id="response63">
+  <div class="tab-pane" id="java63">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
+MaxCDNObject response = api.put("/zones/"+zoneType+"/"+zoneId+"/ssl.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response63">
     <pre>
 {
   "code":201,
@@ -4671,6 +4989,7 @@ Remove the SSL certificate for the specified {zone_type} and
   <li><a href="#php64" data-toggle='tab'>PHP</a></li>
   <li><a href="#node64" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp64" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java64" data-toggle='tab'>Java</a></li>
   <li><a href="#response64" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4717,7 +5036,13 @@ string type = Console.ReadLine();
 api.Delete("/zones/" + type + "/" + zoneID + "/ssl.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response64">
+  <div class="tab-pane" id="java64">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNObject response = api.delete("/zones/"+zoneType+"/"+zoneId+"/ssl.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response64">
     <pre>
 {
   "code":200,
@@ -4801,6 +5126,7 @@ Get the upstream information for the specified {zone_id}.
   <li><a href="#php65" data-toggle='tab'>PHP</a></li>
   <li><a href="#node65" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp65" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java65" data-toggle='tab'>Java</a></li>
   <li><a href="#response65" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4847,7 +5173,13 @@ string type = Console.ReadLine();
 api.Get("/zones/" + type + "/" + zoneID + "/upstream.json");
 </pre>
   </div>
-  <div class="tab-pane" id="response65">
+  <div class="tab-pane" id="java65">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNObject response = api.get("/zones/"+zoneType+"/"+zoneId+"/upstream.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response65">
     <pre>
 {u'code': 200, u'data': {u'total': 1, u'upstreams': [{u'weight': u'1', u'id': u'121', u'bucket_id': u'96061', u'server': u'http://cdn.somedomain.com', u'backup': u'0', u'port': u'80'}]}}
 </pre>
@@ -4890,6 +5222,7 @@ Parameter | Description |
   <li><a href="#php66" data-toggle='tab'>PHP</a></li>
   <li><a href="#node66" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp66" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java66" data-toggle='tab'>Java</a></li>
   <li><a href="#response66" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -4940,7 +5273,14 @@ string type = Console.ReadLine();
 api.Post("/zones/" + type + "/" + zoneID + "/upstream.json", "server=http://cdn.somedomain.com&port=80");
 </pre>
   </div>
-  <div class="tab-pane" id="response66">
+  <div class="tab-pane" id="java66">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNRequest data = MaxCDN.newRequest("server", "http://cdn.somedomain.com").append("port", "80");
+MaxCDNObject response = api.post("/zones/"+zoneType+"/"+zoneId+"/upstream.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response66">
     <pre>
 </pre>
   </div>
@@ -4983,6 +5323,7 @@ Parameter | Description |
   <li><a href="#php67" data-toggle='tab'>PHP</a></li>
   <li><a href="#node67" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp67" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java67" data-toggle='tab'>Java</a></li>
   <li><a href="#response67" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -5042,7 +5383,15 @@ int upstream_id = Convert.ToInt32(Console.ReadLine());
 api.Put("/zones/" + type + "/" + zoneID + "/upstream.json/" + upstream_id, "upstream_id=" + upstreamID + "&server=http://somedomain.com&port=80");
 </pre>
   </div>
-  <div class="tab-pane" id="response67">
+  <div class="tab-pane" id="java67">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+String upstreamId = "123";
+MaxCDNRequest data = MaxCDN.newRequest("upstream_id", "9203").append("server", "http://cdn.somedomain.com").append("port", "80");
+MaxCDNObject response = api.put("/zones/"+zoneType+"/"+zoneId+"/upstream.json"+upstreamId, data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response67">
     <pre>
 </pre>
   </div>
@@ -5068,6 +5417,7 @@ Remove the Upstream Information for the specified {zone_id}.
   <li><a href="#php68" data-toggle='tab'>PHP</a></li>
   <li><a href="#node68" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp68" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java68" data-toggle='tab'>Java</a></li>
   <li><a href="#response68" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -5121,6 +5471,13 @@ int upstream_id = Convert.ToInt32(Console.ReadLine());
 api.Delete("/zones/" + type + "/" + zoneID + "/upstream.json/" + upstream_id);
 </pre>
   </div>
+  <div class="tab-pane" id="java68">
+  <pre>String zoneId = "100200";
+String zoneType = "pull";
+String upstreamId = "123";
+MaxCDNObject response = api.delete("/zones/"+zoneType+"/"+zoneId+"/upstream.json/"+upstreamId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response68">
     <pre>
 </pre>
