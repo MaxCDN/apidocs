@@ -13,12 +13,12 @@
 <link rel="shortcut icon" href="//secure-cdn.maxcdn.com/favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/docs.min.css">
+	<link rel="stylesheet" type="text/css" href="/apidocs/css/docs.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/docs.css">
+	<link rel="stylesheet" type="text/css" href="/apidocs/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/apidocs/css/docs.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/prettify.min.css">
+	<link rel="stylesheet" type="text/css" href="/apidocs/css/prettify.min.css">
 	<!--fonts-->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic">
 </head>
@@ -33,7 +33,7 @@
 			<div class="container">
 				<a href="/reseller/" class="brand"></a>
 				<ul class="nav pull-right">
-					<li><a href="http://resellerdocs.maxcdn.com">Reseller API Docs</a></li>
+					<li><a href="http://reseller-docs.maxcdn.com">Reseller API Docs</a></li>
 					<li><a href="/">API Docs</a></li>
 					<li><a href="http://www.maxcdn.com">MaxCDN.com</a></li>
 				</ul>
@@ -134,7 +134,7 @@
 
 	<!--span9-->
 		<div id="readme-docs" class="span9">
-			<h1 id="maxcdn-api-docs"><a name="maxcdn-api-docs" id="maxcdn-api-docs">MaxCDN API Docs</a></h1>
+			<h1 id="maxcdn-api-docs"><a name="maxcdn-api-docs" id="maxcdn-api-docs">MaxCDN Reseller API Docs</a></h1>
 			<p><a href="http://www.maxcdn.com">MaxCDN</a> is a Content Delivery Network service.</p>
 			
 <h2 id="index">Index</h2>
@@ -200,12 +200,12 @@
 <h2 id="changelog">Changelog</h2>
 <ul>
   <li><strong>2015-09-10</strong>  Updated docs for reseller api</li>
-  <li><strong>2015-07-27</strong>  Updated validation for <code class="highlighter-rouge">use_stale</code></li>
-  <li><strong>2015-03-06</strong>  Added <code class="highlighter-rouge">ssl</code>, <code class="highlighter-rouge">ssl_sni</code>, and <code class="highlighter-rouge">geo_enabled</code> flags for Pull Zones</li>
+  <li><strong>2015-07-27</strong>  Updated validation for <code>use_stale</code></li>
+  <li><strong>2015-03-06</strong>  Added <code>ssl</code>, <code>ssl_sni</code>, and <code>geo_enabled</code> flags for Pull Zones</li>
   <li><strong>2015-01-19</strong>  Added account-level SSL</li>
   <li><strong>2014-12-18</strong>  Removed Live Zone API documentation (EOL)</li>
   <li><strong>2014-12-09</strong>  Added new <a href="#origin-shield-api">Origin Shield API</a> documentation</li>
-  <li><strong>2014-10-20</strong>  Updated description for <code class="highlighter-rouge">use_stale</code></li>
+  <li><strong>2014-10-20</strong>  Updated description for <code>use_stale</code></li>
   <li><strong>2014-07-16</strong>  Added SNI option on SSL Installation</li>
   <li><strong>2014-07-11</strong>  Updated PHP and .NET libs</li>
   <li><strong>2014-06-30</strong>  Add RUM code for webperf measuring</li>
@@ -219,7 +219,7 @@
   <li><strong>2014-04-10</strong>  Added feature “X-Forwarded-For” to Pull Zone settings</li>
   <li><strong>2014-03-05</strong>  Firefox bug fixes.</li>
   <li><strong>2014-03-05</strong>  Added <a href="#get-all-zone-stats">stats per zone</a> reporting endpoint</li>
-  <li><strong>2014-03-03</strong>  Documented <code class="highlighter-rouge">dns_check</code> property of Pull Zones</li>
+  <li><strong>2014-03-03</strong>  Documented <code>dns_check</code> property of Pull Zones</li>
   <li><strong>2014-01-10</strong>  Minor grammatical fixes</li>
   <li><strong>2013-09-10</strong>  Rebranded for MaxCDN</li>
   <li><strong>2013-07-22</strong>  Added JSON responses to SSL</li>
@@ -237,7 +237,7 @@
   <li><strong>2013-03-08</strong>  cURL multi purge files</li>
   <li><strong>2013-03-07</strong>  Fix 3-legged OAuth restriction</li>
   <li><strong>2013-01-16</strong>  Fixed SSL bug</li>
-  <li><strong>2012-12-05</strong>  Added 2xx_hit calculation to all <code class="highlighter-rouge">statuscodebyfilename</code> reports</li>
+  <li><strong>2012-12-05</strong>  Added 2xx_hit calculation to all <code>statuscodebyfilename</code> reports</li>
   <li><strong>2012-02-27</strong>  Released alpha Version of RWS API.</li>
 </ul>
 
@@ -286,12 +286,12 @@ On a conceptual level it works in the following way:</p>
 <h3 id="request-tokens">Request Tokens</h3>
 <p>The first step to authenticating a user is to obtain a request token from MaxCDN.</p>
 
-<p>The end point for requesting a token is: <code class="highlighter-rouge">https://rws.maxcdn.com/oauth/request_token</code></p>
+<p>The end point for requesting a token is: <code>https://rws.maxcdn.com/oauth/request_token</code></p>
 
 <h3 id="user-authorization">User Authorization</h3>
 <p>The User Authorization step sends the user to the MaxCDN RWS authorization page, which grants your application privileges to use their account with the API. You will need the oauth_token from the previous step to complete this.</p>
 
-<p>The endpoint for the authorization url is: <code class="highlighter-rouge">https://rws.maxcdn.com/oauth/authorize</code></p>
+<p>The endpoint for the authorization url is: <code>https://rws.maxcdn.com/oauth/authorize</code></p>
 
 <h3 id="key-path-parameters">Key: Path Parameters</h3>
 
@@ -304,16 +304,16 @@ On a conceptual level it works in the following way:</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge"><span class="p">{</span><span class="err">companyalias</span><span class="p">}</span></code></td>
+      <td><code>{companyalias}</code></td>
       <td>The alias used when creating the account</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge"><span class="p">{</span><span class="err">zone_type</span><span class="p">}</span></code></td>
-      <td>The type of zone you are making a request on — one of <code class="highlighter-rouge">pull</code>, <code class="highlighter-rouge">push</code>, or <code class="highlighter-rouge">vod</code></td>
+      <td><code>{zone_type}</code></td>
+      <td>The type of zone you are making a request on — one of <code>pull</code>, <code>push</code>, or <code>vod</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge"><span class="p">{</span><span class="err">report_type</span><span class="p">}</span></code></td>
-      <td>The format you want the reports summarized by — <code class="highlighter-rouge">hourly</code>, <code class="highlighter-rouge">daily</code>, or <code class="highlighter-rouge">monthly</code>. This value can be left blank to receive ungrouped totals</td>
+      <td><code>{report_type}</code></td>
+      <td>The format you want the reports summarized by — <code>hourly</code>, <code>daily</code>, or <code>monthly</code>. This value can be left blank to receive ungrouped totals</td>
     </tr>
   </tbody>
 </table>
@@ -340,35 +340,35 @@ On a conceptual level it works in the following way:</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Account ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>The name of your account</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">address_id</code></td>
+      <td><code>address_id</code></td>
       <td>Address ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">alias</code></td>
+      <td><code>alias</code></td>
       <td>Company Alias</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_credits</code></td>
+      <td><code>ssl_credits</code></td>
       <td>SSL Credits</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">flex_credits</code></td>
+      <td><code>flex_credits</code></td>
       <td>Flex Location Credits</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_created</code></td>
+      <td><code>date_created</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_updated</code></td>
+      <td><code>date_updated</code></td>
       <td>Date Updated</td>
     </tr>
   </tbody>
@@ -463,7 +463,7 @@ api.Get("/clients/{id}/account.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-30 chars</td>
       <td>The name of your account</td>
@@ -482,35 +482,35 @@ api.Get("/clients/{id}/account.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Account ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>The name of your account</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">address_id</code></td>
+      <td><code>address_id</code></td>
       <td>Address ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">alias</code></td>
+      <td><code>alias</code></td>
       <td>Company Alias</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_credits</code></td>
+      <td><code>ssl_credits</code></td>
       <td>SSL Credits</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">flex_credits</code></td>
+      <td><code>flex_credits</code></td>
       <td>Flex Location Credits</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_created</code></td>
+      <td><code>date_created</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_updated</code></td>
+      <td><code>date_updated</code></td>
       <td>Date Updated</td>
     </tr>
   </tbody>
@@ -608,39 +608,39 @@ api.Put("/clients/{id}/account.json", "name=UserName");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Address ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">street1</code></td>
+      <td><code>street1</code></td>
       <td>Street Address Line 1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">street2</code></td>
+      <td><code>street2</code></td>
       <td>Street Address Line 2</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">city</code></td>
+      <td><code>city</code></td>
       <td>City</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">state</code></td>
+      <td><code>state</code></td>
       <td>State</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zip</code></td>
+      <td><code>zip</code></td>
       <td>ZIP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">country</code></td>
+      <td><code>country</code></td>
       <td>Country Code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_created</code></td>
+      <td><code>date_created</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_updated</code></td>
+      <td><code>date_updated</code></td>
       <td>Date Updated</td>
     </tr>
   </tbody>
@@ -733,37 +733,37 @@ api.Get("/clients/{id}/account.json/address");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">street1</code></td>
+      <td><code>street1</code></td>
       <td>-</td>
       <td>length: 1-200 chars</td>
       <td>Street Address Line 1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">street2</code></td>
+      <td><code>street2</code></td>
       <td>-</td>
       <td>length: 1-200 chars</td>
       <td>Street Address Line 2</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">city</code></td>
+      <td><code>city</code></td>
       <td>-</td>
       <td>length: 1-50 chars</td>
       <td>City</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">state</code></td>
+      <td><code>state</code></td>
       <td>-</td>
       <td>length: 1-50 chars</td>
       <td>State</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zip</code></td>
+      <td><code>zip</code></td>
       <td>-</td>
       <td>length: 3-5 chars; only digits accepted</td>
       <td>ZIP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">country</code></td>
+      <td><code>country</code></td>
       <td>-</td>
       <td>length: 2 chars</td>
       <td>Country Code</td>
@@ -782,39 +782,39 @@ api.Get("/clients/{id}/account.json/address");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Address ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">street1</code></td>
+      <td><code>street1</code></td>
       <td>Street Address Line 1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">street2</code></td>
+      <td><code>street2</code></td>
       <td>Street Address Line 2</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">city</code></td>
+      <td><code>city</code></td>
       <td>City</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">state</code></td>
+      <td><code>state</code></td>
       <td>State</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zip</code></td>
+      <td><code>zip</code></td>
       <td>ZIP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">country</code></td>
+      <td><code>country</code></td>
       <td>Country Code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_created</code></td>
+      <td><code>date_created</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_updated</code></td>
+      <td><code>date_updated</code></td>
       <td>Date Updated</td>
     </tr>
   </tbody>
@@ -909,47 +909,47 @@ api.Put("/clients/{id}/account.json/address", "street1=1234 Main Street");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>User ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code>timezone</code></td>
       <td>User’s Timezone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_last_login</code></td>
+      <td><code>date_last_login</code></td>
       <td>The date and time the user last logged into the system</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip_last_login</code></td>
+      <td><code>ip_last_login</code></td>
       <td>The IP for the user at the last login</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_created</code></td>
+      <td><code>date_created</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_updated</code></td>
+      <td><code>date_updated</code></td>
       <td>Date Updated</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">roles</code></td>
+      <td><code>roles</code></td>
       <td>An array of roles for the given user</td>
     </tr>
   </tbody>
@@ -1095,37 +1095,37 @@ api.Get("/clients/{id}/users.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 6-200 chars; valid email address</td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code>password</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 5-30 chars</td>
       <td>Password</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-32 chars</td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-32 chars</td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>-</td>
       <td>length: 7, 10, 11, or 14 chars; only digits considered</td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code>timezone</code></td>
       <td>-</td>
       <td>valid::timezone</td>
       <td>Valid timezone (see <a href="http://php.net/manual/en/timezones.php">List of Supported Timezones</a>)</td>
@@ -1144,47 +1144,47 @@ api.Get("/clients/{id}/users.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>User ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code>timezone</code></td>
       <td>User’s Timezone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_last_login</code></td>
+      <td><code>date_last_login</code></td>
       <td>The date and time the user last logged into the system</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip_last_login</code></td>
+      <td><code>ip_last_login</code></td>
       <td>The IP for the user at the last login</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_created</code></td>
+      <td><code>date_created</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_updated</code></td>
+      <td><code>date_updated</code></td>
       <td>Date Updated</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">roles</code></td>
+      <td><code>roles</code></td>
       <td>An array of roles for the given user</td>
     </tr>
   </tbody>
@@ -1214,10 +1214,6 @@ params={'email':'name43@domain.com','password':'password','firstname':'Given','l
 api.post('/clients/{id}/users.json',data=params )</pre>
   </div>
     <div class="tab-pane" id="perl6">
-    <pre>
-my @params = {firstname =&gt; 'Perl', lastname =&gt; 'User', email =&gt; 'user@domain.com', password =&gt; 'testpwd'};
-$api-&gt;post("/users.json", @params);</pre>
-<h3>Reseller API</h3>
 <pre>
 my @params = {firstname =&gt; 'Perl', lastname =&gt; 'User', email =&gt; 'user@domain.com', password =&gt; 'testpwd'};
 $api-&gt;post("/clients/{id}/users.json", @params);</pre>
@@ -1298,27 +1294,27 @@ api.Post("/clients/{id}/users.json", "firstname=" + fname + "&amp;lastname=" + l
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>User ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code>timezone</code></td>
       <td>User’s Timezone</td>
     </tr>
   </tbody>
@@ -1343,10 +1339,6 @@ id = '33706'
 api.get('/clients/{id}/users.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python7">
-    <pre>
-id = '33706'
-api.get('/users.json/'+id)</pre>
-<h3>Reseller API</h3>
 <pre>
 id = '33706'
 api.get('/clients/{id}/users.json/' + id)</pre>
@@ -1431,31 +1423,31 @@ api.Get("/clients/{id}/users.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>-</td>
       <td>length: 6-200 chars; valid email address</td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>-</td>
       <td>length: 1-32 chars</td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>-</td>
       <td>length: 1-32 chars</td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>-</td>
       <td>length: 7, 10, 11, or 14 chars; only digits considered</td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code>timezone</code></td>
       <td>-</td>
       <td>valid::timezone</td>
       <td>Valid timezone (see <a href="http://php.net/manual/en/timezones.php">List of Supported Timezones</a>)</td>
@@ -1474,27 +1466,27 @@ api.Get("/clients/{id}/users.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>User ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code>timezone</code></td>
       <td>User’s Timezone</td>
     </tr>
   </tbody>
@@ -1521,9 +1513,6 @@ api.put('/clients/{id}/users.json/' + id,params)
 </pre>
   </div>
   <div class="tab-pane" id="python8">
-    <pre>
-api.put('/users.json/'+id,params={'firstname': 'name'})</pre>
-<h3>Reseller API</h3>
 <pre>
 api.put('/clients/{id}/users.json/'+id,params={'firstname': 'name'})</pre>
   </div>
@@ -1534,11 +1523,6 @@ my @params = ('lastname=Test');
 $api-&gt;put("/clients/{id}/users.json/" . $id, @params);</pre>
   </div>
   <div class="tab-pane" id="php8">
-    <pre>
-$id = '33941';
-$params =  array("firstname"=&gt;"Billy");
-$api-&gt;put('/users.json/'.$id,$params);</pre>
-<h3>Reseller API</h3>
 <pre>
 $id = '33941';
 $params =  array("firstname"=&gt;"Billy");
@@ -1766,15 +1750,15 @@ account</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">pull</code></td>
+      <td><code>pull</code></td>
       <td>The number of pull zones for your account</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">push</code></td>
+      <td><code>push</code></td>
       <td>The number of push zones for your account</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">vod</code></td>
+      <td><code>vod</code></td>
       <td>The number of vod zones for your account</td>
     </tr>
   </tbody>
@@ -1794,9 +1778,6 @@ account</p>
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby11">
-    <pre>
-api.get('/zones.json/summary')</pre>
-<h3>Reseller API</h3>
 <pre>
 api.get('/clients/{id}/zones.json/summary')</pre>
   </div>
@@ -1858,7 +1839,7 @@ api.Get("/clients/{id}/zones.json/summary");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">count</code></td>
+      <td><code>count</code></td>
       <td>The total number of content zones for your account</td>
     </tr>
   </tbody>
@@ -1939,127 +1920,127 @@ api.Get("/clients/{id}/zones.json/count");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Pull Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Pull Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">url</code></td>
+      <td><code>url</code></td>
       <td>Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>Port</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip</code></td>
+      <td><code>ip</code></td>
       <td>IP address of the Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">compress</code></td>
+      <td><code>compress</code></td>
       <td>Enables on the fly GZip compression of your files from our edge servers for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype, application/octet-stream</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">backend_compress</code></td>
+      <td><code>backend_compress</code></td>
       <td>Enables us to cache, from origin, GZip compressed versions of your files for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">queries</code></td>
+      <td><code>queries</code></td>
       <td>Treat Query Strings as a separate cacheable item</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">set_host_header</code></td>
+      <td><code>set_host_header</code></td>
       <td>The URL sent as the Host in all HTTP Response Headers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_valid</code></td>
+      <td><code>cache_valid</code></td>
       <td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of 1d, 7d, 1M or 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_setcookie_header</code></td>
+      <td><code>ignore_setcookie_header</code></td>
       <td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_cache_control</code></td>
+      <td><code>ignore_cache_control</code></td>
       <td>Ignore any max age values set by the origin and use the CDN set value instead</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">use_stale</code></td>
+      <td><code>use_stale</code></td>
       <td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">proxy_cache_lock</code></td>
+      <td><code>proxy_cache_lock</code></td>
       <td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expires</code></td>
+      <td><code>expires</code></td>
       <td>Set any request with a no “Cache-Control header” from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots</code></td>
+      <td><code>disallow_robots</code></td>
       <td>Enable robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots_txt</code></td>
+      <td><code>disallow_robots_txt</code></td>
       <td>Use custom robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">canonical_link_headers</code></td>
+      <td><code>canonical_link_headers</code></td>
       <td>Pass the canonical URL in the Link HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pseudo_streaming</code></td>
+      <td><code>pseudo_streaming</code></td>
       <td>Enable the zone for pseudo streaming content</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>Read-only flag denoting if the zone has Dedicated IP SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_sni</code></td>
+      <td><code>ssl_sni</code></td>
       <td>Read-only flag denoting if the zone has SNI SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">geo_enabled</code></td>
+      <td><code>geo_enabled</code></td>
       <td>Read-only flag denoting if the zone has ‘More Locations’ enabled</td>
     </tr>
   </tbody>
@@ -2231,157 +2212,157 @@ api.Post("/clients/{id}/zones/pull.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 3-32 chars; only letters, digits, and dash (-)accepted</td>
       <td>Pull Zone Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">url</code></td>
+      <td><code>url</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 4-100 chars; only valid URLs accepted</td>
       <td>Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>80</td>
       <td>length: 1-5 chars; only digits accepted</td>
       <td>Port</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">dns_check</code></td>
+      <td><code>dns_check</code></td>
       <td>1</td>
       <td>only 0 or 1 accepted</td>
       <td>This field determines how your Origin resolves. When set to 1, we automatically grab the origin’s IP using DNS. Setting it to 0 allows you explicitly provide the IP of the origin.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip</code></td>
+      <td><code>ip</code></td>
       <td>-</td>
       <td>length: 1-10 chars, only digits accepted</td>
-      <td>Valid IP address of the Origin URL. Be sure to set <code class="highlighter-rouge">dns_check</code> to 0 to prevent this value from being overwritten.</td>
+      <td>Valid IP address of the Origin URL. Be sure to set <code>dns_check</code> to 0 to prevent this value from being overwritten.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">compress</code></td>
+      <td><code>compress</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enables on the fly GZip compression of your files from our edge servers for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">backend_compress</code></td>
+      <td><code>backend_compress</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enables us to cache, from origin, GZip compressed versions of your files for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">queries</code></td>
+      <td><code>queries</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Treat Query Strings as a separate cacheable item</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">set_host_header</code></td>
+      <td><code>set_host_header</code></td>
       <td>-</td>
       <td>length: 4-100 chars; only valid URLs accepted</td>
       <td>The URL to send as the Host in all HTTP Response Headers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_valid</code></td>
+      <td><code>cache_valid</code></td>
       <td>1d</td>
       <td>length: 1-30 chars; must be a number followed by one of s, m, h, d, M, or Y</td>
       <td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of 1d, 7d, 1M or 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_setcookie_header</code></td>
+      <td><code>ignore_setcookie_header</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_cache_control</code></td>
+      <td><code>ignore_cache_control</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Ignore any max age values set by the origin and use the CDN set value instead</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">use_stale</code></td>
+      <td><code>use_stale</code></td>
       <td>0</td>
       <td>List of status codes separated with space - empty character - (?use_stale=500 502 503 504 403 404) are accepted as a valid request. 0 or 1 are accepted by legacy but, these are not valid parameters any more. To disable use_stale you can pass 0 (as a part of the legacy) or empty string “”.</td>
       <td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">proxy_cache_lock</code></td>
+      <td><code>proxy_cache_lock</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>-</td>
       <td>length: 1-100 chars</td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expires</code></td>
+      <td><code>expires</code></td>
       <td>1d</td>
       <td>length: 1-32 chars</td>
       <td>Set any request with a no “Cache-Control header” from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots</code></td>
+      <td><code>disallow_robots</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots_txt</code></td>
+      <td><code>disallow_robots_txt</code></td>
       <td>-</td>
       <td>length 1-255 chars</td>
       <td>Use custom robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">canonical_link_headers</code></td>
+      <td><code>canonical_link_headers</code></td>
       <td>1</td>
       <td>only 0 or 1 accepted</td>
       <td>Pass the canonical URL in the Link HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">x_forward_for</code></td>
+      <td><code>x_forward_for</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Add X-Forwarded-For (XFF) HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pseudo_streaming</code></td>
+      <td><code>pseudo_streaming</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable the zone for pseudo streaming content</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">secret</code></td>
+      <td><code>secret</code></td>
       <td>-</td>
       <td>length: 1 - 32 chars</td>
       <td>Use a secret to protect your files from unwanted visitors</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable SPDY protocol on the zone (requires SSL)</td>
@@ -2400,131 +2381,131 @@ api.Post("/clients/{id}/zones/pull.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Pull Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Pull Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">url</code></td>
+      <td><code>url</code></td>
       <td>Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>Port</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip</code></td>
+      <td><code>ip</code></td>
       <td>IP address of the Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">compress</code></td>
+      <td><code>compress</code></td>
       <td>Enables on the fly GZip compression of your files from our edge servers for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">backend_compress</code></td>
+      <td><code>backend_compress</code></td>
       <td>Enables us to cache, from origin, GZip compressed versions of your files for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">queries</code></td>
+      <td><code>queries</code></td>
       <td>Treat Query Strings as a separate cacheable item</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">set_host_header</code></td>
+      <td><code>set_host_header</code></td>
       <td>The URL sent as the Host in all HTTP Response Headers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_valid</code></td>
+      <td><code>cache_valid</code></td>
       <td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of 1d, 7d, 1M or 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_setcookie_header</code></td>
+      <td><code>ignore_setcookie_header</code></td>
       <td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_cache_control</code></td>
+      <td><code>ignore_cache_control</code></td>
       <td>Ignore any max age values set by the origin and use the CDN set value instead</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">use_stale</code></td>
+      <td><code>use_stale</code></td>
       <td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">proxy_cache_lock</code></td>
+      <td><code>proxy_cache_lock</code></td>
       <td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expires</code></td>
+      <td><code>expires</code></td>
       <td>Set any request with a no “Cache-Control header” from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots</code></td>
+      <td><code>disallow_robots</code></td>
       <td>Enable robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots_txt</code></td>
+      <td><code>disallow_robots_txt</code></td>
       <td>Use custom robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">canonical_link_headers</code></td>
+      <td><code>canonical_link_headers</code></td>
       <td>Pass the canonical URL in the Link HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">x_forward_for</code></td>
+      <td><code>x_forward_for</code></td>
       <td>Add X-Forwarded-For (XFF) HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pseudo_streaming</code></td>
+      <td><code>pseudo_streaming</code></td>
       <td>Enable the zone for pseudo streaming content</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>Read-only flag denoting if the zone has Dedicated IP SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_sni</code></td>
+      <td><code>ssl_sni</code></td>
       <td>Read-only flag denoting if the zone has SNI SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">geo_enabled</code></td>
+      <td><code>geo_enabled</code></td>
       <td>Read-only flag denoting if the zone has ‘More Locations’ enabled</td>
     </tr>
   </tbody>
@@ -2656,7 +2637,7 @@ api.Post("/clients/{id}/zones/pull.json", "url=" + url + "&amp;name=" + ZoneName
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">count</code></td>
+      <td><code>count</code></td>
       <td>The number of pull zones on the specified account</td>
     </tr>
   </tbody>
@@ -2739,131 +2720,131 @@ api.Get("/clients/{id}/zones/pull.json/count");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The Pull Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Pull Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">url</code></td>
+      <td><code>url</code></td>
       <td>Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>Port</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip</code></td>
+      <td><code>ip</code></td>
       <td>Valid IP address of the Origin URL, if omitted the service will automatically try to find the IP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">compress</code></td>
+      <td><code>compress</code></td>
       <td>Enables on the fly GZip compression of your files from our edge servers for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">backend_compress</code></td>
+      <td><code>backend_compress</code></td>
       <td>Enables us to cache, from origin, GZip compressed versions of your files for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">queries</code></td>
+      <td><code>queries</code></td>
       <td>Treat Query Strings as a separate cacheable item</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">set_host_header</code></td>
+      <td><code>set_host_header</code></td>
       <td>The URL sent as the Host in all HTTP Response Headers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_valid</code></td>
+      <td><code>cache_valid</code></td>
       <td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of 1d, 7d, 1M or 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_setcookie_header</code></td>
+      <td><code>ignore_setcookie_header</code></td>
       <td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_cache_control</code></td>
+      <td><code>ignore_cache_control</code></td>
       <td>Ignore any max age values set by the origin and use the CDN set value instead</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">use_stale</code></td>
+      <td><code>use_stale</code></td>
       <td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">proxy_cache_lock</code></td>
+      <td><code>proxy_cache_lock</code></td>
       <td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expires</code></td>
+      <td><code>expires</code></td>
       <td>Set any request with a no “Cache-Control header” from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots</code></td>
+      <td><code>disallow_robots</code></td>
       <td>Enable robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots_txt</code></td>
+      <td><code>disallow_robots_txt</code></td>
       <td>Use custom robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">canonical_link_headers</code></td>
+      <td><code>canonical_link_headers</code></td>
       <td>Pass the canonical URL in the Link HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">x_forward_for</code></td>
+      <td><code>x_forward_for</code></td>
       <td>Add X-Forwarded-For (XFF) HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pseudo_streaming</code></td>
+      <td><code>pseudo_streaming</code></td>
       <td>Enable the zone for pseudo streaming content</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>Read-only flag denoting if the zone has Dedicated IP SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_sni</code></td>
+      <td><code>ssl_sni</code></td>
       <td>Read-only flag denoting if the zone has SNI SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">geo_enabled</code></td>
+      <td><code>geo_enabled</code></td>
       <td>Read-only flag denoting if the zone has ‘More Locations’ enabled</td>
     </tr>
   </tbody>
@@ -2996,151 +2977,151 @@ api.Get("/clients/{id}/zones/pull.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">url</code></td>
+      <td><code>url</code></td>
       <td>-</td>
       <td>length: 4-100 chars; only valid URLs accepted</td>
       <td>Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>80</td>
       <td>length: 1-5 chars; only digits accepted</td>
       <td>Port</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">dns_check</code></td>
+      <td><code>dns_check</code></td>
       <td>1</td>
       <td>only 0 or 1 accepted</td>
       <td>This field determines how your Origin resolves. When set to 1, we automatically grab the origin’s IP using DNS. Setting it to 0 allows you explicitly provide the IP of the origin.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip</code></td>
+      <td><code>ip</code></td>
       <td>-</td>
       <td>length: 1-10 chars, only digits accepted</td>
-      <td>Valid IP address of the Origin URL. Be sure to set <code class="highlighter-rouge">dns_check</code> to 0 to prevent this value from being overwritten.</td>
+      <td>Valid IP address of the Origin URL. Be sure to set <code>dns_check</code> to 0 to prevent this value from being overwritten.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">compress</code></td>
+      <td><code>compress</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>On the fly compression of your files served from our edges. Enables GZip compression for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">backend_compress</code></td>
+      <td><code>backend_compress</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Allow us to cache compressed versions of your files from the origin. Enables GZip compression for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">queries</code></td>
+      <td><code>queries</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Treat Query Strings as a separate cacheable item</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">set_host_header</code></td>
+      <td><code>set_host_header</code></td>
       <td>-</td>
       <td>length: 4-100 chars; only valid URLs accepted</td>
       <td>The URL to send as the Host in all HTTP Response Headers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_valid</code></td>
+      <td><code>cache_valid</code></td>
       <td>-</td>
       <td>length: 1-30 chars; must be a number followed by one of s, m, h, d, M, or Y</td>
       <td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of 1d, 7d, 1M or 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_setcookie_header</code></td>
+      <td><code>ignore_setcookie_header</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_cache_control</code></td>
+      <td><code>ignore_cache_control</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Ignore any max age values set by the origin and use the CDN set value instead</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">use_stale</code></td>
+      <td><code>use_stale</code></td>
       <td>0</td>
       <td>List of status codes separated with space - empty character - (?use_stale=500 502 503 504 403 404) are accepted as a valid request. 0 or 1 are accepted by legacy but, these are not valid parameters any more. To disable use_stale you can pass 0 (as a part of the legacy) or empty string “”.</td>
       <td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">proxy_cache_lock</code></td>
+      <td><code>proxy_cache_lock</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>-</td>
       <td>length: 1-100 chars</td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expires</code></td>
+      <td><code>expires</code></td>
       <td>1d</td>
       <td>length: 1-32 chars</td>
       <td>Set any request with a no “Cache-Control header” from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots</code></td>
+      <td><code>disallow_robots</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots_txt</code></td>
+      <td><code>disallow_robots_txt</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Use custom robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">canonical_link_headers</code></td>
+      <td><code>canonical_link_headers</code></td>
       <td>1</td>
       <td>only 0 or 1 accepted</td>
       <td>Pass the canonical URL in the Link HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">x_forward_for</code></td>
+      <td><code>x_forward_for</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Add X-Forwarded-For (XFF) HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pseudo_streaming</code></td>
+      <td><code>pseudo_streaming</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable the zone for pseudo streaming content</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">secret</code></td>
+      <td><code>secret</code></td>
       <td>-</td>
       <td>length: 1 - 32 chars</td>
       <td>Use a secret to protect your files from unwanted visitors</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable SPDY protocol on the zone (requires SSL)</td>
@@ -3159,131 +3140,131 @@ api.Get("/clients/{id}/zones/pull.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Pull Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Pull Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">url</code></td>
+      <td><code>url</code></td>
       <td>Origin URL</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>Port</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ip</code></td>
+      <td><code>ip</code></td>
       <td>Valid IP address of the Origin URL, if omitted the service will automatically try to find the IP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">compress</code></td>
+      <td><code>compress</code></td>
       <td>On the fly compression of your files served from our edges. Enables GZip compression for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">backend_compress</code></td>
+      <td><code>backend_compress</code></td>
       <td>Allow us to cache compressed versions of your files from the origin. Enables GZip compression for the following file types: text/plain, text/html, text/javascript, text/css, text/xml, application/javascript, application/x-javascript, application/xml, text/x-component, application/json, application/xhtml+xml, application/rss+xml, application/atom+xml, app/vnd.ms-fontobject, image/svg+xml, application/x-font-ttf, font/opentype</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">queries</code></td>
+      <td><code>queries</code></td>
       <td>Treat Query Strings as a separate cacheable item</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">set_host_header</code></td>
+      <td><code>set_host_header</code></td>
       <td>The URL sent as the Host in all HTTP Response Headers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_valid</code></td>
+      <td><code>cache_valid</code></td>
       <td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of 1d, 7d, 1M or 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_setcookie_header</code></td>
+      <td><code>ignore_setcookie_header</code></td>
       <td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ignore_cache_control</code></td>
+      <td><code>ignore_cache_control</code></td>
       <td>Ignore any max age values set by the origin and use the CDN set value instead</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">use_stale</code></td>
+      <td><code>use_stale</code></td>
       <td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">proxy_cache_lock</code></td>
+      <td><code>proxy_cache_lock</code></td>
       <td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expires</code></td>
+      <td><code>expires</code></td>
       <td>Set any request with a no “Cache-Control header” from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots</code></td>
+      <td><code>disallow_robots</code></td>
       <td>Enable robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">disallow_robots_txt</code></td>
+      <td><code>disallow_robots_txt</code></td>
       <td>Use custom robots.txt</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">canonical_link_headers</code></td>
+      <td><code>canonical_link_headers</code></td>
       <td>Pass the canonical URL in the Link HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">x_forward_for</code></td>
+      <td><code>x_forward_for</code></td>
       <td>Add X-Forwarded-For (XFF) HTTP Header</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pseudo_streaming</code></td>
+      <td><code>pseudo_streaming</code></td>
       <td>Enable the zone for pseudo streaming content</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>Read-only flag denoting if the zone has Dedicated IP SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_sni</code></td>
+      <td><code>ssl_sni</code></td>
       <td>Read-only flag denoting if the zone has SNI SSL enabled</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">geo_enabled</code></td>
+      <td><code>geo_enabled</code></td>
       <td>Read-only flag denoting if the zone has ‘More Locations’ enabled</td>
     </tr>
   </tbody>
@@ -3781,7 +3762,7 @@ api.Put("/clients/{id}/zones/pull/" + id + "/disable.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">files</code></td>
+      <td><code>files</code></td>
       <td>-</td>
       <td>An array containing relative paths of the files to purge (i.e./favicon.ico)</td>
       <td> </td>
@@ -3833,18 +3814,6 @@ id = '97167'
 api.purge('/clients/{id}/zones/pull.json/165013/cache', ['/file1.txt','/file2.txt'])</pre>
   </div>
     <div class="tab-pane" id="perl21">
-  <pre>
-#Purge Zone
-$api-&gt;delete("/zones/pull.json/165013/cache");
-
-#Purge File
-my @params = ("%2Frankings%2Fhotlist%2Fi%2F500w%2F2.jpg");
-$api-&gt;delete("/zones/pull.json/165013/cache", @params);
-
-#Purge Files
-my @params = ("%2Frankings%2Fhotlist%2Fi%2F500w%2F2.jpg", "%2F_index%2Ff_mdcdb.html");
-$api-&gt;delete("/zones/pull.json/165013/cache", @params);</pre>
-<h3>Reseller API</h3>
 <pre>
 #Purge Zone
 $api-&gt;delete("/clients/{id}/zones/pull.json/165013/cache");
@@ -3975,15 +3944,15 @@ switch (ptype){
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>A valid custom domain</td>
     </tr>
   </tbody>
@@ -4085,13 +4054,13 @@ Console.Write(api.Get("/clients/{id}/zones/pull/" + zoneID + "/customdomains.jso
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
       <td>A valid custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">type</code></td>
+      <td><code>type</code></td>
       <td>-</td>
       <td>Applies only to VOD Zones and must be either ‘vod-rtmp’,’vod-pseudo’, ‘vod-direct’, or ‘vod-ftp’</td>
       <td>The type of custom domain being created</td>
@@ -4110,15 +4079,15 @@ Console.Write(api.Get("/clients/{id}/zones/pull/" + zoneID + "/customdomains.jso
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The valid custom domain</td>
     </tr>
   </tbody>
@@ -4221,15 +4190,15 @@ api.Post("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json", dat="cust
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The valid custom domain</td>
     </tr>
   </tbody>
@@ -4336,7 +4305,7 @@ api.Get("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json/" + domainId
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
       <td>A new valid custom domain</td>
@@ -4355,15 +4324,15 @@ api.Get("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json/" + domainId
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The new valid custom domain</td>
     </tr>
   </tbody>
@@ -4553,47 +4522,47 @@ api.Delete("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json/" + domai
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Push Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Push Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
   </tbody>
@@ -4722,43 +4691,43 @@ api.Get("/clients/{id}/zones/push.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted</td>
       <td>Push Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code>password</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 5-30 chars;</td>
       <td>Push Zone FTP password</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>-</td>
       <td>length: 1-200 chars</td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable SPDY protocol on the zone (requires SSL)</td>
@@ -4777,47 +4746,47 @@ api.Get("/clients/{id}/zones/push.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Push Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Push Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
   </tbody>
@@ -4924,7 +4893,7 @@ api.Post("/clients/{id}/zones/push.json", "name=" + ZoneName + "&amp;password=" 
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">count</code></td>
+      <td><code>count</code></td>
       <td>The number of push zones on the specified account</td>
     </tr>
   </tbody>
@@ -5005,47 +4974,47 @@ api.Get("/clients/{id}/zones/push.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Push Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Push Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
   </tbody>
@@ -5152,31 +5121,31 @@ api.Get("/clients/{id}/zones/push.json/" + zoneID);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>-</td>
       <td>length: 1-100 chars</td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>Enable SPDY protocol on the zone (requires SSL)</td>
@@ -5195,47 +5164,47 @@ api.Get("/clients/{id}/zones/push.json/" + zoneID);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Push Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Push Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>Something that describes your zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">valid_referers</code></td>
+      <td><code>valid_referers</code></td>
       <td>List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content_disposition</code></td>
+      <td><code>content_disposition</code></td>
       <td>Force files to download</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sslshared</code></td>
+      <td><code>sslshared</code></td>
       <td>Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">spdy</code></td>
+      <td><code>spdy</code></td>
       <td>Flag denoting if the zone has the SPDY protocol enabled</td>
     </tr>
   </tbody>
@@ -5547,15 +5516,15 @@ api.Put("/clients/{id}/zones/push/" + id + "/disable.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>A valid custom domain</td>
     </tr>
   </tbody>
@@ -5650,13 +5619,13 @@ Console.Write(api.Get("/clients/{id}/zones/push/" + zoneID + "/customdomains.jso
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
       <td>A valid custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">type</code></td>
+      <td><code>type</code></td>
       <td>-</td>
       <td>Applies only to VOD Zones and must be either ‘vod-rtmp’,’vod-pseudo’, ‘vod-direct’, or ‘vod-ftp’</td>
       <td>The type of custom domain being created</td>
@@ -5675,15 +5644,15 @@ Console.Write(api.Get("/clients/{id}/zones/push/" + zoneID + "/customdomains.jso
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The valid custom domain</td>
     </tr>
   </tbody>
@@ -5781,15 +5750,15 @@ api.Post("/clients/{id}/zones/push/" + zoneID + "/customdomains.json", dat="cust
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The valid custom domain</td>
     </tr>
   </tbody>
@@ -5888,7 +5857,7 @@ api.Get("/clients/{id}/zones/push/" + zoneID + "/customdomains.json/" + domainId
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
       <td>A new valid custom domain</td>
@@ -5907,15 +5876,15 @@ api.Get("/clients/{id}/zones/push/" + zoneID + "/customdomains.json/" + domainId
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The new valid custom domain</td>
     </tr>
   </tbody>
@@ -6094,31 +6063,31 @@ api.Delete("/clients/{id}/zones/push/" + zoneID + "/customdomains.json/" + domai
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>VOD Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>VOD Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>The zone’s description</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
   </tbody>
@@ -6243,25 +6212,25 @@ api.Get("/clients/{id}/zones/vod.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted</td>
       <td>VOD Zone user name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code>password</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 5-30 chars</td>
       <td>Your desired password</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">token</code></td>
+      <td><code>token</code></td>
       <td>-</td>
       <td>length: 1-64 chars</td>
       <td>The token value (shared secret) for secure streaming</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Something that describes your zone</td>
@@ -6280,31 +6249,31 @@ api.Get("/clients/{id}/zones/vod.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>VOD Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>VOD Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>The zone’s description</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
   </tbody>
@@ -6409,7 +6378,7 @@ api.Post("/clients/{id}/zones/vod.json", "name=" + ZoneName + "&amp;password=" +
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">count</code></td>
+      <td><code>count</code></td>
       <td>The number of VOD zones on the specified account</td>
     </tr>
   </tbody>
@@ -6486,31 +6455,31 @@ api.Get("/clients/{id}/zones/vod.json/count");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>VOD Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>VOD Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>The zone’s description</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
   </tbody>
@@ -6616,19 +6585,19 @@ api.Get("/clients/{id}/zones/vod.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code>password</code></td>
       <td>-</td>
       <td>length: 5-30 chars</td>
       <td>Your desired password</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">token</code></td>
+      <td><code>token</code></td>
       <td>-</td>
       <td>length: 1-64 chars</td>
       <td>The token value (shared secret) for secure streaming</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>-</td>
       <td>length: 1-255 chars</td>
       <td>Something that describes your zone</td>
@@ -6647,31 +6616,31 @@ api.Get("/clients/{id}/zones/vod.json/" + id);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>VOD Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>VOD Zone name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">label</code></td>
+      <td><code>label</code></td>
       <td>The zone’s description</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">suspend</code></td>
+      <td><code>suspend</code></td>
       <td>Flag denoting if the zone has been suspended</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">locked</code></td>
+      <td><code>locked</code></td>
       <td>Flag denoting if the zone has been locked</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">inactive</code></td>
+      <td><code>inactive</code></td>
       <td>Flag denoting if the zone has been deleted</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">creation_date</code></td>
+      <td><code>creation_date</code></td>
       <td>Date Created</td>
     </tr>
   </tbody>
@@ -6981,15 +6950,15 @@ api.Put("/clients/{id}/zones/vod/" + id + "/disable.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>A valid custom domain</td>
     </tr>
   </tbody>
@@ -7084,13 +7053,13 @@ Console.Write(api.Get("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
       <td>A valid custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">type</code></td>
+      <td><code>type</code></td>
       <td>-</td>
       <td>Applies only to VOD Zones and must be either ‘vod-rtmp’,’vod-pseudo’, ‘vod-direct’, or ‘vod-ftp’</td>
       <td>The type of custom domain being created</td>
@@ -7109,15 +7078,15 @@ Console.Write(api.Get("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The valid custom domain</td>
     </tr>
   </tbody>
@@ -7216,15 +7185,15 @@ api.Post("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json", dat="custo
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The valid custom domain</td>
     </tr>
   </tbody>
@@ -7323,7 +7292,7 @@ api.Get("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json/" + domainId)
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
       <td>A new valid custom domain</td>
@@ -7342,15 +7311,15 @@ api.Get("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json/" + domainId)
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The id of the custom domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The id of the zone the custom domain belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">custom_domain</code></td>
+      <td><code>custom_domain</code></td>
       <td>The new valid custom domain</td>
     </tr>
   </tbody>
@@ -7617,31 +7586,31 @@ api.Get("/clients/{id}/zones/" + type + "/" + zoneID + "/ssl.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl_id</code></td>
+      <td><code>ssl_id</code></td>
       <td>-</td>
       <td>digit</td>
       <td>id of previously created certificate (NOTE: This will become required in future revisions)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_crt</code></td>
+      <td><code>ssl_crt</code></td>
       <td>-</td>
       <td>-</td>
       <td>The SSL certificate you are installing. (NOTE: Not required if ssl_id specified)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_key</code></td>
+      <td><code>ssl_key</code></td>
       <td>-</td>
       <td>-</td>
       <td>The key for the SSL certificate you are installing.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_cabundle</code></td>
+      <td><code>ssl_cabundle</code></td>
       <td>-</td>
       <td>-</td>
       <td>The CA Bundle for the SSL Certificate you are installing.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_sni</code></td>
+      <td><code>ssl_sni</code></td>
       <td>0</td>
       <td>only 0 or 1 accepted</td>
       <td>If this flag is set to 1 your zone will use SNI to identify your certificate, rather than requiring a dedicated IP.</td>
@@ -7660,27 +7629,27 @@ api.Get("/clients/{id}/zones/" + type + "/" + zoneID + "/ssl.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The SSL Certificate ID.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_crt</code></td>
+      <td><code>ssl_crt</code></td>
       <td>The SSL certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_cabundle</code></td>
+      <td><code>ssl_cabundle</code></td>
       <td>The CA Bundle for the certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">domain</code></td>
+      <td><code>domain</code></td>
       <td>The domain applicable to this certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_expiration</code></td>
+      <td><code>date_expiration</code></td>
       <td>The date of expiration for the certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">wildcard</code></td>
+      <td><code>wildcard</code></td>
       <td>Flag to signify whether this is a wildcard certificate.</td>
     </tr>
   </tbody>
@@ -7811,25 +7780,25 @@ api.Post("/clients/{id}/zones/" + type + "/" + zoneId + "/ssl.json", dat="ssl_cr
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl_id</code></td>
+      <td><code>ssl_id</code></td>
       <td>-</td>
       <td>digit</td>
       <td>id of previously created certificate (NOTE: This will become required in future revisions)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_crt</code></td>
+      <td><code>ssl_crt</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The SSL certificate you are installing.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_key</code></td>
+      <td><code>ssl_key</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The key for the SSL certificate you are installing.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_cabundle</code></td>
+      <td><code>ssl_cabundle</code></td>
       <td>-</td>
       <td>The CABundle for the SSL Certificate you are installing.</td>
       <td> </td>
@@ -7848,27 +7817,27 @@ api.Post("/clients/{id}/zones/" + type + "/" + zoneId + "/ssl.json", dat="ssl_cr
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The SSL Certificate ID.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_crt</code></td>
+      <td><code>ssl_crt</code></td>
       <td>The SSL certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_cabundle</code></td>
+      <td><code>ssl_cabundle</code></td>
       <td>The CA Bundle for the certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">domain</code></td>
+      <td><code>domain</code></td>
       <td>The domain applicable to this certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_expiration</code></td>
+      <td><code>date_expiration</code></td>
       <td>The date of expiration for the certificate.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">wildcard</code></td>
+      <td><code>wildcard</code></td>
       <td>Flag to signify whether this is a wildcard certificate.</td>
     </tr>
   </tbody>
@@ -8197,13 +8166,13 @@ api.Get("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">server</code></td>
+      <td><code>server</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The server URL or IP to provide the streaming resources</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The port where server is to be called</td>
@@ -8222,19 +8191,19 @@ api.Get("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The Upstream ID.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The bucket_id it belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">server</code></td>
+      <td><code>server</code></td>
       <td>The server URL or IP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>The port it uses to call the server</td>
     </tr>
   </tbody>
@@ -8327,19 +8296,19 @@ api.Post("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json", "serve
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">upstream_id</code></td>
+      <td><code>upstream_id</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The Upstream Information you’re modifying</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">server</code></td>
+      <td><code>server</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The server URL or IP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br /></td>
       <td>The port used to call the server</td>
@@ -8358,19 +8327,19 @@ api.Post("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json", "serve
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The Upstream ID.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The bucket_id it belongs to</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">server</code></td>
+      <td><code>server</code></td>
       <td>The server URL or IP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code>port</code></td>
       <td>The port it uses to call the server</td>
     </tr>
   </tbody>
@@ -8551,13 +8520,13 @@ the total usage on your account.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -8576,23 +8545,23 @@ the total usage on your account.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>The timestamp for the corresponding {report_type}</td>
     </tr>
   </tbody>
@@ -8686,13 +8655,13 @@ api.Get("/clients/{id}/reports/stats.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -8711,27 +8680,27 @@ api.Get("/clients/{id}/reports/stats.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The Zone ID that corresponds to this set of stats</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>The timestamp for the corresponding {report_type}</td>
     </tr>
   </tbody>
@@ -8856,13 +8825,13 @@ the total usage for the zones.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -8881,23 +8850,23 @@ the total usage for the zones.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>The timestamp for the corresponding {report_type}</td>
     </tr>
   </tbody>
@@ -9003,15 +8972,15 @@ api.Get("/clients/{id}/reports/" + zoneID + "/stats.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Node Id</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Node 3 letter code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">description</code></td>
+      <td><code>description</code></td>
       <td>Full node name</td>
     </tr>
   </tbody>
@@ -9150,15 +9119,15 @@ api.Get("/clients/{id}/reports/nodes.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Node Id</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Node 3 letter code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">description</code></td>
+      <td><code>description</code></td>
       <td>Full node name</td>
     </tr>
   </tbody>
@@ -9298,13 +9267,13 @@ the total usage broken up by node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-31)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-31)</td>
       <td>End date</td>
@@ -9323,35 +9292,35 @@ the total usage broken up by node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">pop_id</code></td>
+      <td><code>pop_id</code></td>
       <td>Node Id</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pop_name</code></td>
+      <td><code>pop_name</code></td>
       <td>Node 3 letter code, only returned when {report_type} is not empty</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pop_description</code></td>
+      <td><code>pop_description</code></td>
       <td>Full node name, only returned when {report_type} is not empty</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>A timestamp corresponding to {report_type}, only returned when {report_type} is not empty</td>
     </tr>
   </tbody>
@@ -9538,13 +9507,13 @@ the request will return the total usage broken up by node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -9563,35 +9532,35 @@ the request will return the total usage broken up by node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">pop_id</code></td>
+      <td><code>pop_id</code></td>
       <td>Node Id</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pop_name</code></td>
+      <td><code>pop_name</code></td>
       <td>Node 3 letter code, only returned when {report_type} is not empty</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pop_description</code></td>
+      <td><code>pop_description</code></td>
       <td>Full node name, only returned when {report_type} is not empty</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>A timestamp corresponding to {report_type}, only returned when {report_type} is not empty</td>
     </tr>
   </tbody>
@@ -9688,15 +9657,15 @@ api.Get("/clients/{id}/reports/" + zoneID + "/nodes.json/stats" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Node Id</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Node 3 letter code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">description</code></td>
+      <td><code>description</code></td>
       <td>Full node name</td>
     </tr>
   </tbody>
@@ -9787,15 +9756,15 @@ api.Get("/clients/{id}/reports/nodes.json/" + nodeID);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>Node Id</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Node 3 letter code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">description</code></td>
+      <td><code>description</code></td>
       <td>Full node name</td>
     </tr>
   </tbody>
@@ -9898,13 +9867,13 @@ request will return the total usage for the node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date.</td>
@@ -9923,23 +9892,23 @@ request will return the total usage for the node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>A timestamp corresponding to {report_type}, only returned when {report_type} is not empty</td>
     </tr>
   </tbody>
@@ -10043,13 +10012,13 @@ the request will return the total usage for the node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -10068,23 +10037,23 @@ the request will return the total usage for the node.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times files were requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">noncache_hit</code></td>
+      <td><code>noncache_hit</code></td>
       <td>The number of times a requested file was not in cache</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_hit</code></td>
+      <td><code>cache_hit</code></td>
       <td>The number of times a requested file was already cached</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>A timestamp corresponding to {report_type}, only returned when {report_type} is not empty</td>
     </tr>
   </tbody>
@@ -10196,13 +10165,13 @@ grouped into daily statistics</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01).</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01).</td>
       <td>End date</td>
@@ -10221,27 +10190,27 @@ grouped into daily statistics</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The Zone ID for the popular file</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">uri</code></td>
+      <td><code>uri</code></td>
       <td>The URI for the requested popular file</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times the file was requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred for the given file</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">vhost</code></td>
+      <td><code>vhost</code></td>
       <td>The CDN URL for the corresponding zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
   </tbody>
@@ -10330,13 +10299,13 @@ filtered by {zone_type} and grouped into daily statistics</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -10355,27 +10324,27 @@ filtered by {zone_type} and grouped into daily statistics</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The Zone ID for the popular file</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">uri</code></td>
+      <td><code>uri</code></td>
       <td>The URI for the requested popular file</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times the file was requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred for the given file</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">vhost</code></td>
+      <td><code>vhost</code></td>
       <td>The CDN URL for the corresponding zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timestamp</code></td>
+      <td><code>timestamp</code></td>
       <td>The amount of bytes transferred</td>
     </tr>
   </tbody>
@@ -10473,13 +10442,13 @@ api.Get("/clients/{id}/reports/" + type + "/popularfiles.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -10498,15 +10467,15 @@ api.Get("/clients/{id}/reports/" + type + "/popularfiles.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">status_code</code></td>
+      <td><code>status_code</code></td>
       <td>The HTTP status code for the response</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of responses with this status code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">definition</code></td>
+      <td><code>definition</code></td>
       <td>The definition for the status code</td>
     </tr>
   </tbody>
@@ -10526,10 +10495,6 @@ api.Get("/clients/{id}/reports/" + type + "/popularfiles.json");
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby81">
-    <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
-api.get('/reports/statuscodes.json'+reportType)</pre>
-<h3>Reseller API</h3>
 <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/clients/{id}/reports/statuscodes.json'+reportType)</pre>
@@ -10608,13 +10573,13 @@ api.Get("/clients/{id}/reports/statuscodes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -10633,15 +10598,15 @@ api.Get("/clients/{id}/reports/statuscodes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">status_code</code></td>
+      <td><code>status_code</code></td>
       <td>The HTTP status code for the response</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of responses with this status code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">definition</code></td>
+      <td><code>definition</code></td>
       <td>The definition for the status code</td>
     </tr>
   </tbody>
@@ -10739,13 +10704,13 @@ api.Get("/clients/{id}/reports/" + zoneID + "/statuscodes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -10764,15 +10729,15 @@ api.Get("/clients/{id}/reports/" + zoneID + "/statuscodes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">status_code</code></td>
+      <td><code>status_code</code></td>
       <td>The HTTP status code for the response</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of responses with this status code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">definition</code></td>
+      <td><code>definition</code></td>
       <td>The definition for the status code</td>
     </tr>
   </tbody>
@@ -10877,13 +10842,13 @@ api.Get("/clients/{id}/reports/" + zoneType + "/statuscodes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -10902,15 +10867,15 @@ api.Get("/clients/{id}/reports/" + zoneType + "/statuscodes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">status_code</code></td>
+      <td><code>status_code</code></td>
       <td>The HTTP status code for the response</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of responses with this status code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">definition</code></td>
+      <td><code>definition</code></td>
       <td>The definition for the status code</td>
     </tr>
   </tbody>
@@ -11017,13 +10982,13 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/statuscodes.json"
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -11042,11 +11007,11 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/statuscodes.json"
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">file_type</code></td>
+      <td><code>file_type</code></td>
       <td>The file type requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times a file of this type has been requested</td>
     </tr>
   </tbody>
@@ -11146,13 +11111,13 @@ api.Get("/clients/{id}/reports/filetypes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d e.g. 2012-01-01</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d e.g. 2012-01-01</td>
       <td>End date</td>
@@ -11171,11 +11136,11 @@ api.Get("/clients/{id}/reports/filetypes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">file_type</code></td>
+      <td><code>file_type</code></td>
       <td>The file type requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times a file of this type has been requested</td>
     </tr>
   </tbody>
@@ -11275,11 +11240,11 @@ api.Get("/clients/{id}/reports/" + zoneID + "/filetypes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">file_type</code></td>
+      <td><code>file_type</code></td>
       <td>The file type requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times a file of this type has been requested</td>
     </tr>
   </tbody>
@@ -11387,13 +11352,13 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filetypes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -11412,11 +11377,11 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filetypes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">file_type</code></td>
+      <td><code>file_type</code></td>
       <td>The file type requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of times a file of this type has been requested</td>
     </tr>
   </tbody>
@@ -11528,13 +11493,13 @@ ranges</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -11553,35 +11518,35 @@ ranges</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">le_10k_hits</code></td>
+      <td><code>le_10k_hits</code></td>
       <td>The number of requests for files &lt;= 10KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_50k_hits</code></td>
+      <td><code>le_50k_hits</code></td>
       <td>The number of requests for files &lt;= 50KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100k_hits</code></td>
+      <td><code>le_100k_hits</code></td>
       <td>The number of requests for files &lt;= 100KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_500k_hits</code></td>
+      <td><code>le_500k_hits</code></td>
       <td>The number of requests for files &lt;= 500KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_1m_hits</code></td>
+      <td><code>le_1m_hits</code></td>
       <td>The number of requests for files &lt;= 1MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_10m_hits</code></td>
+      <td><code>le_10m_hits</code></td>
       <td>The number of requests for files &lt;= 10MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100m_hits</code></td>
+      <td><code>le_100m_hits</code></td>
       <td>The number of requests for files &lt;= 100MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">gt_100m_hits</code></td>
+      <td><code>gt_100m_hits</code></td>
       <td>The number of requests for files &gt; 100MB</td>
     </tr>
   </tbody>
@@ -11684,13 +11649,13 @@ file size ranges</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d e.g. 2012-01-01</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d e.g. 2012-01-01</td>
       <td>End date</td>
@@ -11709,35 +11674,35 @@ file size ranges</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">le_10k_hits</code></td>
+      <td><code>le_10k_hits</code></td>
       <td>The number of requests for files &lt;= 10KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_50k_hits</code></td>
+      <td><code>le_50k_hits</code></td>
       <td>The number of requests for files &lt;= 50KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100k_hits</code></td>
+      <td><code>le_100k_hits</code></td>
       <td>The number of requests for files &lt;= 100KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_500k_hits</code></td>
+      <td><code>le_500k_hits</code></td>
       <td>The number of requests for files &lt;= 500KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_1m_hits</code></td>
+      <td><code>le_1m_hits</code></td>
       <td>The number of requests for files &lt;= 1MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_10m_hits</code></td>
+      <td><code>le_10m_hits</code></td>
       <td>The number of requests for files &lt;= 10MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100m_hits</code></td>
+      <td><code>le_100m_hits</code></td>
       <td>The number of requests for files &lt;= 100MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">gt_100m_hits</code></td>
+      <td><code>gt_100m_hits</code></td>
       <td>The number of requests for files &gt; 100MB</td>
     </tr>
   </tbody>
@@ -11845,13 +11810,13 @@ file size ranges</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d e.g. 2012-01-01</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d e.g. 2012-01-01</td>
       <td>End date</td>
@@ -11870,35 +11835,35 @@ file size ranges</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">le_10k_hits</code></td>
+      <td><code>le_10k_hits</code></td>
       <td>The number of requests for files &lt;= 10KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_50k_hits</code></td>
+      <td><code>le_50k_hits</code></td>
       <td>The number of requests for files &lt;= 50KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100k_hits</code></td>
+      <td><code>le_100k_hits</code></td>
       <td>The number of requests for files &lt;= 100KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_500k_hits</code></td>
+      <td><code>le_500k_hits</code></td>
       <td>The number of requests for files &lt;= 500KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_1m_hits</code></td>
+      <td><code>le_1m_hits</code></td>
       <td>The number of requests for files &lt;= 1MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_10m_hits</code></td>
+      <td><code>le_10m_hits</code></td>
       <td>The number of requests for files &lt;= 10MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100m_hits</code></td>
+      <td><code>le_100m_hits</code></td>
       <td>The number of requests for files &lt;= 100MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">gt_100m_hits</code></td>
+      <td><code>gt_100m_hits</code></td>
       <td>The number of requests for files &gt; 100MB</td>
     </tr>
   </tbody>
@@ -12006,13 +11971,13 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filesizes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -12031,35 +11996,35 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filesizes.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">le_10k_hits</code></td>
+      <td><code>le_10k_hits</code></td>
       <td>The number of requests for files &lt;= 10KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_50k_hits</code></td>
+      <td><code>le_50k_hits</code></td>
       <td>The number of requests for files &lt;= 50KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100k_hits</code></td>
+      <td><code>le_100k_hits</code></td>
       <td>The number of requests for files &lt;= 100KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_500k_hits</code></td>
+      <td><code>le_500k_hits</code></td>
       <td>The number of requests for files &lt;= 500KB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_1m_hits</code></td>
+      <td><code>le_1m_hits</code></td>
       <td>The number of requests for files &lt;= 1MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_10m_hits</code></td>
+      <td><code>le_10m_hits</code></td>
       <td>The number of requests for files &lt;= 10MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">le_100m_hits</code></td>
+      <td><code>le_100m_hits</code></td>
       <td>The number of requests for files &lt;= 100MB</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">gt_100m_hits</code></td>
+      <td><code>gt_100m_hits</code></td>
       <td>The number of requests for files &gt; 100MB</td>
     </tr>
   </tbody>
@@ -12176,13 +12141,13 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/filesizes.json" +
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -12201,19 +12166,19 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/filesizes.json" +
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The Zone ID for the top level directory</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">dir</code></td>
+      <td><code>dir</code></td>
       <td>The name of the directory</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of requests made to files within this directory</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred from within this directory</td>
     </tr>
   </tbody>
@@ -12309,13 +12274,13 @@ api.Get("/clients/{id}/reports/statsbydir.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">date_from</code></td>
+      <td><code>date_from</code></td>
       <td>now() - 1 month</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>Start date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date_to</code></td>
+      <td><code>date_to</code></td>
       <td>now()</td>
       <td>Y-m-d (e.g. 2012-01-01)</td>
       <td>End date</td>
@@ -12334,19 +12299,19 @@ api.Get("/clients/{id}/reports/statsbydir.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">bucket_id</code></td>
+      <td><code>bucket_id</code></td>
       <td>The Zone ID for the top level directory</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">dir</code></td>
+      <td><code>dir</code></td>
       <td>The name of the directory</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hit</code></td>
+      <td><code>hit</code></td>
       <td>The number of requests made to files within this directory</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">size</code></td>
+      <td><code>size</code></td>
       <td>The amount of bytes transferred from within this directory</td>
     </tr>
   </tbody>
@@ -12452,79 +12417,79 @@ api.Get("/clients/{id}/reports/" + zoneID + "/statsbydir.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">start</code></td>
+      <td><code>start</code></td>
       <td>now() - 1 hour</td>
       <td>ISO-8601 formatted date/time</td>
       <td>The start of the range for requests to pull.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">end</code></td>
+      <td><code>end</code></td>
       <td>now()</td>
       <td>ISO-8601 formatted date/time</td>
       <td>The end of the range for requests to pull</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zones</code></td>
+      <td><code>zones</code></td>
       <td>-</td>
       <td>CSV of ints</td>
       <td>The specific zones whose requests you want to pull. Separate multiple zone ids by comma</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">uri</code></td>
+      <td><code>uri</code></td>
       <td>-</td>
       <td>string</td>
       <td>Use this filter to view requests made for a specific resource (or group of resources). You can do a literal match or regular expression in this field (i.e. ‘/images/header.png’ or ‘regex:/images/’)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">status</code></td>
+      <td><code>status</code></td>
       <td>-</td>
       <td>CSV of ints</td>
       <td>The specific HTTP status code responses you want to pull. Separate multiple HTTP status codes by comma (i.e. 200,201,304)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>both</td>
       <td>enum(nossl, ssl, both)</td>
       <td>Use this filter to distinguish between SSL and non-SSL traffic (choose nossl, ssl or both)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">user_agent</code></td>
+      <td><code>user_agent</code></td>
       <td>-</td>
       <td>string</td>
       <td>Filter logs by specific user agents. You can do a literal match or regular expression in this field (i.e. ‘Python MaxCDN API Client’ or ‘regex:Chrome’)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">referer</code></td>
+      <td><code>referer</code></td>
       <td>-</td>
       <td>string</td>
       <td>Filter logs by a specific referer. You can do a literal match or regular expression in this field (i.e. ‘www.maxcdn.com’ or ‘regex:maxcdn.com’)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pop</code></td>
+      <td><code>pop</code></td>
       <td>-</td>
       <td>CSV of strings</td>
       <td>Filter logs by specific POPs (Points Of Presence), use comma separation for multiple POPs. Possible values: ams, atl, aus, chi, dal, den, fra, hkg, jfk, lax, lhr, mia, sea, sfo, sin, sjc, slc, tko, vir</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">query_string</code></td>
+      <td><code>query_string</code></td>
       <td>-</td>
       <td>string</td>
       <td>Filter logs by a specific query string. You can do a literal match or regular expression in this field (i.e. ‘width=600’ or ‘regex:width’)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">limit</code></td>
+      <td><code>limit</code></td>
       <td>100</td>
       <td>int</td>
       <td>How many records should be retrieved per page. Maximum is 1000</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">start_key</code></td>
+      <td><code>start_key</code></td>
       <td>-</td>
       <td>string</td>
       <td>String-based key for next page of records to return, for easy pagination or streaming. This key will be provided in the “next_page_key” from a response.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sort</code></td>
+      <td><code>sort</code></td>
       <td>recent</td>
       <td>enum(recent, oldest)</td>
       <td>Display records sorted by newest first or oldest first</td>
@@ -12543,123 +12508,123 @@ api.Get("/clients/{id}/reports/" + zoneID + "/statsbydir.json" + reportType);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">limit</code></td>
+      <td><code>limit</code></td>
       <td>The maximum number of records retrieved</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">page</code></td>
+      <td><code>page</code></td>
       <td>The current page of records retrieved</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">request_time</code></td>
+      <td><code>request_time</code></td>
       <td>Time in milliseconds for request to complete</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">next_page_key</code></td>
+      <td><code>next_page_key</code></td>
       <td>Number string that can be used to load the next page</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">records</code></td>
+      <td><code>records</code></td>
       <td>Total records displayed</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">bytes</code></td>
+      <td><code>bytes</code></td>
       <td>Total bytes of request</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_asn</code></td>
+      <td><code>client_asn</code></td>
       <td>Visitor’s “access network” (ISP)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_city</code></td>
+      <td><code>client_city</code></td>
       <td>Visitor’s city</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_continent</code></td>
+      <td><code>client_continent</code></td>
       <td>Visitor’s continent</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_country</code></td>
+      <td><code>client_country</code></td>
       <td>Visitor’s country</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_dma</code></td>
+      <td><code>client_dma</code></td>
       <td>Visitor’s “designated market area”</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_ip</code></td>
+      <td><code>client_ip</code></td>
       <td>Visitor’s public IP</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_latitude</code></td>
+      <td><code>client_latitude</code></td>
       <td>Visitor’s geographical latitude (roughly)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_longitude</code></td>
+      <td><code>client_longitude</code></td>
       <td>Visitor’s geographical longitude (roughly)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">client_state</code></td>
+      <td><code>client_state</code></td>
       <td>Visitor’s state</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">company_id</code></td>
+      <td><code>company_id</code></td>
       <td>Your company ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">cache_status</code></td>
+      <td><code>cache_status</code></td>
       <td>CDN status of the file (HIT, MISS)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hostname</code></td>
+      <td><code>hostname</code></td>
       <td>Domain name that was visited</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">method</code></td>
+      <td><code>method</code></td>
       <td>HTTP request method</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">origin_time</code></td>
+      <td><code>origin_time</code></td>
       <td>How long it takes MaxCDN to retrieve the file (if cache status was a MISS)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">pop</code></td>
+      <td><code>pop</code></td>
       <td>Point Of Presence that was hit (LAX, LHR, TYO, etc.)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">protocol</code></td>
+      <td><code>protocol</code></td>
       <td>HTTP protocol used</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">query_string</code></td>
+      <td><code>query_string</code></td>
       <td>Query string attached to a file (ex. ver=1.2)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">referer</code></td>
+      <td><code>referer</code></td>
       <td>Referring site</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">scheme</code></td>
+      <td><code>scheme</code></td>
       <td>HTTP or HTTPS</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">status</code></td>
+      <td><code>status</code></td>
       <td>HTTP status code (200, 404, 302, etc.)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">time</code></td>
+      <td><code>time</code></td>
       <td>UTC timestamp of the request</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">uri</code></td>
+      <td><code>uri</code></td>
       <td>File requested</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">user_agent</code></td>
+      <td><code>user_agent</code></td>
       <td>Text identifying the visitor’s browser</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zone_id</code></td>
+      <td><code>zone_id</code></td>
       <td>ID of the Push/Pull/VOD zone hit</td>
     </tr>
   </tbody>
@@ -12790,7 +12755,7 @@ api.Get("/clients/{id}/v3/reporting/logs.json?start=2014-01-30&amp;end=2014-01-3
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">location</code></td>
+      <td><code>location</code></td>
       <td>Possible values: sjc for San Jose, vir for Virginia</td>
     </tr>
   </tbody>
@@ -12807,15 +12772,15 @@ api.Get("/clients/{id}/v3/reporting/logs.json?start=2014-01-30&amp;end=2014-01-3
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The numerical ID of your request</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zone_id</code></td>
+      <td><code>zone_id</code></td>
       <td>Your Pull Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">reporting_code</code></td>
+      <td><code>reporting_code</code></td>
       <td>The chosen geographical location of the Origin Shield</td>
     </tr>
   </tbody>
@@ -12910,7 +12875,7 @@ api.Post("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json", "location=s
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">location</code></td>
+      <td><code>location</code></td>
       <td>Possible values: sjc for San Jose, vir for Virginia</td>
     </tr>
   </tbody>
@@ -12927,15 +12892,15 @@ api.Post("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json", "location=s
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">id</code></td>
+      <td><code>id</code></td>
       <td>The numerical ID of your request</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zone_id</code></td>
+      <td><code>zone_id</code></td>
       <td>Your Pull Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">reporting_code</code></td>
+      <td><code>reporting_code</code></td>
       <td>The chosen geographical location of the Origin Shield</td>
     </tr>
   </tbody>
@@ -13098,7 +13063,7 @@ api.Delete("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">certificates</code></td>
+      <td><code>certificates</code></td>
       <td>An array of certificates for the given user</td>
     </tr>
   </tbody>
@@ -13199,25 +13164,25 @@ api.Get("/clients/{id}/ssl.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl_crt</code></td>
+      <td><code>ssl_crt</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: text;</td>
       <td>Certificate</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_key</code></td>
+      <td><code>ssl_key</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: text</td>
       <td>Certificate Private Key</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_cabundle</code></td>
+      <td><code>ssl_cabundle</code></td>
       <td>-</td>
       <td>length: text</td>
       <td>Certificate Authority Intermediate Bundle</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>auto_{domain}<em>{expiration}</em>{update}</td>
       <td>length: 1-255</td>
       <td>Use descriptive name</td>
@@ -13236,7 +13201,7 @@ api.Get("/clients/{id}/ssl.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>The information about the certificate (see List Certificates response)</td>
     </tr>
   </tbody>
@@ -13356,7 +13321,7 @@ api.Post("/clients/{id}/ssl.json", dat="ssl_crt=" + cert + "&amp;ssl_key=" + key
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>The information about the certificate (see List Certificates response)</td>
     </tr>
   </tbody>
@@ -13460,31 +13425,31 @@ api.Get("/clients/{id}/ssl.json/" + zoneID);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl_crt</code></td>
+      <td><code>ssl_crt</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: text;</td>
       <td>Certificate</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_key</code></td>
+      <td><code>ssl_key</code></td>
       <td>-</td>
       <td><span class="label important">required</span><br />length: text</td>
       <td>Certificate Private Key</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">ssl_cabundle</code></td>
+      <td><code>ssl_cabundle</code></td>
       <td>-</td>
       <td>length: text</td>
       <td>Certificate Authority Intermediate Bundle</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>auto_{domain}<em>{expiration}</em>{update}</td>
       <td>length: 1-255</td>
       <td>Use descriptive name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">force</code></td>
+      <td><code>force</code></td>
       <td>0</td>
       <td>digit</td>
       <td>Override check to ensure that the domain has not changed</td>
@@ -13503,7 +13468,7 @@ api.Get("/clients/{id}/ssl.json/" + zoneID);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ssl</code></td>
+      <td><code>ssl</code></td>
       <td>The information about the certificate (see List Certificates response)</td>
     </tr>
   </tbody>
@@ -13692,59 +13657,59 @@ api.Delete("/clients/{id}/ssl.json/" + zoneId);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Name of the Company</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">companyalias</code></td>
+      <td><code>companyalias</code></td>
       <td>Alias of the Company</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">group_id</code></td>
+      <td><code>group_id</code></td>
       <td>Group ID Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">address1</code></td>
+      <td><code>address1</code></td>
       <td>Address, first line</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">city</code></td>
+      <td><code>city</code></td>
       <td>City</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">state</code></td>
+      <td><code>state</code></td>
       <td>State</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">postcode</code></td>
+      <td><code>postcode</code></td>
       <td>City Post/ZIP Code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">country</code></td>
+      <td><code>country</code></td>
       <td>Country</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code>password</code></td>
       <td>Password</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">active</code></td>
+      <td><code>active</code></td>
       <td>Whether or not the client is active</td>
     </tr>
   </tbody>
@@ -13860,7 +13825,7 @@ api.Get("/clients.json");
 <tr> 
 	<td>account_owner</td> 
 	<td> - </td> 
-	<td><span class="label important">required</span><br /> A JSON Encoded Array including 'email', 'firstname', 'lastname', 'password', 'phone', 'order_status (active)</td> 
+	<td><span class="label important">required</span><br /> A JSON Encoded Array including 'email', 'firstname', 'lastname', 'password', 'phone'</td> 
 	<td>
 		Account Owner Information:
 		<br />
@@ -13871,7 +13836,6 @@ api.Get("/clients.json");
 			<li>'lastname' - Account Owner's Last Name</li>
 			<li>'password' - Account's Password</li>
 			<li>'phone' - Account Owner's Phone Number</li>
-			<li>'order_status' - Status of the Account (hard coded to 'active')</li>
 		</ul>
 
 	</td> 
@@ -13894,12 +13858,6 @@ api.Get("/clients.json");
 	<td><span class="label important">required</span><br /></td> 
 	<td>Hard Code this to not generate an invoice with the parameter '0'</td> 
 </tr>
-<tr> 
-	<td>order_status</td> 
-	<td>'active'</td> 
-	<td><span class="label important">required</span><br /></td> 
-	<td>Hard Code this to active with 'Active'</td> 
-</tr>
 
 </table>
 
@@ -13914,59 +13872,59 @@ api.Get("/clients.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">email</code></td>
+      <td><code>email</code></td>
       <td>Email Address</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">firstname</code></td>
+      <td><code>firstname</code></td>
       <td>First Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">lastname</code></td>
+      <td><code>lastname</code></td>
       <td>Last Name</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">phone</code></td>
+      <td><code>phone</code></td>
       <td>Phone Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">name</code></td>
+      <td><code>name</code></td>
       <td>Name of the Company</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">alias</code></td>
+      <td><code>alias</code></td>
       <td>Alias of the Company</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">group_id</code></td>
+      <td><code>group_id</code></td>
       <td>Group ID Number</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">address1</code></td>
+      <td><code>address1</code></td>
       <td>Address, first line</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">city</code></td>
+      <td><code>city</code></td>
       <td>City</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">state</code></td>
+      <td><code>state</code></td>
       <td>State</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">postcode</code></td>
+      <td><code>postcode</code></td>
       <td>City Post/ZIP Code</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">country</code></td>
+      <td><code>country</code></td>
       <td>Country</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code>password</code></td>
       <td>Password</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">active</code></td>
+      <td><code>active</code></td>
       <td>Whether or not the client is active</td>
     </tr>
   </tbody>
@@ -13992,8 +13950,7 @@ account_owner={
             "lastname"=&gt;"Last Name",
             "email"=&gt;"E-Mail",
             "phone"=&gt;"1234567890", 
-            "password"=&gt;"password", 
-            "order_status"=&gt;"Active"
+            "password"=&gt;"password"
         }
         
         address={
@@ -14023,8 +13980,7 @@ account_owner={
             'lastname':'Last Name',
             'email':'E-Mail',
             'phone':'1234567890', 
-            'password':'password', 
-            'order_status':'Active'
+            'password':'password' 
         }
         
         address = {
@@ -14054,8 +14010,7 @@ account_owner={
             "lastname"=&gt;"Last Name",
             "email"=&gt;"E-Mail",
             "phone"=&gt;"1234567890", 
-            "password"=&gt;"password", 
-            "order_status"=&gt;"Active"
+            "password"=&gt;"password"
         }
         
         my @address = {
@@ -14086,8 +14041,7 @@ $account_owner = array(
             'lastname'  =&gt; 'doe',
             'email'     =&gt; 'johndoe@gmail.com',
             'phone'     =&gt; '555-555-5555',
-            'password'  =&gt; 'testpass',
-            'order_status'    =&gt; 'active'
+            'password'  =&gt; 'testpass'
         );
         
         
@@ -14118,8 +14072,7 @@ var account_owner = [
         lastname:'Last Name',
         email:'E-Mail',
         phone:'1234567890', 
-        password:'password', 
-        order_status:'active'
+        password:'password'
     ];
     
     var address = [ 
@@ -14152,8 +14105,7 @@ var account_owner = [
         lastname:'Last Name',
         email:'E-Mail',
         phone:'1234567890', 
-        password:'password', 
-        order_status:'active'
+        password:'password'
     ];
     var jsonSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             string account_owner = jsonSerializer.Serialize(account_owner);
@@ -14242,27 +14194,27 @@ api.Post("/clients.json", params);
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">valid_until</code></td>
+      <td><code>valid_until</code></td>
       <td>Date bandwidth expires</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">credit</code></td>
+      <td><code>credit</code></td>
       <td>Bandwidth Credit</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">still_valid</code></td>
+      <td><code>still_valid</code></td>
       <td>Extended Bandwidth Life Validation</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">base</code></td>
+      <td><code>base</code></td>
       <td>Base Bandwidth Ammount</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">expiration</code></td>
+      <td><code>expiration</code></td>
       <td>Bandwidth Expiration</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">purchased</code></td>
+      <td><code>purchased</code></td>
       <td>Date Bandwidth Was Purchased</td>
     </tr>
   </tbody>
@@ -14348,27 +14300,27 @@ api.Get("/clients/{id}/bandwidth.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">zone_id</code></td>
+      <td><code>zone_id</code></td>
       <td>Zone ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">storage</code></td>
+      <td><code>storage</code></td>
       <td>Amount of Storage Used</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">storage_id </code></td>
+      <td><code>storage_id </code></td>
       <td>Storage ID</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zone_type</code></td>
+      <td><code>zone_type</code></td>
       <td>Type of Zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">zone_name</code></td>
+      <td><code>zone_name</code></td>
       <td>Name of Zone</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">last_updated</code></td>
+      <td><code>last_updated</code></td>
       <td>Date Last Updated</td>
     </tr>
   </tbody>
@@ -14488,7 +14440,7 @@ api.Get("/clients/{id}/storage.json");
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">storage</code></td>
+      <td><code>storage</code></td>
       <td>Storage Amount</td>
     </tr>
   </tbody>

@@ -31,6 +31,7 @@ Parameter | Description |
   <li><a href="#php1" data-toggle='tab'>PHP</a></li>
   <li><a href="#node1" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp1" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java1" data-toggle='tab'>Java</a></li>
   <li><a href="#response1" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -63,6 +64,12 @@ function callback(err, response) {
 api.Get("/account.json");
 </pre>
   </div>
+  <div class="tab-pane" id="java1">
+  <pre>
+MaxCDNObject response = api.get("/account.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
+</div>
   <div class="tab-pane" id="response1">
     <pre>
 {
@@ -129,6 +136,7 @@ Parameter | Description |
   <li><a href="#php2" data-toggle='tab'>PHP</a></li>
   <li><a href="#node2" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp2" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java2" data-toggle='tab'>Java</a></li>
   <li><a href="#response2" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -166,6 +174,13 @@ function callback(err, response) {
 api.Put("/account.json", "name=UserName");
 </pre>
   </div>
+  <div class="tab-pane" id="java2">
+  <pre>
+MaxCDNRequest data = MaxCDN.newRequest("firstname", "Jane"); 
+MaxCDNObject response = api.put("/account.json", data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
+</div>
   <div class="tab-pane" id="response2">
     <pre>
 {
@@ -226,6 +241,7 @@ Parameter | Description |
   <li><a href="#php3" data-toggle='tab'>PHP</a></li>
   <li><a href="#node3" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp3" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java3" data-toggle='tab'>Java</a></li>
   <li><a href="#response3" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -258,6 +274,12 @@ function callback(err, response) {
   <div class="tab-pane" id="csharp3">
   <pre>
 api.Get("/account.json/address");
+</pre>
+</div>
+<div class="tab-pane" id="java3">
+  <pre>
+MaxCDNObject response = api.get("/account.json/address");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
 </pre>
 </div>
   <div class="tab-pane" id="response3">
@@ -328,6 +350,7 @@ Parameter | Description |
   <li><a href="#php4" data-toggle='tab'>PHP</a></li>
   <li><a href="#node4" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp4" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java4" data-toggle='tab'>Java</a></li>
   <li><a href="#response4" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -364,7 +387,14 @@ function callback(err, response) {
   <pre>
 api.Put("/account.json/address", "street1=1234 Main Street");
 </pre>
-  </div> 
+  </div>
+  <div class="tab-pane" id="java4">
+  <pre>
+MaxCDNRequest data = MaxCDN.newRequest("street1", "Main St 12").append("street2", "Lake St 13"); 
+MaxCDNObject response = api.put("/account.json/address", data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
+</div> 
   <div class="tab-pane" id="response4">
     <pre>
 {
