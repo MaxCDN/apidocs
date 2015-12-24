@@ -70,7 +70,7 @@ function callback(err, response) {
 <pre>
 api.Get("/clients.json");
 </pre>
-  </div> 
+  </div>
   <div class="tab-pane" id="response205-0">
     <pre>
 {
@@ -111,34 +111,28 @@ Creates a new client on the specified account
 <table>
 <th>Parameter</th><th>Default Value</th><th>Validation</th><th>Description</th>
 
-<tr> 
-	<td>name</td> 
-	<td> - </td> 
-	<td><span class="label important">required</span><br />length: 1-255 chars</td> 
-	<td>Company Name</td> 
+<tr>
+	<td>name</td>
+	<td> - </td>
+	<td><span class="label important">required</span><br />length: 1-255 chars</td>
+	<td>Company Name</td>
 </tr>
-<tr> 
-	<td>alias</td> 
-	<td> - </td> 
-	<td><span class="label important">required</span><br />length: 1-45 chars</td> 
-	<td>Company Alias</td> 
+<tr>
+	<td>alias</td>
+	<td> - </td>
+	<td><span class="label important">required</span><br />length: 1-45 chars</td>
+	<td>Company Alias</td>
 </tr>
-<tr> 
-	<td>group_id</td> 
-	<td> - </td> 
-	<td><span class="label important">required</span><br /> length: 1-11 chars</td> 
-	<td>Group ID Number</td> 
-</tr>
-<tr> 
-	<td>package_id</td> 
-	<td> - </td> 
-	<td><span class="label important">required</span><br /> length: 1-11 chars</td> 
+<tr>
+	<td>package_id</td>
+	<td> - </td>
+	<td><span class="label important">required</span><br /> length: 1-11 chars</td>
 	<td>Package ID Number (Contact your sales representative to determine your Package ID Number)</td>
 </tr>
-<tr> 
-	<td>account_owner</td> 
-	<td> - </td> 
-	<td><span class="label important">required</span><br /> A JSON Encoded Array including 'email', 'firstname', 'lastname', 'password', 'phone'</td> 
+<tr>
+	<td>account_owner</td>
+	<td> - </td>
+	<td><span class="label important">required</span><br /> A JSON Encoded Array including 'email', 'firstname', 'lastname', 'password', 'phone'</td>
 	<td>
 		Account Owner Information:
 		<br/>
@@ -151,25 +145,25 @@ Creates a new client on the specified account
 			<li>'phone' - Account Owner's Phone Number</li>
 		</ul>
 
-	</td> 
+	</td>
 </tr>
-<tr> 
-	<td>address</td> 
-	<td> - </td> 
-	<td><span class="label important">required</span><br /> A JSON Encoded Array including street1, street2 (not required), City, State, ZIP / Postal Code, Country</td> 
-	<td>Account Owner Address</td> 
+<tr>
+	<td>address</td>
+	<td> - </td>
+	<td><span class="label important">required</span><br /> A JSON Encoded Array including street1, street2 (not required), City, State, ZIP / Postal Code, Country</td>
+	<td>Account Owner Address</td>
 </tr>
-<tr> 
-	<td>paymentmethod</td> 
-	<td>'mailin'</td> 
-	<td><span class="label important">required</span><br /></td> 
-	<td>Payment Method "Hard code this to Mail-In Payment"</td> 
+<tr>
+	<td>paymentmethod</td>
+	<td>'mailin'</td>
+	<td><span class="label important">required</span><br /></td>
+	<td>Payment Method "Hard code this to Mail-In Payment"</td>
 </tr>
-<tr> 
-	<td>generateinvoice</td> 
-	<td>'0'</td> 
-	<td><span class="label important">required</span><br /></td> 
-	<td>Hard Code this to not generate an invoice with the parameter '0'</td> 
+<tr>
+	<td>generateinvoice</td>
+	<td>'0'</td>
+	<td><span class="label important">required</span><br /></td>
+	<td>Hard Code this to not generate an invoice with the parameter '0'</td>
 </tr>
 
 </table>
@@ -212,29 +206,28 @@ account_owner={
             "firstname"=>"First Name",
             "lastname"=>"Last Name",
             "email"=>"E-Mail",
-            "phone"=>"1234567890", 
+            "phone"=>"1234567890",
             "password"=>"password"
         }
-        
+
         address={
             "street1"=>"Street One",
             "street2"=>"Not Required",
             "city"=>"City Name",
-            "state"=>"State", 
-            "zip"=>"ZIP / Postal Code", 
+            "state"=>"State",
+            "zip"=>"ZIP / Postal Code",
             "country"=>"US (or country name)"
         }
-        
+
         params={
             "name"=>"Company Name",
             "alias"=>"Company Alias",
-            "group_id"=>"Group ID",
-            "package_id"=>"x", 
-            "account_owner"=>JSON.encode(account_owner), 
-            "address"=>JSON.encode(address),
+            "package_id"=>"x",
+            "account_owner"=>account_owner.to_json,
+            "address"=>address.to_json,
             "paymentmethod"=>"mailin"
         }
-        
+
         api.post('/clients.json',params)</pre>
   </div>
   <div class="tab-pane" id="python205">
@@ -242,29 +235,29 @@ account_owner={
             'firstname':'First Name',
             'lastname':'Last Name',
             'email':'E-Mail',
-            'phone':'1234567890', 
-            'password':'password' 
+            'phone':'1234567890',
+            'password':'password'
         }
-        
+
         address = {
             'street1':'Street One',
             'street2':'Not Required',
             'city':'City Name',
-            'state':'State', 
-            'zip':'ZIP / Postal Code', 
+            'state':'State',
+            'zip':'ZIP / Postal Code',
             'country':'US (or country name)'
         }
-        
+
         params = {
             'name":'Company Name',
             'alias':'Company Alias',
             'group_id':'Group ID',
-            'package_id':'x', 
-            'account_owner':json.dumps(account_owner), 
+            'package_id':'x',
+            'account_owner':json.dumps(account_owner),
             'address':json.dumps(address),
             'paymentmethod':'mailin'
         }
-        
+
         api.post('/clients.json',data=params)</pre>
   </div>
     <div class="tab-pane" id="perl205">
@@ -272,29 +265,29 @@ account_owner={
             "firstname"=>"First Name",
             "lastname"=>"Last Name",
             "email"=>"E-Mail",
-            "phone"=>"1234567890", 
+            "phone"=>"1234567890",
             "password"=>"password"
         }
-        
+
         my @address = {
             "street1"=>"Street One",
             "street2"=>"Not Required",
             "city"=>"City Name",
-            "state"=>"State", 
-            "zip"=>"ZIP / Postal Code", 
+            "state"=>"State",
+            "zip"=>"ZIP / Postal Code",
             "country"=>"US (or country name)"
         }
-        
+
         my @params = {
             "name"=>"Company Name",
             "alias"=>"Company Alias",
             "group_id"=>"Group ID",
-            "package_id"=>"x", 
-            "account_owner"=>encode_json(\@account_owner), 
+            "package_id"=>"x",
+            "account_owner"=>encode_json(\@account_owner),
             "address"=>encode_json(\@address),
             "paymentmethod"=>"mailin"
         }
-    
+
     my $data = $api->post("/clients.json", @params);</pre>
   </div>
   <div class="tab-pane" id="php205">
@@ -306,8 +299,8 @@ $account_owner = array(
             'phone'     => '555-555-5555',
             'password'  => 'testpass'
         );
-        
-        
+
+
         $address = array(
             'street1' => '123 Fake St.',
             'city'    => 'Los Angeles',
@@ -315,7 +308,7 @@ $account_owner = array(
             'zip'     => '90000',
             'country' => 'US'
         );
-        
+
         $params = array(
             'name'          => 'New Account Name',
             'companyalias'         => 'newaccountalias',
@@ -325,28 +318,28 @@ $account_owner = array(
             'address'       => json_encode($address)
             'paymentmethod' => 'mailin'
         );
-        
+
         $response = $api->post("/clients.json", $params);</pre>
   </div>
   <div class="tab-pane" id="node205">
   <pre>
-var account_owner = [ 
+var account_owner = [
         firstname:'First Name',
         lastname:'Last Name',
         email:'E-Mail',
-        phone:'1234567890', 
+        phone:'1234567890',
         password:'password'
     ];
-    
-    var address = [ 
+
+    var address = [
         street1: '123 Fake St.',
         city: 'Los Angeles',
         state: 'California',
         zip: '90000',
         country: 'US'
     ];
-    
-    var params = [ 
+
+    var params = [
         name => 'New Account Name',
         companyalias => 'newaccountalias',
         group_id => '27',
@@ -355,7 +348,7 @@ var account_owner = [
         address => json_encode(address),
         paymentmethod => 'mailin'
     ];
-    
+
     api.post('/clients.json' + params, callback)
     function callback(err, response) {
       if (err) return console.log(err)
@@ -363,16 +356,16 @@ var account_owner = [
     }</pre>
   </div>
     <div class="tab-pane" id="csharp205">
-  <pre>var account_owner = [ 
+  <pre>var account_owner = [
         firstname:'First Name',
         lastname:'Last Name',
         email:'E-Mail',
-        phone:'1234567890', 
+        phone:'1234567890',
         password:'password'
     ];
     var jsonSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             string account_owner = jsonSerializer.Serialize(account_owner);
-    var address = [ 
+    var address = [
         street1: '123 Fake St.',
         city: 'Los Angeles',
         state: 'California',
@@ -381,7 +374,7 @@ var account_owner = [
     ];
     var jsonSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             string address = jsonSerializer.Serialize(address);
-    var params = [ 
+    var params = [
         name => 'New Account Name',
         companyalias => 'newaccountalias',
         group_id => '27',
@@ -502,13 +495,13 @@ api.Get("/clients/{id}/bandwidth.json");
 {
     "code": 200,
     "data": {
-        "account": {total": "1", 
+        "account": {total": "1",
         "summary": [{
-            "valid_until": "Jun 07, 2011", 
-            "credit": "10", 
-            "still_valid": false, 
-            "base": 1000, 
-            "expiration": false, 
+            "valid_until": "Jun 07, 2011",
+            "credit": "10",
+            "still_valid": false,
+            "base": 1000,
+            "expiration": false,
             "purchased": "Jun 07, 2010", "debit": 11107173020
             }]
         }
@@ -583,48 +576,48 @@ api.Get("/clients/{id}/storage.json");
     "code": 200, "data": {
         "stats": [
         {
-            "last_updated": "2014-11-13 18:39:19", 
-            "zone_id": "{zoneid}", 
-            "storage_used": "1234", 
-            "storage_id": "1", 
-            "zone_type": "1", 
-            "zone_name": "zonename"}, 
+            "last_updated": "2014-11-13 18:39:19",
+            "zone_id": "{zoneid}",
+            "storage_used": "1234",
+            "storage_id": "1",
+            "zone_type": "1",
+            "zone_name": "zonename"},
         {
-            "last_updated": "2014-11-13 16:00:50", 
-            "zone_id": "zoneid", 
-            "storage_used": "5678", 
-            "storage_id": "2", 
-            "zone_type": "2", 
+            "last_updated": "2014-11-13 16:00:50",
+            "zone_id": "zoneid",
+            "storage_used": "5678",
+            "storage_id": "2",
+            "zone_type": "2",
             "zone_name": "zonename2"
-        }, 
+        },
         {
-            "last_updated": "2014-11-13 16:00:08", 
-            "zone_id": "zoneid", 
-            "storage_used": "9012", 
-            "storage_id": "3", 
-            "zone_type": "3", 
+            "last_updated": "2014-11-13 16:00:08",
+            "zone_id": "zoneid",
+            "storage_used": "9012",
+            "storage_id": "3",
+            "zone_type": "3",
             "zone_name": "zonename3"
-        }, 
+        },
         {
-            "last_updated": "2014-11-13 18:39:19", 
-            "zone_id": "zoneid", 
-            "storage_used": "3456", 
-            "storage_id": "4", 
-            "zone_type": "4", 
+            "last_updated": "2014-11-13 18:39:19",
+            "zone_id": "zoneid",
+            "storage_used": "3456",
+            "storage_id": "4",
+            "zone_type": "4",
             "zone_name": "zonename4"
-        }, 
+        },
         {
-            "last_updated": "2014-11-13 16:00:50", 
-            "zone_id": "zoneid", 
-            "storage_used": "7890", 
-            "storage_id": "5", 
-            "zone_type": "5", 
+            "last_updated": "2014-11-13 16:00:50",
+            "zone_id": "zoneid",
+            "storage_used": "7890",
+            "storage_id": "5",
+            "zone_type": "5",
             "zone_name": "zonename"}
-        ], 
-    "page_size": "50", 
-    "pages": 1, 
-    "current_page_size": 1, 
-    "total": "1", 
+        ],
+    "page_size": "50",
+    "pages": 1,
+    "current_page_size": 1,
+    "total": "1",
     "page": 1
     }
 }</pre>
@@ -689,7 +682,7 @@ api.Get("/clients/{id}/storage/used.json");
   <div class="tab-pane" id="response202">
     <pre>
 {
-"code": 200, 
+"code": 200,
 "data": {
     "storage": "1535815680"
     }
