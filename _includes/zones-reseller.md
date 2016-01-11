@@ -57,9 +57,8 @@ api.Get("/clients/{id}/zones/pull.json");
   </div>
     <div class="tab-pane" id="java10">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response10">
     <pre>
@@ -153,9 +152,8 @@ api.Get("/clients/{id}/zones.json/summary");
   </div>
     <div class="tab-pane" id="java11">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones.json/summary");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones.json/summary");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response11">
     <pre>
@@ -234,9 +232,9 @@ api.Get("/clients/{id}/zones.json/count");
   </div>
     <div class="tab-pane" id="java12">
    <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones.json/count");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones.json/count");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response12">
     <pre>
@@ -345,9 +343,9 @@ api.Post("/clients/{id}/zones/pull.json");
   </div>
     <div class="tab-pane" id="java13">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones/pull.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones/pull.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response13">
     <pre>
@@ -585,8 +583,7 @@ api.Post("/clients/{id}/zones/pull.json", "url=" + url + "&name=" + ZoneName);
   <pre>
 MaxCDNRequest data = MaxCDN.newRequest("name", "cdn").append("url", "http://domain.com");
 MaxCDNObject response = api.post("/clients/{id}/zones/pull.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response14">
     <pre>
@@ -701,11 +698,10 @@ api.get('/clients/{id}/zones/pull.json/count', function(err, response) {
 api.Get("/clients/{id}/zones/pull.json/count");
 </pre>
   </div>
-    <div class="tab-pane" id="java15">
+<div class="tab-pane" id="java15">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones/pull.json/count");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones/pull.json/count");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response15">
     <pre>
@@ -823,8 +819,7 @@ api.Get("/clients/{id}/zones/pull.json/" + id);
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/zones/pull.json/"+zoneId);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response16">
     <pre>
@@ -1022,8 +1017,7 @@ api.Put("/clients/{id}/zones/pull.json/" + zoneID, prop + "=" + val);
 String zoneId = "100200";
 MaxCDNRequest data = MaxCDN.newRequest("label", "New label"); 
 MaxCDNObject response = api.put("/clients/{id}/zones/pull.json/"+zoneId, data); 
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response17">
     <pre>
@@ -1145,8 +1139,7 @@ api.Post("/clients/{id}/zones/pull/" + id + "/flex.json");
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.post("/clients/{id}/zones/pull/"+zoneId+"/flex.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response17-1">
     <pre>
@@ -1226,8 +1219,7 @@ api.Delete("/clients/{id}/zones/pull/" + id + "/flex.json");
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.delete("/clients/{id}/zones/pull/"+zoneId+"/flex.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response17-2">
     <pre>
@@ -1307,8 +1299,7 @@ api.Delete("/clients/{id}/zones/pull.json/" + id);
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/"+zoneId);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response18">
     <pre>
@@ -1385,10 +1376,9 @@ api.Put("/clients/{id}/zones/pull/" + id + "/enable.json");
   </div>
     <div class="tab-pane" id="java19">
  <pre>
-	 String zoneId = "100200";
-	 MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/enable.json"); 
-	 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/enable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response19">
     <pre>
@@ -1468,8 +1458,7 @@ api.Put("/clients/{id}/zones/pull/" + id + "/disable.json");
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/disable.json"); 
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response20">
     <pre>
@@ -1640,23 +1629,23 @@ switch (ptype){
   </div>
     <div class="tab-pane" id="java21">
   <pre>
-  //Purge zone
-  String zoneId = "100200";
-  MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/cache"+zoneId);        
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+ //Purge zone
+ String zoneId = "100200";
+ MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/cache"+zoneId);        
+ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
 
-  //Purge single file
-  String zoneId = "100200";
-  String[] file = {"/file.txt"};
-  MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/"+zoneId+"/cache?file="+file[0]);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+ //Purge single file
+ String zoneId = "100200";
+ String[] file = {"/file.txt"};
+ MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/"+zoneId+"/cache?file="+file[0]);
+ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
                
-  //Purge more files at once
-  String zoneId = "100200";
-  String[] file = {"/file_1.txt", "/file_2.txt"};
-  MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/"+zoneId+"/cache?file="+file[0]+"&file="+file[1]);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+ //Purge more files at once
+ String zoneId = "100200";
+ String[] file = {"/file_1.txt", "/file_2.txt"};
+ MaxCDNObject response = api.delete("/clients/{id}/zones/pull.json/"+zoneId+"/cache?file="+file[0]+"&file="+file[1]);
+ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+ </pre>
     </div>
   <div class="tab-pane" id="response21">
     <pre>
@@ -1744,10 +1733,9 @@ Console.Write(api.Get("/clients/{id}/zones/pull/" + zoneID + "/customdomains.jso
   </div>
     <div class="tab-pane" id="java22">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response22">
     <pre>
@@ -1860,8 +1848,7 @@ api.Post("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json", dat="cust
 String zoneId = "100200";
 MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com");
 MaxCDNObject response = api.post("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response23">
     <pre>
@@ -1962,11 +1949,11 @@ api.Get("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json/" + domainId
   </div>
     <div class="tab-pane" id="java24">
   <pre>
-  String zoneId = "100200";
-  String domainId = "287431";
-  MaxCDNObject response = api.get("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json/"+domainId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String domainId = "287431";
+MaxCDNObject response = api.get("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response24">
     <pre>
@@ -2080,12 +2067,12 @@ api.Put("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json/" + domainId
   </div>
     <div class="tab-pane" id="java25">
   <pre>
-  String zoneId = "100200";
-  String domainId = "287790";
-  MaxCDNRequest data = MaxCDN.newRequest("custom_domain","cdn456.domain.com"); 
-  MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json/"+domainId, data); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String domainId = "287790";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain","cdn456.domain.com"); 
+MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json/"+domainId, data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response25">
     <pre>
@@ -2181,8 +2168,7 @@ api.Delete("/clients/{id}/zones/pull/" + zoneID + "/customdomains.json/" + domai
 String zoneId = "100200";
 String domainId = "287431";
 MaxCDNObject response = api.delete("/clients/{id}/zones/pull/"+zoneId+"/customdomains.json/"+domainId);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response26">
     <pre>
@@ -2262,9 +2248,8 @@ api.Get("/clients/{id}/zones/push.json");
   </div>
     <div class="tab-pane" id="java27">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones/push.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones/push.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response27">
     <pre>
@@ -2420,8 +2405,7 @@ api.Post("/clients/{id}/zones/push.json", "name=" + ZoneName + "&password=" + pa
   <pre>
 MaxCDNRequest data = MaxCDN.newRequest("name", "newpush").append("password", "pass1234");
 MaxCDNObject response = api.post("/clients/{id}/zones/push.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response28">
     <pre>
@@ -2518,8 +2502,7 @@ api.Get("/clients/{id}/zones/push.json/" + id);
     <div class="tab-pane" id="java29">
   <pre>
 MaxCDNObject response = api.get("/clients/{id}/zones/push.json/count");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response29">
     <pre>
@@ -2609,10 +2592,10 @@ api.Get("/clients/{id}/zones/push.json/" + zoneID);
   </div>
     <div class="tab-pane" id="java30">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/zones/push.json/"+zoneId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/zones/push.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response30">
     <pre>
@@ -2742,11 +2725,11 @@ api.Put("/clients/{id}/zones/push.json/" + zoneID, prop + "=" + val);
   </div>
     <div class="tab-pane" id="java31">
   <pre>
-  String zoneId = "100200";
-  MaxCDNRequest data = MaxCDN.newRequest("label", "newpush");
-  MaxCDNObject response = api.put("/clients/{id}/zones/push.json/"+zoneId, data); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("label", "newpush");
+MaxCDNObject response = api.put("/clients/{id}/zones/push.json/"+zoneId, data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response31">
     <pre>
@@ -2841,10 +2824,10 @@ api.Delete("/clients/{id}/zones/push.json/" + id);
   </div>
     <div class="tab-pane" id="java32">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.delete("/clients/{id}/zones/push.json/"+zoneId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.delete("/clients/{id}/zones/push.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
     </div>
   <div class="tab-pane" id="response32">
     <pre>
@@ -2915,10 +2898,9 @@ api.Put("/clients/{id}/zones/push/" + id + "/enable.json");
   </div>
     <div class="tab-pane" id="java33">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.put("/clients/{id}/zones/push/"+zoneId+"/enable.json"); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.put("/clients/{id}/zones/push/"+zoneId+"/enable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response33">
     <pre>
@@ -2990,10 +2972,9 @@ api.Put("/clients/{id}/zones/push/" + id + "/disable.json");
   </div>
     <div class="tab-pane" id="java34">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.put("/clients/{id}/zones/push/"+zoneId+"/disable.json"); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.put("/clients/{id}/zones/push/"+zoneId+"/disable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response34">
     <pre>
@@ -3075,10 +3056,9 @@ Console.Write(api.Get("/clients/{id}/zones/push/" + zoneID + "/customdomains.jso
   </div>
     <div class="tab-pane" id="java35">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/zones/push/"+zoneId+"/customdomains.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/zones/push/"+zoneId+"/customdomains.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response35">
     <pre>
@@ -3182,11 +3162,10 @@ api.Post("/clients/{id}/zones/push/" + zoneID + "/customdomains.json", dat="cust
   </div>
     <div class="tab-pane" id="java36">
   <pre>
-  String zoneId = "100200";
-  MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com");
-  MaxCDNObject response = api.post("/clients/{id}/zones/push/"+zoneId+"/customdomains.json", data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com");
+MaxCDNObject response = api.post("/clients/{id}/zones/push/"+zoneId+"/customdomains.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response36">
     <pre>
@@ -3282,11 +3261,10 @@ api.Get("/clients/{id}/zones/push/" + zoneID + "/customdomains.json/" + domainId
   </div>
     <div class="tab-pane" id="java37">
   <pre>
-  String zoneId = "100200";
-  String domainId = "287434";
-  MaxCDNObject response = api.get("/clients/{id}/zones/push/"+zoneId+"/customdomains.json/"+domainId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String domainId = "287434";
+MaxCDNObject response = api.get("/clients/{id}/zones/push/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response37">
     <pre>
@@ -3394,12 +3372,11 @@ api.Put("/clients/{id}/zones/push/" + zoneID + "/customdomains.json/" + domainId
   </div>
     <div class="tab-pane" id="java38">
   <pre>
-  String zoneId = "100200";
-  String domainId = "288862";
-  MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdn3.newdomain.com");
-  MaxCDNObject response = api.put("/clients/{id}/zones/push/"+zoneId+"/customdomains.json/"+domainId, data);  
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String domainId = "288862";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdn3.newdomain.com");
+MaxCDNObject response = api.put("/clients/{id}/zones/push/"+zoneId+"/customdomains.json/"+domainId, data);  
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response38">
     <pre>
@@ -3487,12 +3464,11 @@ api.Delete("/clients/{id}/zones/push/" + zoneID + "/customdomains.json/" + domai
   </div>
     <div class="tab-pane" id="java39">
   <pre>
-  String zoneId = "100200";
-  String domainId = "287434";
-  MaxCDNObject response = api.delete("/clients/{id}/zones/push/"+zoneId+"/customdomains.json/"+domainId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
-    </div>
+String zoneId = "100200";
+String domainId = "287434";
+MaxCDNObject response = api.delete("/clients/{id}/zones/push/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response39">
     <pre>
 {
@@ -3568,9 +3544,8 @@ api.Get("/clients/{id}/zones/vod.json");
   </div>
     <div class="tab-pane" id="java40">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones/vod.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones/vod.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response40">
     <pre>
@@ -3713,10 +3688,9 @@ api.Post("/clients/{id}/zones/vod.json", "name=" + ZoneName + "&password=" + pas
   </div>
     <div class="tab-pane" id="java41">
   <pre>
-  MaxCDNRequest data = MaxCDN.newRequest("name", "newvod").append("password", "pass1234");
-  MaxCDNObject response = api.post("/clients/{id}/zones/vod.json", data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNRequest data = MaxCDN.newRequest("name", "newvod").append("password", "pass1234");
+MaxCDNObject response = api.post("/clients/{id}/zones/vod.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response41">
     <pre>
@@ -3807,9 +3781,8 @@ api.Get("/clients/{id}/zones/vod.json/count");
   </div>
     <div class="tab-pane" id="java42">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/zones/vod.json/count");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/zones/vod.json/count");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response42">
     <pre>
@@ -3895,10 +3868,9 @@ api.Get("/clients/{id}/zones/vod.json/" + id);
   </div>
     <div class="tab-pane" id="java43">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/zones/vod.json/"+zoneId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/zones/vod.json/"+zoneId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response43">
     <pre>
@@ -4020,11 +3992,10 @@ api.Put("/clients/{id}/zones/vod.json/" + zoneID, prop + "=" + val);
   </div>
     <div class="tab-pane" id="java44">
   <pre>
-  String zoneId = "100200";
-  MaxCDNRequest data = MaxCDN.newRequest("label", "cdn3.newdomain.com");
-  MaxCDNObject response = api.put("/clients/{id}/zones/vod.json/"+zoneId, data);  
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("label", "cdn3.newdomain.com");
+MaxCDNObject response = api.put("/clients/{id}/zones/vod.json/"+zoneId, data);  
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response44">
     <pre>
@@ -4119,8 +4090,7 @@ api.Delete("/clients/{id}/zones/vod.json/" + id);
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.delete("/clients/{id}/zones/vod.json/"+zoneId);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response45">
     <pre>
@@ -4191,10 +4161,9 @@ api.Put("/clients/{id}/zones/vod/" + id + "/enable.json");
   </div>
     <div class="tab-pane" id="java46">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.put("/clients/{id}/zones/vod/"+zoneId+"/enable.json"); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.put("/clients/{id}/zones/vod/"+zoneId+"/enable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response46">
     <pre>
@@ -4265,10 +4234,9 @@ api.Put("/clients/{id}/zones/vod/" + id + "/disable.json");
   </div>
     <div class="tab-pane" id="java47">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.put("/clients/{id}/zones/vod/"+zoneId+"/disable.json"); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.put("/clients/{id}/zones/vod/"+zoneId+"/disable.json"); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response47">
     <pre>
@@ -4350,10 +4318,9 @@ Console.Write(api.Get("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json
   </div>
     <div class="tab-pane" id="java48">
   <pre>
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response48">
     <pre>
@@ -4459,11 +4426,10 @@ api.Post("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json", dat="custo
   </div>
     <div class="tab-pane" id="java49">
   <pre>
-  String zoneId = "100200";
-  MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com").append("type", "vod-rtmp");
-  MaxCDNObject response = api.post("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json", data));
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdnn.domain.com").append("type", "vod-rtmp");
+MaxCDNObject response = api.post("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json", data));
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response49">
     <pre>
@@ -4558,11 +4524,10 @@ api.Get("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json/" + domainId)
   </div>
     <div class="tab-pane" id="java50">
   <pre>
-  String zoneId = "100200";
-  String domainId = "287438";
-  MaxCDNObject response = api.get("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json/"+domainId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String domainId = "287438";
+MaxCDNObject response = api.get("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response50">
     <pre>
@@ -4669,12 +4634,11 @@ api.Put("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json/" + domainId,
   </div>
     <div class="tab-pane" id="java51">
   <pre>
-  String zoneId = "100200";
-  String domainId = "288865";
-  MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdn5.newdomain.com");
-  MaxCDNObject response = api.put("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json/"+domainId, data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String domainId = "288865";
+MaxCDNRequest data = MaxCDN.newRequest("custom_domain", "cdn5.newdomain.com");
+MaxCDNObject response = api.put("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json/"+domainId, data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response51">
     <pre>
@@ -4762,12 +4726,11 @@ api.Delete("/clients/{id}/zones/vod/" + zoneID + "/customdomains.json/" + domain
   </div>
     <div class="tab-pane" id="java52">
   <pre>
-  String zoneId = "100200";
-  String domainId = "287434";
-  MaxCDNObject response = api.delete("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json/"+domainId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
-    </div>
+String zoneId = "100200";
+String domainId = "287434";
+MaxCDNObject response = api.delete("/clients/{id}/zones/vod/"+zoneId+"/customdomains.json/"+domainId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
   <div class="tab-pane" id="response52">
     <pre>
 {
@@ -4847,11 +4810,10 @@ api.Get("/clients/{id}/zones/" + type + "/" + zoneID + "/ssl.json");
   </div>
     <div class="tab-pane" id="java61">
   <pre>
-  String zoneId = "100200";
-  String zoneType = "pull";
-  MaxCDNObject response = api.get("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNObject response = api.get("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response61">
     <pre>
@@ -4992,14 +4954,13 @@ api.Post("/clients/{id}/zones/" + type + "/" + zoneId + "/ssl.json", dat="ssl_cr
   </div>
       <div class="tab-pane" id="java62">
   <pre>
-  String zoneId = "100200";
-  String zoneType = "pull";
-  String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
-  String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
-  MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
-  MaxCDNObject response = api.post("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json", data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
+MaxCDNObject response = api.post("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response62">
     <pre>
@@ -5142,8 +5103,7 @@ String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n---
 String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
 MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
 MaxCDNObject response = api.put("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response63">
     <pre>
@@ -5235,11 +5195,10 @@ api.Delete("/clients/{id}/zones/" + type + "/" + zoneID + "/ssl.json");
   </div>
     <div class="tab-pane" id="java64">
   <pre>
-  String zoneId = "100200";
-  String zoneType = "pull";
-  MaxCDNObject response = api.delete("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNObject response = api.delete("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/ssl.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response64">
     <pre>
@@ -5374,11 +5333,10 @@ api.Get("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json");
   </div>
     <div class="tab-pane" id="java65">
   <pre>
- String zoneId = "100200";
- String zoneType = "pull";
- MaxCDNObject response = api.get("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json");
- Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNObject response = api.get("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response65">
     <pre>
@@ -5476,12 +5434,11 @@ api.Post("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json", "serve
   </div>
     <div class="tab-pane" id="java66">
   <pre>
-  String zoneId = "100200";
-  String zoneType = "pull";
-  MaxCDNRequest data = MaxCDN.newRequest("server", "http://cdn.somedomain.com").append("port", "80");
-  MaxCDNObject response = api.post("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json", data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+MaxCDNRequest data = MaxCDN.newRequest("server", "http://cdn.somedomain.com").append("port", "80");
+MaxCDNObject response = api.post("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response66">
     <pre>
@@ -5586,13 +5543,12 @@ api.Put("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json/" + upstr
   </div>
     <div class="tab-pane" id="java67">
   <pre>
-  String zoneId = "100200";
-  String zoneType = "pull";
-  String upstreamId = "123";
-  MaxCDNRequest data = MaxCDN.newRequest("upstream_id", "9203").append("server", "http://cdn.somedomain.com").append("port", "80");
-  MaxCDNObject response = api.put("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json"+upstreamId, data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+String upstreamId = "123";
+MaxCDNRequest data = MaxCDN.newRequest("upstream_id", "9203").append("server", "http://cdn.somedomain.com").append("port", "80");
+MaxCDNObject response = api.put("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json"+upstreamId, data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response67">
     <pre>
@@ -5676,12 +5632,11 @@ api.Delete("/clients/{id}/zones/" + type + "/" + zoneID + "/upstream.json/" + up
   </div>
     <div class="tab-pane" id="java68">
   <pre>
-  String zoneId = "100200";
-  String zoneType = "pull";
-  String upstreamId = "123";
-  MaxCDNObject response = api.delete("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json/"+upstreamId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String zoneType = "pull";
+String upstreamId = "123";
+MaxCDNObject response = api.delete("/clients/{id}/zones/"+zoneType+"/"+zoneId+"/upstream.json/"+upstreamId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response68">
     <pre>

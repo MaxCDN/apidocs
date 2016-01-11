@@ -108,8 +108,7 @@ api.Get("/clients/{id}/v3/reporting/logs.json?start=2014-01-30&end=2014-01-31&st
   </div>
  <div class="tab-pane" id="java101">
   <pre>
-Console.log(api.get("/clients/{id}/v3/reporting/logs.json?start=2015-12-01&end=2015-12-02&status=200"));
-  </pre>
+Console.log(api.get("/clients/{id}/v3/reporting/logs.json?start=2015-12-01&end=2015-12-02&status=200"));</pre>
     </div>
   <div class="tab-pane" id="response101">
     <pre>

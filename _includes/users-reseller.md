@@ -72,8 +72,7 @@ api.Get("/clients/{id}/users.json");
     <div class="tab-pane" id="java5">
   <pre>
   MaxCDNObject response = api.get("/clients/{id}/users.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response5">
     <pre>
@@ -249,8 +248,7 @@ api.Post("/clients/{id}/users.json", "firstname=" + fname + "&lastname=" + lname
   <pre>
   MaxCDNRequest data = MaxCDN.newRequest("email", "test@gmail.com").append("password", "pass1234").append("firstname", "Jane").append("lastname", "Smith");
   MaxCDNObject response = api.post("/clients/{id}/users.json", data);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response6">
     <pre>
@@ -360,8 +358,7 @@ api.Get("/clients/{id}/users.json/" + id);
   <pre>
 String userId = "12345";
 MaxCDNObject response = api.get("/clients/{id}/users.json"+userId);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response7">
     <pre>
@@ -487,8 +484,7 @@ api.Put("/clients/{id}/users.json/" + uid + "/", prop + "=" + val);
 String userId = "12345";
 MaxCDNRequest data = MaxCDN.newRequest("firstname", "Jane"); 
 MaxCDNObject response = api.put("/clients/{id}/users.json/"+userId, data); 
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
  </div>
  <div class="tab-pane" id="response8">
     <pre>
@@ -584,8 +580,7 @@ api.Delete("/clients/{id}/users.json/" + id);
   <pre>
   String userId = "12345";
   MaxCDNObject response = api.delete("//clients/{id}/users.json/"+userId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response9">
     <pre>

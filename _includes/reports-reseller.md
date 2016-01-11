@@ -80,10 +80,9 @@ api.Get("/clients/{id}/reports/stats.json" + reportType);
   </div>
     <div class="tab-pane" id="java69">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/stats.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/stats.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response69">
     <pre>
@@ -182,10 +181,9 @@ api.Get("/clients/{id}/reports/statsbyzone.json" + reportType);
   </div>
     <div class="tab-pane" id="java100">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/statsbyzone.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/statsbyzone.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response100">
     <pre>
@@ -323,11 +321,10 @@ api.Get("/clients/{id}/reports/" + zoneID + "/stats.json" + reportType);
   </div>
     <div class="tab-pane" id="java70">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/stats.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/stats.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response70">
     <pre>
@@ -414,9 +411,8 @@ api.Get("/clients/{id}/reports/nodes.json");
   </div>
     <div class="tab-pane" id="java71">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response71">
     <pre>
@@ -559,10 +555,9 @@ api.Get("/clients/{id}/reports/" + zoneID + "/nodes.json");
   </div>
     <div class="tab-pane" id="java72">
   <pre>
-  String nodeId = "2";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+nodeId+"/nodes.json"));
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String nodeId = "2";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+nodeId+"/nodes.json"));
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response72">
     <pre>
@@ -709,10 +704,9 @@ api.Get("/clients/{id}/reports/nodes.json/stats" + reportType);
   </div>
     <div class="tab-pane" id="java73">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json/stats"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response73">
     <pre>
@@ -911,11 +905,10 @@ api.Get("/clients/{id}/reports/" + zoneID + "/nodes.json/stats" + reportType);
   </div>
     <div class="tab-pane" id="java74">
   <pre>
-  String nodeId = "2";
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+nodeId+"/nodes.json/stats"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String nodeId = "2";
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/"+nodeId+"/nodes.json/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response74">
     <pre>
@@ -1003,10 +996,9 @@ api.Get("/clients/{id}/reports/nodes.json/" + nodeID);
   </div>
     <div class="tab-pane" id="java75">
   <pre>
-  String nodeId = "2";
-  MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json/"+nodeId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String nodeId = "2";
+MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json/"+nodeId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response75">
     <pre>
@@ -1100,11 +1092,10 @@ api.Get("/clients/{id}/reports/" + zoneID + "/nodes.json/" + nodeID);
   </div>
     <div class="tab-pane" id="java76">
   <pre>
-  String zoneId = "100200";
-  String nodeId = "2";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/nodes.json/"+nodeId);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String nodeId = "2";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/nodes.json/"+nodeId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response76">
     <pre>
@@ -1211,11 +1202,10 @@ api.Get("/clients/{id}/reports/nodes.json/" + nodeID + "/stats" + reportType);
   </div>
     <div class="tab-pane" id="java77">
   <pre>
-  String nodeId = "2";
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json/"+nodeId+"/stats"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String nodeId = "2";
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/nodes.json/"+nodeId+"/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response77">
     <pre>
@@ -1332,12 +1322,11 @@ api.Get("/clients/{id}/reports/" + zoneID + "/nodes.json/" + nodeID + "/stats" +
   </div>
     <div class="tab-pane" id="java78">
   <pre>
-  String zoneId = "100200";
-  String nodeId = "2";
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/nodes.json/"+nodeId+"/stats"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneId = "100200";
+String nodeId = "2";
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/nodes.json/"+nodeId+"/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response78">
     <pre>
@@ -1432,9 +1421,8 @@ api.Get("/clients/{id}/reports/popularfiles.json");
   </div>
     <div class="tab-pane" id="java79">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/reports/popularfiles.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/reports/popularfiles.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response79">
     <pre>
@@ -1538,10 +1526,9 @@ api.Get("/clients/{id}/reports/" + type + "/popularfiles.json");
   </div>
     <div class="tab-pane" id="java80">
   <pre>
-  String zoneType = "pull";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/popularfiles.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String zoneType = "pull";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/popularfiles.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response80">
     <pre>
@@ -1641,10 +1628,9 @@ api.Get("/clients/{id}/reports/statuscodes.json" + reportType);
   </div>
     <div class="tab-pane" id="java81">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/statuscodes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response81">
     <pre>
@@ -1753,8 +1739,7 @@ api.Get("/clients/{id}/reports/" + zoneID + "/statuscodes.json" + reportType);
 String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/statuscodes.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response82">
     <pre>
@@ -1855,11 +1840,10 @@ api.Get("/clients/{id}/reports/" + zoneType + "/statuscodes.json" + reportType);
   </div>
     <div class="tab-pane" id="java83">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  String zoneType = "pull";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/statuscodes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response83">
     <pre>
@@ -1975,12 +1959,11 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/statuscodes.json"
   </div>
     <div class="tab-pane" id="java84">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  String zoneType = "pull";
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/"+zoneId+"/statuscodes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/"+zoneId+"/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response84">
     <pre>
@@ -2074,10 +2057,9 @@ api.Get("/clients/{id}/reports/filetypes.json" + reportType);
   </div>
     <div class="tab-pane" id="java85">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  MaxCDNObject response = api.get("/clients/{id}/reports/filetypes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/clients/{id}/reports/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response85">
     <pre>
@@ -2185,11 +2167,10 @@ api.Get("/clients/{id}/reports/" + zoneID + "/filetypes.json" + reportType);
   </div>
     <div class="tab-pane" id="java86">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/filetypes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response86">
     <pre>
@@ -2284,11 +2265,10 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filetypes.json" + reportType);
   </div>
     <div class="tab-pane" id="java87">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  String zoneType = "pull";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/filetypes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response87">
     <pre>
@@ -2405,12 +2385,11 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/filetypes.json" +
   </div>
     <div class="tab-pane" id="java88">
   <pre>
-  String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
-  String zoneType = "pull";
-  String zoneId = "100200";
-  MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/"+zoneId+"/filetypes.json"+reportType);
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+String zoneId = "100200";
+MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/"+zoneId+"/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response88">
     <pre>
@@ -2519,8 +2498,7 @@ api.Get("/clients/{id}/reports/filesizes.json/" + reportType);
   <pre>
 String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
 MaxCDNObject response = api.get("/clients/{id}/reports/filesizes.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response89">
     <pre>
@@ -2638,8 +2616,7 @@ api.Get("/clients/{id}/reports/" + zoneID + "/filesizes.json" + reportType);
 String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/filesizes.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response90">
     <pre>
@@ -2757,8 +2734,7 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filesizes.json" + reportType);
 String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
 String zoneType = "pull";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/filesizes.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response91">
     <pre>
@@ -2886,8 +2862,7 @@ String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" o
 String zoneType = "pull";
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/"+zoneId+"/filesizes.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response92">
     <pre>
@@ -2995,8 +2970,7 @@ api.Get("/clients/{id}/reports/statsbydir.json" + reportType);
   <pre>
 String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
 MaxCDNObject response = api.get("/clients/{id}/reports/statsbydir.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response93">
     <pre>
@@ -3107,8 +3081,7 @@ api.Get("/clients/{id}/reports/" + zoneID + "/statsbydir.json" + reportType);
 String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/statsbydir.json"+reportType);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response94">
     <pre>

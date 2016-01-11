@@ -62,8 +62,7 @@ api.Get("/clients/{id}/ssl.json");
     <div class="tab-pane" id="java106">
   <pre>
 MaxCDNObject response = api.get("/clients/{id}/ssl.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response106">
     <pre>
@@ -194,8 +193,7 @@ String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----EN
 String name = "Our *.example.com wildcard";
 MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key").append("name", "name");
 MaxCDNObject response = api.post("/clients/{id}/ssl.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response107">
     <pre>
@@ -298,8 +296,7 @@ api.Get("/clients/{id}/ssl.json/" + zoneID);
   <pre>
 String sslId = "1234";
 MaxCDNObject response = api.get("/clients/{id}/ssl.json/"+sslId));
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response108">
     <pre>
@@ -430,8 +427,7 @@ String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n---
 String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
 MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
 MaxCDNObject response = api.put("/clients/{id}/ssl.json"+sslId, data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
   </div>
 </div>
 
@@ -500,8 +496,7 @@ api.Delete("/clients/{id}/ssl.json/" + zoneId);
   <pre>
 String sslId = "1234";
 MaxCDNObject response = api.delete("/clients/{id}/ssl.json/"+sslId));
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response110">
     <pre>

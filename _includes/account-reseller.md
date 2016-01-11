@@ -178,8 +178,7 @@ api.Put("/clients/{id}/account.json", "name=UserName");
   <pre>
   MaxCDNRequest data = MaxCDN.newRequest("firstname", "Jane"); 
   MaxCDNObject response = api.put("/clients/{id}/account.json", data); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response2">
     <pre>
@@ -280,8 +279,7 @@ api.Get("/clients/{id}/account.json/address");
 <pre>
 String clientId = "222555";
 MaxCDNObject response = api.get("/clients/{id}/clients/"+clientId+"/account.json/address");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-</pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
 </div>
   <div class="tab-pane" id="response3">
     <pre>
@@ -391,10 +389,9 @@ api.Put("/clients/{id}/account.json/address", "street1=1234 Main Street");
   </div>
     <div class="tab-pane" id="java4">
   <pre>
-  MaxCDNRequest data = MaxCDN.newRequest("street1", "Main St 12").append("street2", "Lake St 13"); 
-  MaxCDNObject response = api.put("/clients/{id}/clients/"+clientId+"/account.json/address", data); 
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNRequest data = MaxCDN.newRequest("street1", "Main St 12").append("street2", "Lake St 13"); 
+MaxCDNObject response = api.put("/clients/{id}/clients/"+clientId+"/account.json/address", data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div> 
   <div class="tab-pane" id="response4">
     <pre>

@@ -75,8 +75,7 @@ api.Get("/clients.json");
     <div class="tab-pane" id="java205-0">
   <pre>
 MaxCDNObject response = api.get('/clients.json');
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response205-0">
     <pre>
@@ -445,10 +444,7 @@ api.Post("/clients.json", params);
 
 				MaxCDNRequest data = MaxCDN.newRequest("name", "Company Name").append("alias", "Company alias").append("group_id", "Group ID").append("package_id", "x").append("account_owner", "saccount_owner").append("address", "saddress").append("paymentmethod", "mailin");
 				MaxCDNObject response = api.post("/clients.json", data);
-				Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-				
-				
-  </pre>
+				Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response205">
     <pre>{"code"=>201,
@@ -557,8 +553,7 @@ api.Get("/clients/{id}/bandwidth.json");
       <div class="tab-pane" id="java200">
     <pre>
 MaxCDNObject response = api.get("/clients/{id}/bandwidth.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response200">
     <pre>
@@ -644,8 +639,7 @@ api.Get("/clients/{id}/storage.json");
    <div class="tab-pane" id="java201">
     <pre>
 MaxCDNObject response = api.get("/clients/{id}/storage.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response201">
     <pre>
@@ -760,8 +754,7 @@ api.Get("/clients/{id}/storage/used.json");
       <div class="tab-pane" id="java202">
     <pre>
 MaxCDNObject response = api.get("/clients/{id}/storage/used.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response202">
     <pre>

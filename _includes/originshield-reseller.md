@@ -81,8 +81,7 @@ api.Post("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json", "location=s
 String zoneId = "100200";
 MaxCDNRequest data = MaxCDN.newRequest("location", "sjc");
 MaxCDNObject response = api.post("/clients/{id}/zones/pull/"+zoneId+"/zoneshields.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response102">
     <pre>
@@ -182,8 +181,7 @@ api.Put("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json", "location=sj
 String zoneId = "100200";
 MaxCDNRequest data = MaxCDN.newRequest("location", "vir");
 MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/zoneshields.json", data);
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response103">
     <pre>
@@ -265,8 +263,7 @@ api.Delete("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json");
   <pre>
 String zoneId = "100200";
 MaxCDNObject response = api.delete("/clients/{id}/zones/pull/"+zoneId+"/zoneshields.json");
-Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response104">
     <pre>
