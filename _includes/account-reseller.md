@@ -31,7 +31,7 @@ Parameter | Description |
   <li><a href="#php1" data-toggle='tab'>PHP</a></li>
   <li><a href="#node1" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp1" data-toggle='tab'>.NET/C#</a></li>
-  <li><a href="#java" data-toggle='tab'>Java</a></li>
+  <li><a href="#java1" data-toggle='tab'>Java</a></li>
   <li><a href="#response1" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -66,9 +66,8 @@ api.Get("/clients/{id}/account.json");
   </div>
       <div class="tab-pane" id="java1">
   <pre>
-  MaxCDNObject response = api.get("/clients/{id}/account.json");
-  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
-  </pre>
+MaxCDNObject response = api.get("/clients/{id}/account.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
   <div class="tab-pane" id="response1">
     <pre>
