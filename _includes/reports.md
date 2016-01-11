@@ -38,6 +38,7 @@ Parameter | Description |
   <li><a href="#php69" data-toggle='tab'>PHP</a></li>
   <li><a href="#node69" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp69" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java69" data-toggle='tab'>Java</a></li>
   <li><a href="#response69" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -83,7 +84,12 @@ api.Get("/reports/stats.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response69">
+  <div class="tab-pane" id="java69">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/stats.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response69">
     <pre>
 {
     "code": 200,
@@ -139,6 +145,7 @@ Parameter | Description |
   <li><a href="#php100" data-toggle='tab'>PHP</a></li>
   <li><a href="#node100" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp100" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java100" data-toggle='tab'>Java</a></li>
   <li><a href="#response100" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -184,7 +191,13 @@ api.Get("/reports/statsbyzone.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response100">
+  
+  <div class="tab-pane" id="java100">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/statsbyzone.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response100">
     <pre>
 {
   "code": 200,
@@ -272,6 +285,7 @@ Parameter | Description |
   <li><a href="#php70" data-toggle='tab'>PHP</a></li>
   <li><a href="#node70" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp70" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java70" data-toggle='tab'>Java</a></li>
   <li><a href="#response70" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -324,7 +338,13 @@ api.Get("/reports/" + zoneID + "/stats.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response70">
+  <div class="tab-pane" id="java70">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneId+"/stats.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response70">
     <pre>
 {
     "code": 200,
@@ -376,6 +396,7 @@ Parameter | Description |
   <li><a href="#php71" data-toggle='tab'>PHP</a></li>
   <li><a href="#node71" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp71" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java71" data-toggle='tab'>Java</a></li>
   <li><a href="#response71" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -413,7 +434,12 @@ api.Get("/reports/nodes.json");
 </pre>
 
   </div>
-  <div class="tab-pane" id="response71">
+  <div class="tab-pane" id="java71">
+  <pre>MaxCDNObject response = api.get("/reports/nodes.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response71">
     <pre>
 {
     "code": 200,
@@ -513,6 +539,7 @@ Parameter | Description |
   <li><a href="#php72" data-toggle='tab'>PHP</a></li>
   <li><a href="#node72" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp72" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java72" data-toggle='tab'>Java</a></li>
   <li><a href="#response72" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -558,7 +585,13 @@ api.Get("/reports/" + zoneID + "/nodes.json");
 </pre>
 
   </div>
-  <div class="tab-pane" id="response72">
+  <div class="tab-pane" id="java72">
+  <pre>String nodeId = "2";
+MaxCDNObject response = api.get("/reports/"+nodeId+"/nodes.json"));
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response72">
     <pre>
 {
     "code": 200,
@@ -662,6 +695,7 @@ Parameter | Description |
   <li><a href="#php73" data-toggle='tab'>PHP</a></li>
   <li><a href="#node73" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp73" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java73" data-toggle='tab'>Java</a></li>
   <li><a href="#response73" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -707,6 +741,12 @@ api.Get("/reports/nodes.json/stats" + reportType);
 </pre>
 
   </div>
+  <div class="tab-pane" id="java73">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/nodes.json/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
   <div class="tab-pane" id="response73">
     <pre>
 {
@@ -858,6 +898,7 @@ Parameter | Description |
   <li><a href="#php74" data-toggle='tab'>PHP</a></li>
   <li><a href="#node74" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp74" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java74" data-toggle='tab'>Java</a></li>
   <li><a href="#response74" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -908,7 +949,14 @@ api.Get("/reports/" + zoneID + "/nodes.json/stats" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response74">
+  <div class="tab-pane" id="java74">
+  <pre>String nodeId = "2";
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/"+nodeId+"/nodes.json/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response74">
     <pre>
 {
     "code": 200,
@@ -953,6 +1001,7 @@ Parameter | Description |
   <li><a href="#php75" data-toggle='tab'>PHP</a></li>
   <li><a href="#node75" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp75" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java75" data-toggle='tab'>Java</a></li>
   <li><a href="#response75" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -998,7 +1047,13 @@ api.Get("/reports/nodes.json/" + nodeID);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response75">
+  <div class="tab-pane" id="java75">
+  <pre>String nodeId = "2";
+MaxCDNObject response = api.get("/reports/nodes.json/"+nodeId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response75">
     <pre>
 {
     "code": 200,
@@ -1042,6 +1097,7 @@ Parameter | Description |
   <li><a href="#php76" data-toggle='tab'>PHP</a></li>
   <li><a href="#node76" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp76" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java76" data-toggle='tab'>Java</a></li>
   <li><a href="#response76" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1094,7 +1150,14 @@ api.Get("/reports/" + zoneID + "/nodes.json/" + nodeID);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response76">
+  <div class="tab-pane" id="java76">
+  <pre>String zoneId = "100200";
+String nodeId = "2";
+MaxCDNObject response = api.get("/reports/"+zoneId+"/nodes.json/"+nodeId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response76">
     <pre>
 {
     "code": 200,
@@ -1151,6 +1214,7 @@ Parameter | Description |
   <li><a href="#php77" data-toggle='tab'>PHP</a></li>
   <li><a href="#node77" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp77" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java77" data-toggle='tab'>Java</a></li>
   <li><a href="#response77" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1203,7 +1267,14 @@ api.Get("/reports/nodes.json/" + nodeID + "/stats" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response77">
+  <div class="tab-pane" id="java77">
+  <pre>String nodeId = "2";
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/nodes.json/"+nodeId+"/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response77">
     <pre>
 {
     "code": 200,
@@ -1263,6 +1334,7 @@ Parameter | Description |
   <li><a href="#php78" data-toggle='tab'>PHP</a></li>
   <li><a href="#node78" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp78" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java78" data-toggle='tab'>Java</a></li>
   <li><a href="#response78" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1322,7 +1394,15 @@ api.Get("/reports/" + zoneID + "/nodes.json/" + nodeID + "/stats" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response78">
+  <div class="tab-pane" id="java78">
+  <pre>String zoneId = "100200";
+String nodeId = "2";
+String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/"+zoneId+"/nodes.json/"+nodeId+"/stats"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response78">
     <pre>
 {
     "code": 200,
@@ -1382,6 +1462,7 @@ Parameter | Description |
   <li><a href="#php79" data-toggle='tab'>PHP</a></li>
   <li><a href="#node79" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp79" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java79" data-toggle='tab'>Java</a></li>
   <li><a href="#response79" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1419,7 +1500,11 @@ api.Get("/reports/popularfiles.json");
 </pre>
 
   </div>
-  <div class="tab-pane" id="response79">
+  <div class="tab-pane" id="java79">
+  <pre>MaxCDNObject response = api.get("/reports/popularfiles.json");
+	  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response79">
     <pre>
 {
     "code": 200,
@@ -1480,6 +1565,7 @@ Parameter | Description |
   <li><a href="#php80" data-toggle='tab'>PHP</a></li>
   <li><a href="#node80" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp80" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java80" data-toggle='tab'>Java</a></li>
   <li><a href="#response80" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1525,7 +1611,13 @@ api.Get("/reports/" + type + "/popularfiles.json");
 </pre>
 
   </div>
-  <div class="tab-pane" id="response80">
+  <div class="tab-pane" id="java80">
+  <pre>String zoneType = "pull";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/popularfiles.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response80">
     <pre>
 {
     "code": 200,
@@ -1582,6 +1674,7 @@ Parameter | Description |
   <li><a href="#php81" data-toggle='tab'>PHP</a></li>
   <li><a href="#node81" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp81" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java81" data-toggle='tab'>Java</a></li>
   <li><a href="#response81" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1627,7 +1720,13 @@ api.Get("/reports/statuscodes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response81">
+  <div class="tab-pane" id="java81">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+
+</div>
+<div class="tab-pane" id="response81">
     <pre>
 {
     "code": 200,
@@ -1684,6 +1783,7 @@ Parameter | Description |
   <li><a href="#php82" data-toggle='tab'>PHP</a></li>
   <li><a href="#node82" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp82" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java82" data-toggle='tab'>Java</a></li>
   <li><a href="#response82" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1736,7 +1836,13 @@ api.Get("/reports/" + zoneID + "/statuscodes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response82">
+  <div class="tab-pane" id="java82">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneId+"/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response82">
     <pre>
 {
     "code": 200,
@@ -1787,6 +1893,7 @@ Parameter | Description |
   <li><a href="#php83" data-toggle='tab'>PHP</a></li>
   <li><a href="#node83" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp83" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java83" data-toggle='tab'>Java</a></li>
   <li><a href="#response83" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1839,7 +1946,13 @@ api.Get("/reports/" + zoneType + "/statuscodes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response83">
+  <div class="tab-pane" id="java83">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response83">
     <pre>
 {
     "code": 200,
@@ -1898,6 +2011,7 @@ Parameter | Description |
   <li><a href="#php84" data-toggle='tab'>PHP</a></li>
   <li><a href="#node84" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp84" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java84" data-toggle='tab'>Java</a></li>
   <li><a href="#response84" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -1957,7 +2071,14 @@ api.Get("/reports/" + zoneType + "/" + zoneID + "/statuscodes.json" + reportType
 </pre>
 
   </div>
-  <div class="tab-pane" id="response84">
+  <div class="tab-pane" id="java84">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/"+zoneId+"/statuscodes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response84">
     <pre>
 {
     "code": 200,
@@ -2008,6 +2129,7 @@ Parameter | Description |
   <li><a href="#php85" data-toggle='tab'>PHP</a></li>
   <li><a href="#node85" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp85" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java85" data-toggle='tab'>Java</a></li>
   <li><a href="#response85" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2053,7 +2175,12 @@ api.Get("/reports/filetypes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response85">
+  <div class="tab-pane" id="java85">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response85">
     <pre>
 {
     "code": 200,
@@ -2111,6 +2238,7 @@ Parameter | Description |
   <li><a href="#php86" data-toggle='tab'>PHP</a></li>
   <li><a href="#node86" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp86" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java86" data-toggle='tab'>Java</a></li>
   <li><a href="#response86" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2163,7 +2291,13 @@ api.Get("/reports/" + zoneID + "/filetypes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response86">
+  <div class="tab-pane" id="java86">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneId+"/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response86">
     <pre>
 {
     "code": 200,
@@ -2208,6 +2342,7 @@ Parameter | Description |
   <li><a href="#php87" data-toggle='tab'>PHP</a></li>
   <li><a href="#node87" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp87" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java87" data-toggle='tab'>Java</a></li>
   <li><a href="#response87" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2260,7 +2395,13 @@ api.Get("/reports/" + zoneType + "/filetypes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response87">
+  <div class="tab-pane" id="csharp87">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response87">
     <pre>
 {
     "code": 200,
@@ -2320,6 +2461,7 @@ Parameter | Description |
   <li><a href="#php88" data-toggle='tab'>PHP</a></li>
   <li><a href="#node88" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp88" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java88" data-toggle='tab'>Java</a></li>
   <li><a href="#response88" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2379,7 +2521,14 @@ api.Get("/reports/" + zoneType + "/" + zoneID + "/filetypes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response88">
+  <div class="tab-pane" id="java88">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/"+zoneId+"/filetypes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response88">
     <pre>
 {
     "code": 200,
@@ -2441,6 +2590,7 @@ Parameter | Description |
   <li><a href="#php89" data-toggle='tab'>PHP</a></li>
   <li><a href="#node89" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp89" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java89" data-toggle='tab'>Java</a></li>
   <li><a href="#response89" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2484,7 +2634,12 @@ api.Get("/reports/filesizes.json/" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response89">
+  <div class="tab-pane" id="java89">
+	<pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/filesizes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response89">
     <pre>
 {
     "code": 200,
@@ -2550,6 +2705,7 @@ Parameter | Description |
   <li><a href="#php90" data-toggle='tab'>PHP</a></li>
   <li><a href="#node90" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp90" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java90" data-toggle='tab'>Java</a></li>
   <li><a href="#response90" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2601,7 +2757,13 @@ api.Get("/reports/" + zoneID + "/filesizes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response90">
+  <div class="tab-pane" id="java90">
+	<pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneId+"/filesizes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response90">
     <pre>
 {
     "code": 200,
@@ -2667,6 +2829,7 @@ Parameter | Description |
   <li><a href="#php91" data-toggle='tab'>PHP</a></li>
   <li><a href="#node91" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp91" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java91" data-toggle='tab'>Java</a></li>
   <li><a href="#response91" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2718,7 +2881,13 @@ api.Get("/reports/" + zoneType + "/filesizes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response91">
+  <div class="tab-pane" id="java91">
+	<pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/filesizes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response91">
     <pre>
 {
     "code": 200,
@@ -2785,6 +2954,7 @@ Parameter | Description |
   <li><a href="#php92" data-toggle='tab'>PHP</a></li>
   <li><a href="#node92" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp92" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java92" data-toggle='tab'>Java</a></li>
   <li><a href="#response92" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2844,7 +3014,14 @@ api.Get("/reports/" + zoneType + "/" + zoneID + "/filesizes.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response92">
+  <div class="tab-pane" id="csharp92">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneType = "pull";
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneType+"/"+zoneId+"/filesizes.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response92">
     <pre>
 {
     "code": 200,
@@ -2907,6 +3084,7 @@ Parameter | Description |
   <li><a href="#php93" data-toggle='tab'>PHP</a></li>
   <li><a href="#node93" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp93" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java93" data-toggle='tab'>Java</a></li>
   <li><a href="#response93" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -2952,7 +3130,12 @@ api.Get("/reports/statsbydir.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response93">
+  <div class="tab-pane" id="java93">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+MaxCDNObject response = api.get("/reports/statsbydir.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response93">
     <pre>
 {
     "code": 200,
@@ -3009,6 +3192,7 @@ Parameter | Description |
   <li><a href="#php94" data-toggle='tab'>PHP</a></li>
   <li><a href="#node94" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp94" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java94" data-toggle='tab'>Java</a></li>
   <li><a href="#response94" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -3062,7 +3246,13 @@ api.Get("/reports/" + zoneID + "/statsbydir.json" + reportType);
 </pre>
 
   </div>
-  <div class="tab-pane" id="response94">
+  <div class="tab-pane" id="java94">
+  <pre>String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String zoneId = "100200";
+MaxCDNObject response = api.get("/reports/"+zoneId+"/statsbydir.json"+reportType);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
+</div>
+<div class="tab-pane" id="response94">
     <pre>
 {
     "code": 200,

@@ -72,6 +72,7 @@ Parameter | Description |
   <li><a href="#php101" data-toggle='tab'>PHP</a></li>
   <li><a href="#node101" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp101" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java101" data-toggle='tab'>Java</a></li>
   <li><a href="#response101" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -105,7 +106,10 @@ api.get('/v3/reporting/logs.json?start=2014-01-30&end=2014-01-31&status=200', fu
 api.Get("/v3/reporting/logs.json?start=2014-01-30&end=2014-01-31&status=200");
 </pre>
   </div>
-  <div class="tab-pane" id="response101">
+  <div class="tab-pane" id="java101">
+    <pre>Console.log(api.get("/v3/reporting/logs.json?start=2015-12-01&end=2015-12-02&status=200"));</pre>
+</div>
+<div class="tab-pane" id="response101">
     <pre>
 {
   "limit":1000,
