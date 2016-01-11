@@ -3,10 +3,10 @@
   <channel>
     <title>MaxCDN - API Docs</title>
     <description></description>
-    <link>http://docs.maxcdn.com/</link>
-    <atom:link href="http://docs.maxcdn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Nov 2015 21:41:53 +0100</pubDate>
-    <lastBuildDate>Fri, 20 Nov 2015 21:41:53 +0100</lastBuildDate>
+    <link>http://docs.maxcdn.com/apidocs/</link>
+    <atom:link href="http://docs.maxcdn.com/apidocs/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 Dec 2015 19:43:04 +0100</pubDate>
+    <lastBuildDate>Thu, 24 Dec 2015 19:43:04 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -27,8 +27,8 @@
 
 </description>
         <pubDate>Wed, 18 Nov 2015 23:28:48 +0100</pubDate>
-        <link>http://docs.maxcdn.com/jekyll/update/2015/11/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://docs.maxcdn.com/jekyll/update/2015/11/18/welcome-to-jekyll.html</guid>
+        <link>http://docs.maxcdn.com/apidocs/jekyll/update/2015/11/18/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://docs.maxcdn.com/apidocs/jekyll/update/2015/11/18/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

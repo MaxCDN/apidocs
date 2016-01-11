@@ -37,6 +37,7 @@ Parameter | Description |
   <li><a href="#php205-0" data-toggle='tab'>PHP</a></li>
   <li><a href="#node205-0" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp205-0" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java205-0" data-toggle='tab'>Java</a></li>
   <li><a href="#response205-0" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -71,6 +72,12 @@ function callback(err, response) {
 api.Get("/clients.json");
 </pre>
   </div>
+    <div class="tab-pane" id="java205-0">
+  <pre>
+MaxCDNObject response = api.get('/clients.json');
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response205-0">
     <pre>
 {
@@ -196,6 +203,7 @@ Parameter | Description |
   <li><a href="#php205" data-toggle='tab'>PHP</a></li>
   <li><a href="#node205" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp205" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java205" data-toggle='tab'>Java</a></li>
   <li><a href="#response205" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -387,6 +395,61 @@ var account_owner = [
 api.Post("/clients.json", params);
 </pre>
   </div>
+      <div class="tab-pane" id="java205">
+    <pre>
+	    account_owner = {
+	                'firstname':'First Name',
+	                'lastname':'Last Name',
+	                'email':'E-Mail',
+	                'phone':'1234567890', 
+	                'password':'password' 
+	            }
+            
+	            address = {
+	                'street1':'Street One',
+	                'street2':'Not Required',
+	                'city':'City Name',
+	                'state':'State', 
+	                'zip':'ZIP / Postal Code', 
+	                'country':'US (or country name)'
+	            }
+            
+	            params = {
+	                'name":'Company Name',
+	                'alias':'Company Alias',
+	                'group_id':'Group ID',
+	                'package_id':'x', 
+	                'account_owner':json.dumps(account_owner), 
+	                'address':json.dumps(address),
+	                'paymentmethod':'mailin'
+	            }
+            
+	            api.post('/clients.json',data=params);
+				
+				String firstname = "First Name";
+				String lastname = "Last Name";
+				String email = "E-Mail";
+				String phone = "1234567890"; 
+				String password = "password"; 
+				String account_owner[] = { "firstname", "lastname", "email", "phone", "password"};
+				JSONArray saccount_owner = new JSONArray(Arrays.asList(account_owner));
+
+				String street1 = "Street One";
+				String street2 = "Not required";
+				String city = "Citu name";
+				String state = "State"; 
+				String zip = "6902"; 
+				String country = "US";
+				String address[] = { "street1", "street2", "city", "state", "zip", "country"};
+				JSONArray saddress = new JSONArray(Arrays.asList(address));
+
+				MaxCDNRequest data = MaxCDN.newRequest("name", "Company Name").append("alias", "Company alias").append("group_id", "Group ID").append("package_id", "x").append("account_owner", "saccount_owner").append("address", "saddress").append("paymentmethod", "mailin");
+				MaxCDNObject response = api.post("/clients.json", data);
+				Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+				
+				
+  </pre>
+    </div>
   <div class="tab-pane" id="response205">
     <pre>{"code"=>201,
  "data"=>
@@ -459,6 +522,7 @@ Parameter | Description |
   <li><a href="#php200" data-toggle='tab'>PHP</a></li>
   <li><a href="#node200" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp200" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java200" data-toggle='tab'>Java</a></li>
   <li><a href="#response200" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -490,6 +554,12 @@ function callback(err, response) {
 api.Get("/clients/{id}/bandwidth.json");
 </pre>
   </div>
+      <div class="tab-pane" id="java200">
+    <pre>
+MaxCDNObject response = api.get("/clients/{id}/bandwidth.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response200">
     <pre>
 {
@@ -539,6 +609,7 @@ Parameter | Description |
   <li><a href="#php201" data-toggle='tab'>PHP</a></li>
   <li><a href="#node201" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp201" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java201" data-toggle='tab'>Java</a></li>
   <li><a href="#response201" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -570,6 +641,12 @@ function callback(err, response) {
 api.Get("/clients/{id}/storage.json");
 </pre>
   </div>
+   <div class="tab-pane" id="java201">
+    <pre>
+MaxCDNObject response = api.get("/clients/{id}/storage.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response201">
     <pre>
 {
@@ -648,6 +725,7 @@ Parameter | Description |
   <li><a href="#php202" data-toggle='tab'>PHP</a></li>
   <li><a href="#node202" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp202" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java202" data-toggle='tab'>Java</a></li>
   <li><a href="#response202" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -679,6 +757,12 @@ function callback(err, response) {
 api.Get("/clients/{id}/storage/used.json");
 </pre>
   </div>
+      <div class="tab-pane" id="java202">
+    <pre>
+MaxCDNObject response = api.get("/clients/{id}/storage/used.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response202">
     <pre>
 {

@@ -34,6 +34,7 @@ Parameter | Description |
   <li><a href="#php5" data-toggle='tab'>PHP</a></li>
   <li><a href="#node5" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp5" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java5" data-toggle='tab'>Java</a></li>
   <li><a href="#response5" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -68,6 +69,12 @@ function callback(err, response) {
 api.Get("/clients/{id}/users.json");
 </pre>
   </div> 
+    <div class="tab-pane" id="java5">
+  <pre>
+  MaxCDNObject response = api.get("/clients/{id}/users.json");
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response5">
     <pre>
 {
@@ -191,6 +198,7 @@ Parameter | Description |
   <li><a href="#php6" data-toggle='tab'>PHP</a></li>
   <li><a href="#node6" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp6" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java6" data-toggle='tab'>Java</a></li>
   <li><a href="#response6" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -237,6 +245,13 @@ string pwd = Console.ReadLine();
 api.Post("/clients/{id}/users.json", "firstname=" + fname + "&lastname=" + lname + "&password=" + pwd + "&email=" + email);
 </pre>
   </div> 
+    <div class="tab-pane" id="java6">
+  <pre>
+  MaxCDNRequest data = MaxCDN.newRequest("email", "test@gmail.com").append("password", "pass1234").append("firstname", "Jane").append("lastname", "Smith");
+  MaxCDNObject response = api.post("/clients/{id}/users.json", data);
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response6">
     <pre>
 {
@@ -297,6 +312,7 @@ Parameter | Description |
   <li><a href="#php7" data-toggle='tab'>PHP</a></li>
   <li><a href="#node7" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp7" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java7" data-toggle='tab'>Java</a></li>
   <li><a href="#response7" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -340,6 +356,13 @@ string id = Console.ReadLine();
 api.Get("/clients/{id}/users.json/" + id);
 </pre>
   </div> 
+    <div class="tab-pane" id="java7">
+  <pre>
+String userId = "12345";
+MaxCDNObject response = api.get("/clients/{id}/users.json"+userId);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response7">
     <pre>
 {
@@ -410,6 +433,7 @@ Parameter | Description |
   <li><a href="#php8" data-toggle='tab'>PHP</a></li>
   <li><a href="#node8" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp8" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java8" data-toggle='tab'>Java</a></li>
   <li><a href="#response8" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -458,7 +482,15 @@ string val = Console.ReadLine();
 api.Put("/clients/{id}/users.json/" + uid + "/", prop + "=" + val);
 </pre>
   </div> 
-  <div class="tab-pane" id="response8">
+    <div class="tab-pane" id="java8">
+  <pre>
+String userId = "12345";
+MaxCDNRequest data = MaxCDN.newRequest("firstname", "Jane"); 
+MaxCDNObject response = api.put("/clients/{id}/users.json/"+userId, data); 
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+ </div>
+ <div class="tab-pane" id="response8">
     <pre>
 {
     "code": 200,
@@ -507,6 +539,7 @@ Deletes a user specified by the {user_id} parameter
   <li><a href="#php9" data-toggle='tab'>PHP</a></li>
   <li><a href="#node9" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp9" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java9" data-toggle='tab'>Java</a></li>
   <li><a href="#response9" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -547,6 +580,13 @@ int id = Convert.ToInt32(Console.ReadLine());
 api.Delete("/clients/{id}/users.json/" + id);
 </pre>
   </div> 
+    <div class="tab-pane" id="java9">
+  <pre>
+  String userId = "12345";
+  MaxCDNObject response = api.delete("//clients/{id}/users.json/"+userId);
+  Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response9">
     <pre>
 {

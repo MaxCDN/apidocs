@@ -1,3 +1,11 @@
 input[type="text"]	{
 	height: 34px !important;
 }
+
+.path	{
+	word-break: break-all;
+	font: 12px/25px "DejaVuSansMonoBook";
+	color: #4C5059;
+	pointer-events: none;
+	cursor: default;
+}

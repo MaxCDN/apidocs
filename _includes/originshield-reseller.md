@@ -32,6 +32,7 @@ Parameter | Description |
   <li><a href="#php102" data-toggle='tab'>PHP</a></li>
   <li><a href="#node102" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp102" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java102" data-toggle='tab'>Java</a></li>
   <li><a href="#response102" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -75,6 +76,14 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 api.Post("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json", "location=sjc");
 </pre>
   </div>
+    <div class="tab-pane" id="java102">
+  <pre>
+String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("location", "sjc");
+MaxCDNObject response = api.post("/clients/{id}/zones/pull/"+zoneId+"/zoneshields.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response102">
     <pre>
 {
@@ -124,6 +133,7 @@ Parameter | Description |
   <li><a href="#php103" data-toggle='tab'>PHP</a></li>
   <li><a href="#node103" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp103" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java103" data-toggle='tab'>Java</a></li>
   <li><a href="#response103" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -167,6 +177,14 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 api.Put("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json", "location=sjc");
 </pre>
   </div>
+    <div class="tab-pane" id="java103">
+  <pre>
+String zoneId = "100200";
+MaxCDNRequest data = MaxCDN.newRequest("location", "vir");
+MaxCDNObject response = api.put("/clients/{id}/zones/pull/"+zoneId+"/zoneshields.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response103">
     <pre>
 {
@@ -202,6 +220,7 @@ Remove the active Origin Shield from your Pull Zone
   <li><a href="#php104" data-toggle='tab'>PHP</a></li>
   <li><a href="#node104" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp104" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java104" data-toggle='tab'>Java</a></li>
   <li><a href="#response104" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -242,6 +261,13 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 api.Delete("/clients/{id}/zones/pull/" + zoneID + "/zoneshields.json");
 </pre>
   </div>
+    <div class="tab-pane" id="java104">
+  <pre>
+String zoneId = "100200";
+MaxCDNObject response = api.delete("/clients/{id}/zones/pull/"+zoneId+"/zoneshields.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response104">
     <pre>
 {

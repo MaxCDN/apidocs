@@ -24,6 +24,7 @@ Parameter | Description |
   <li><a href="#php106" data-toggle='tab'>PHP</a></li>
   <li><a href="#node106" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp106" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java106" data-toggle='tab'>Java</a></li>
   <li><a href="#response106" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -58,6 +59,12 @@ function callback(err, response) {
 api.Get("/clients/{id}/ssl.json");
 </pre>
   </div>
+    <div class="tab-pane" id="java106">
+  <pre>
+MaxCDNObject response = api.get("/clients/{id}/ssl.json");
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response106">
     <pre>
 {
@@ -123,6 +130,7 @@ Parameter | Description |
   <li><a href="#php107" data-toggle='tab'>PHP</a></li>
   <li><a href="#node107" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp107" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java107" data-toggle='tab'>Java</a></li>
   <li><a href="#response107" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -179,6 +187,16 @@ key = "-----BEGIN RSA PRIVATE KEY-----\n" + key + "\n-----END RSA PRIVATE KEY---
 api.Post("/clients/{id}/ssl.json", dat="ssl_crt=" + cert + "&ssl_key=" + key);
 </pre>
   </div>
+    <div class="tab-pane" id="java107">
+  <pre>
+String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+String name = "Our *.example.com wildcard";
+MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key").append("name", "name");
+MaxCDNObject response = api.post("/clients/{id}/ssl.json", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response107">
     <pre>
 {
@@ -233,6 +251,7 @@ Parameter | Description |
   <li><a href="#php108" data-toggle='tab'>PHP</a></li>
   <li><a href="#node108" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp108" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java108" data-toggle='tab'>Java</a></li>
   <li><a href="#response108" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -275,6 +294,13 @@ int zoneID = Convert.ToInt32(Console.ReadLine());
 api.Get("/clients/{id}/ssl.json/" + zoneID);
 </pre>
   </div>
+    <div class="tab-pane" id="java108">
+  <pre>
+String sslId = "1234";
+MaxCDNObject response = api.get("/clients/{id}/ssl.json/"+sslId));
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response108">
     <pre>
 {
@@ -335,6 +361,7 @@ Parameter | Description |
   <li><a href="#php109" data-toggle='tab'>PHP</a></li>
   <li><a href="#node109" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp109" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java109" data-toggle='tab'>Java</a></li>
   <li><a href="#response109" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -396,27 +423,15 @@ key = "-----BEGIN RSA PRIVATE KEY-----\n" + key + "\n-----END RSA PRIVATE KEY---
 api.Put("/clients/{id}/ssl.json/" + zoneID, dat="ssl_crt=" + cert + "&ssl_key=" + key);
 </pre>
   </div>
-  <div class="tab-pane" id="response109">
-    <pre>
-{
-    "code": 200,
-    "data": {
-      "ssl": 
-            {
-                "id": "1234",
-                "company_id": "42",
-                "domain": "*.example.com",
-                "zone_count": "5",
-                "date_updated": "2013-05-15 17:33:09",
-                "date_expiration": "2015-11-15",
-                "ssl_cabundle": "",
-                "globalsign": "0",
-                "wilcard": "1",
-                "ssl_crt": "-----BEGIN CERTIFICATE-----\n...-----END CERTIFICATE-----",
-                "name": "Our *.example.com wildcard"
-            }
-    }
-}</pre>
+<div class="tab-pane" id="java109">
+  <pre>
+String sslId = "1234";
+String ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+String ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+MaxCDNRequest data = MaxCDN.newRequest("ssl_crt", "ssl_crt").append("ssl_key", "ssl_key");
+MaxCDNObject response = api.put("/clients/{id}/ssl.json"+sslId, data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
   </div>
 </div>
 
@@ -439,6 +454,7 @@ Deletes a certificate specified by the {ssl_id} parameter
   <li><a href="#php110" data-toggle='tab'>PHP</a></li>
   <li><a href="#node110" data-toggle='tab'>Node</a></li>
   <li><a href="#csharp110" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java110" data-toggle='tab'>Java</a></li>
   <li><a href="#response110" data-toggle='tab'>Response</a></li>
 </ul>
 
@@ -480,6 +496,13 @@ int zoneId = Convert.ToInt32(Console.ReadLine());
 api.Delete("/clients/{id}/ssl.json/" + zoneId);
 </pre>
   </div>
+    <div class="tab-pane" id="java110">
+  <pre>
+String sslId = "1234";
+MaxCDNObject response = api.delete("/clients/{id}/ssl.json/"+sslId));
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+  </pre>
+    </div>
   <div class="tab-pane" id="response110">
     <pre>
 {
