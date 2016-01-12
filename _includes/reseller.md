@@ -39,6 +39,7 @@
  * [Perl](https://github.com/maxcdn/perl-maxcdn)
  * [PHP](https://github.com/MaxCDN/php-maxcdn)
  * [.NET](https://github.com/MaxCDN/dotnet-maxcdn)
+ * [Java <sup>Beta</sup>](https://github.com/MaxCDN/java-maxcdn)
  * [Go <sup>Beta</sup>](http://godoc.org/github.com/MaxCDN/go-maxcdn)
 
 ## Support
