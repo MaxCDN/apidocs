@@ -277,6 +277,20 @@ Example:
 ```
 
 **Important: Code within `<pre>` tags will print indentation and white spaces so avoid adding spaces or [tabs] before the text itself because, it will be indented twice (or more).**
+	
+#### Adding new tabs
+
+If you are adding new tabs in docs make sure to add div identificator (ruby, python, php, node, csharp,...) into /public/js/main.js and /public/js/main.min.js to 
+skip scrolling effect on switching between them:
+
+```bash
+if (target.toString().indexOf('#ruby') ==-1 &&
+                target.toString().indexOf('#python') ==-1 &&
+                target.toString().indexOf('#php') ==-1 &&
+                target.toString().indexOf('#node') ==-1 &&
+                target.toString().indexOf('#csharp') ==-1 &&
+                target.toString().indexOf('#response') ==-1 )
+```
 
 ## Restoring to previous revision
 

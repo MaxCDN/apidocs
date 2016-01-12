@@ -102,6 +102,7 @@ $('a').click(function(ev) {
                 target.toString().indexOf('#perl') ==-1 &&
                 target.toString().indexOf('#node') ==-1 &&
                 target.toString().indexOf('#csharp') ==-1 &&
+				target.toString().indexOf('#java') ==-1 &&
                 target.toString().indexOf('#response') ==-1 ) {
             if (this.href !== '#') {
                 $('html, body').animate({
