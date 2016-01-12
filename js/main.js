@@ -116,7 +116,9 @@ $('a').click(function(ev) {
                 }, animateSpeed);
             }
         }
-    } else {
+	} else if (target.toString().indexOf('#brand')) {
+		$(this).attr('target', '_self');
+	} else {
         $(this).attr('target','_blank');
     }
 });
