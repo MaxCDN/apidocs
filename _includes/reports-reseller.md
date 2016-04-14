@@ -2022,34 +2022,34 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby85">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 api.get('/clients/{id}/reports/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python85">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 api.get('/clients/{id}/reports/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="perl85">
 <pre>
-my $reportType = ""; #Vaild input includes /daily, /hourly, /monthly or ""
+my $reportType = ""; #Vaild input includes /daily, /monthly or ""
 $api->get("/clients/{id}/reports/filetypes.json" . $reportType);</pre>
   </div>
   <div class="tab-pane" id="php85">
 <pre>
-$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$reportType = ''; //Vaild input includes '/daily', '/monthly' or ''
 $api->get('/clients/{id}/reports/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node85">
 <pre>
-var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
+var reportType = '' //Valid input includes '/daily', '/monthly' or ''
 api.get('/clients/{id}/reports/filetypes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="csharp85">
 <pre>
-Console.Write("Report type (/daily, /hourly, /monthly or empty string): \n");
+Console.Write("Report type (/daily, /monthly or empty string): \n");
 string reportType = Console.ReadLine();
 
 api.Get("/clients/{id}/reports/filetypes.json" + reportType);
@@ -2057,7 +2057,7 @@ api.Get("/clients/{id}/reports/filetypes.json" + reportType);
   </div>
     <div class="tab-pane" id="java85">
   <pre>
-String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String reportType = ""; //Valid input includes "/daily", "/monthly" or ""
 MaxCDNObject response = api.get("/clients/{id}/reports/filetypes.json"+reportType);
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
     </div>
@@ -2125,31 +2125,31 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby86">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 id = '96061'
 api.get('/clients/{id}/reports/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python86">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 id = '96061'
 api.get('/clients/{id}/reports/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="perl86">
 <pre>
-my $reportType = ""; #Vaild input includes /daily, /hourly, /monthly or ""
+my $reportType = ""; #Vaild input includes /daily, /monthly or ""
 my $id = 96061;
 $api->get("/clients/{id}/reports/" . $id . "/filetypes.json" . $reportType);</pre>
   </div>
   <div class="tab-pane" id="php86">
 <pre>
-$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$reportType = ''; //Vaild input includes '/daily', '/monthly' or ''
 $id = '96061';
 $api->get('/clients/{id}/reports/'.$id.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node86">
 <pre>
-var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
+var reportType = '' //Valid input includes '/daily', '/monthly' or ''
 var id = '96061'
 api.get('/clients/{id}/reports/' + id + '/filetypes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -2159,7 +2159,7 @@ api.get('/clients/{id}/reports/' + id + '/filetypes.json/' + reportType, functio
 <pre>
 Console.Write("Zone ID: \n");
 int zoneID = Convert.ToInt32(Console.ReadLine());
-Console.Write("Report type (/daily, /hourly, /monthly or empty string): \n");
+Console.Write("Report type (/daily, /monthly or empty string): \n");
 string reportType = Console.ReadLine();
 
 api.Get("/clients/{id}/reports/" + zoneID + "/filetypes.json" + reportType);
@@ -2167,7 +2167,7 @@ api.Get("/clients/{id}/reports/" + zoneID + "/filetypes.json" + reportType);
   </div>
     <div class="tab-pane" id="java86">
   <pre>
-String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String reportType = ""; //Valid input includes "/daily", "/monthly" or ""
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneId+"/filetypes.json"+reportType);
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
@@ -2223,31 +2223,31 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby87">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 zoneType = 'pull'
 api.get('/clients/{id}/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python87">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 zoneType = 'pull'
 api.get('/clients/{id}/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="perl87">
 <pre>
-my $reportType = ""; #Vaild input includes /daily, /hourly, /monthly or ""
+my $reportType = ""; #Vaild input includes /daily, /monthly or ""
 my $zoneType = "pull";
 $api->get("/clients/{id}/reports/" . $zoneType . "/filetypes.json" . $reportType);</pre>
   </div>
   <div class="tab-pane" id="php87">
 <pre>
-$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$reportType = ''; //Vaild input includes '/daily', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/clients/{id}/reports/'.$zoneType.'/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node87">
 <pre>
-var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
+var reportType = '' //Valid input includes '/daily', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/clients/{id}/reports/' + zoneType + '/filetypes.json' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -2257,7 +2257,7 @@ api.get('/clients/{id}/reports/' + zoneType + '/filetypes.json' + reportType, fu
 <pre>
 Console.Write("Zone type: \n");
 string zoneType = Console.ReadLine();
-Console.Write("Report type (/daily, /hourly, /monthly or empty string): \n");
+Console.Write("Report type (/daily, /monthly or empty string): \n");
 string reportType = Console.ReadLine();
 
 api.Get("/clients/{id}/reports/" + zoneType + "/filetypes.json" + reportType);
@@ -2265,7 +2265,7 @@ api.Get("/clients/{id}/reports/" + zoneType + "/filetypes.json" + reportType);
   </div>
     <div class="tab-pane" id="java87">
   <pre>
-String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String reportType = ""; //Valid input includes "/daily", "/monthly" or ""
 String zoneType = "pull";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/filetypes.json"+reportType);
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
@@ -2336,35 +2336,35 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby88">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/clients/{id}/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python88">
 <pre>
-reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+reportType = '' #Valid input includes '/daily', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/clients/{id}/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="perl88">
 <pre>
-my $reportType = ""; #Vaild input includes /daily, /hourly, /monthly or ""
+my $reportType = ""; #Vaild input includes /daily, /monthly or ""
 my $zoneType = "pull";
 my $id = 96061;
 $api->get("/clients/{id}/reports/" . $zoneType . "/" . $id . "/filetypes.json" . $reportType);</pre>
   </div>
   <div class="tab-pane" id="php88">
 <pre>
-$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$reportType = ''; //Vaild input includes '/daily', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/clients/{id}/reports/'.$zoneType.'/'.$id.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node88">
 <pre>
-var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
+var reportType = '' //Valid input includes '/daily', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
 api.get('/clients/{id}/reports/' + zoneType + '/' + id + '/filetypes.json/' + reportType, function(err, response) {
@@ -2377,7 +2377,7 @@ Console.Write("Zone ID: \n");
 int zoneID = Convert.ToInt32(Console.ReadLine());
 Console.Write("Zone type: \n");
 string zoneType = Console.ReadLine();
-Console.Write("Report type (/daily, /hourly, /monthly or empty string): \n");
+Console.Write("Report type (/daily, /monthly or empty string): \n");
 string reportType = Console.ReadLine();
 
 api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/filetypes.json" + reportType);
@@ -2385,7 +2385,7 @@ api.Get("/clients/{id}/reports/" + zoneType + "/" + zoneID + "/filetypes.json" +
   </div>
     <div class="tab-pane" id="java88">
   <pre>
-String reportType = ""; //Valid input includes "/daily", "/hourly", "/monthly" or ""
+String reportType = ""; //Valid input includes "/daily", "/monthly" or ""
 String zoneType = "pull";
 String zoneId = "100200";
 MaxCDNObject response = api.get("/clients/{id}/reports/"+zoneType+"/"+zoneId+"/filetypes.json"+reportType);
