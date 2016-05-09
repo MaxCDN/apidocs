@@ -467,7 +467,6 @@ Parameter | Default Value | Validation | Description |
 `pseudo_streaming` | 0 | only 0 or 1 accepted | Enable the zone for pseudo streaming content |
 `secret` | - | length: 1 - 32 chars | Use a secret to protect your files from unwanted visitors |
 `sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
-`spdy` | 0 | only 0 or 1 accepted | Enable SPDY protocol on the zone (requires SSL) |
 
 
 ### Response Parameters
@@ -502,7 +501,6 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
 `ssl` | Read-only flag denoting if the zone has Dedicated IP SSL enabled |
 `ssl_sni` | Read-only flag denoting if the zone has SNI SSL enabled |
 `geo_enabled` | Read-only flag denoting if the zone has 'More Locations' enabled |
@@ -2207,7 +2205,6 @@ Parameter | Default Value | Validation | Description |
 `valid_referers` | - | length: 1-200 chars | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
 `content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
 `sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
-`spdy` | 0 | only 0 or 1 accepted | Enable SPDY protocol on the zone (requires SSL) |
 
 
 ### Response Parameters
@@ -2224,7 +2221,6 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
 
 ### Code Samples
 
