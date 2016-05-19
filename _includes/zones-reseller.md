@@ -2428,7 +2428,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "tmp_url": "newpushzone4.alias.netdna-cdn.com",
             "type": 3,
             "valid_referers": null,
-            "spdy": 1
+            "http2": 1
         }
     }
 }</pre>
@@ -2536,7 +2536,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 
 ### Code Samples
 
@@ -2618,7 +2618,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "tmp_url": "newpushzone3.alias.netdna-cdn.com",
             "type": "3",
             "valid_referers": null,
-            "spdy": 1
+            "http2": 1
         }
     }
 }</pre>
@@ -2643,7 +2643,7 @@ Parameter | Default Value | Validation | Description |
 `valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
 `content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
 `sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
-`spdy` | 0 | only 0 or 1 accepted | Enable SPDY protocol on the zone (requires SSL) |
+`http2` | 0 | only 0 or 1 accepted | Enable HTTP/2 protocol on the zone (requires SSL) |
 
 
 ### Response Parameters
@@ -2660,7 +2660,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 
 ### Code Samples
 
@@ -2752,7 +2752,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "tmp_url": "newpushzone3.alias.netdna-cdn.com",
             "type": "3",
             "valid_referers": null,
-            "spdy": 1
+            "http2": 1
         }
     }
 }</pre>

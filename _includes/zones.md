@@ -281,7 +281,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has HTTP/2 protocol enabled |
 `ssl` | Read-only flag denoting if the zone has Dedicated IP SSL enabled |
 `ssl_sni` | Read-only flag denoting if the zone has SNI SSL enabled |
 `geo_enabled` | Read-only flag denoting if the zone has 'More Locations' enabled |
@@ -376,7 +376,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
                 "url": "http://somedomain.net",
                 "use_stale": "0",
                 "valid_referers": null,
-                "spdy": 1,
+                "http2": 1,
                 "ssl": 1,
                 "ssl_sni": 0,
                 "geo_enabled": 1
@@ -417,7 +417,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
                 "url": "http://somedomain.net",
                 "use_stale": "0",
                 "valid_referers": null,
-                "spdy": 1,
+                "http2": 1,
                 "ssl": 0,
                 "ssl_sni": 1,
                 "geo_enabled": 0
@@ -601,7 +601,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "use_stale": 0,
             "x_forward_for": 0,
             "valid_referers": null,
-            "spdy": 1,
+            "http2": 1,
             "ssl": 1,
             "ssl_sni": 0,
             "geo_enabled": 1
@@ -723,7 +723,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 `ssl` | Read-only flag denoting if the zone has Dedicated IP SSL enabled |
 `ssl_sni` | Read-only flag denoting if the zone has SNI SSL enabled |
 `geo_enabled` | Read-only flag denoting if the zone has 'More Locations' enabled |
@@ -823,7 +823,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "use_stale": "0",
             "x_forward_for": "0",
             "valid_referers": null,
-            "spdy": 1,
+            "http2": 1,
             "ssl": 1,
             "ssl_sni": 0,
             "geo_enabled": 1
@@ -870,7 +870,7 @@ Parameter | Default Value | Validation | Description |
 `pseudo_streaming` | 0 | only 0 or 1 accepted | Enable the zone for pseudo streaming content |
 `secret` | - | length: 1 - 32 chars | Use a secret to protect your files from unwanted visitors |
 `sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
-`spdy` | 0 | only 0 or 1 accepted | Enable SPDY protocol on the zone (requires SSL) |
+`http2` | 0 | only 0 or 1 accepted | Enable HTTP/2 protocol on the zone (requires SSL) |
 
 
 ### Response Parameters
@@ -905,7 +905,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 `ssl` | Read-only flag denoting if the zone has Dedicated IP SSL enabled |
 `ssl_sni` | Read-only flag denoting if the zone has SNI SSL enabled |
 `geo_enabled` | Read-only flag denoting if the zone has 'More Locations' enabled |
@@ -1015,7 +1015,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "use_stale": "0",
             "x_forward_for": "0",
             "valid_referers": null,
-            "spdy": 1,
+            "http2": 1,
             "ssl": 1,
             "ssl_sni": 0,
             "geo_enabled": 1
@@ -2077,7 +2077,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 
 ### Code Samples
 
@@ -2154,7 +2154,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
                 "tmp_url": "newpushzone2.alias.netdna-cdn.com",
                 "type": "3",
                 "valid_referers": null,
-                "spdy": 1
+                "http2": 1
             },
             {
                 "cdn_url": "cdn.somenewdomain2.com",
@@ -2176,7 +2176,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
                 "tmp_url": "newpushzone3.alias.netdna-cdn.com",
                 "type": "3",
                 "valid_referers": null,
-                "spdy": 0
+                "http2": 0
             }
         ],
         "total": 2
@@ -2302,7 +2302,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "tmp_url": "newpushzone4.alias.netdna-cdn.com",
             "type": 3,
             "valid_referers": null,
-            "spdy": 1
+            "http2": 1
         }
     }
 }</pre>
@@ -2409,7 +2409,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 
 ### Code Samples
 
@@ -2488,7 +2488,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "tmp_url": "newpushzone3.alias.netdna-cdn.com",
             "type": "3",
             "valid_referers": null,
-            "spdy": 1
+            "http2": 1
         }
     }
 }</pre>
@@ -2530,7 +2530,7 @@ Parameter | Description |
 `locked` | Flag denoting if the zone has been locked |
 `inactive` | Flag denoting if the zone has been deleted |
 `creation_date` | Date Created |
-`spdy` | Flag denoting if the zone has the SPDY protocol enabled |
+`http2` | Flag denoting if the zone has the HTTP/2 protocol enabled |
 
 ### Code Samples
 
@@ -2620,7 +2620,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
             "tmp_url": "newpushzone3.alias.netdna-cdn.com",
             "type": "3",
             "valid_referers": null,
-            "spdy": 1
+            "http2": 1
         }
     }
 }</pre>
