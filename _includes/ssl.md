@@ -314,11 +314,11 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 
 ## Update SSL Certificate
 
-Updates an SSL Certificate specified by the {user_id} parameter 
+Updates an SSL Certificate 
 
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
-<span class="path">https://rws.maxcdn.com/{companyalias}/users.json/{user_id}</span></div>
+<span class="path">https://rws.maxcdn.com/{companyalias}/ssl.json</span></div>
 </div>
 
 ### Accepted Request Parameters
