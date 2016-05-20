@@ -51,7 +51,8 @@
 
 
 ## Changelog
-  - **2015-09-10**  Updated docs for reseller api
+  - **2016-05-19**  Updated docs for HTTP/2
+  - **2015-09-10**  Updated docs for Reseller API
   - **2015-07-27**  Updated validation for `use_stale`
   - **2015-03-06**  Added `ssl`, `ssl_sni`, and `geo_enabled` flags for Pull Zones
   - **2015-01-19**  Added account-level SSL
