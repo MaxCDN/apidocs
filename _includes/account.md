@@ -176,8 +176,8 @@ api.Put("/account.json", "name=UserName");
   </div>
   <div class="tab-pane" id="java2">
   <pre>
-MaxCDNRequest data = MaxCDN.newRequest("firstname", "Jane"); 
-MaxCDNObject response = api.put("/account.json", data); 
+MaxCDNRequest data = MaxCDN.newRequest("firstname", "Jane");
+MaxCDNObject response = api.put("/account.json", data);
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
 </pre>
 </div>
@@ -390,11 +390,121 @@ api.Put("/account.json/address", "street1=1234 Main Street");
   </div>
   <div class="tab-pane" id="java4">
   <pre>
-MaxCDNRequest data = MaxCDN.newRequest("street1", "Main St 12").append("street2", "Lake St 13"); 
-MaxCDNObject response = api.put("/account.json/address", data); 
+MaxCDNRequest data = MaxCDN.newRequest("street1", "Main St 12").append("street2", "Lake St 13");
+MaxCDNObject response = api.put("/account.json/address", data);
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
 </pre>
-</div> 
+</div>
+  <div class="tab-pane" id="response4">
+    <pre>
+{
+    "code": 200,
+    "data": {
+        "address": {
+            "city": "los angeles",
+            "country": "US",
+            "date_created": "0000-00-00 00:00:00",
+            "date_updated": "2013-05-23 18:01:29",
+            "id": "#####",
+            "state": "CA",
+            "street1": "1234 Main Street",
+            "street2": "apt 42",
+            "zip": "90068"
+        }
+    }
+}</pre>
+  </div>
+</div>
+
+
+## Get Activity
+
+Gets account activity.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.maxcdn.com/{companyalias}/activity.json</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`page` | - | 1 | int | Pages of results to return |
+`page_size` | 50 | int | Number of results to return per page |
+`user_id` | - | int | User ID that performed the activity |
+`start` | now() - 90 days | ISO-8601 formatted date/time | The start of the range for activity to pull (restricted to last 90 days) |
+`end` | now() | ISO-8601 formatted date/time | The end of the range for activity to pull |
+
+
+### Response Parameters
+
+Parameter | Description |
+--- | --- | ---
+`id` | Unique ID for Activity event |
+`timestamp` | The timestamp when the activity occurred |
+`user_id` | User ID of user that performed the activity |
+`user_email` | Email address of user that performed the activity |
+`activity_message` | Text describing activity action performed |
+`user_agent` | Text identifying the user's browser |
+`user_ip` | Text identifying the user's IP address |
+`location` | Text identifying the user's location, if available |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab4">
+  <li class="active"><a href="#ruby4" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python4" data-toggle='tab'>Python</a></li>
+  <li><a href="#perl4" data-toggle='tab'>Perl</a></li>
+  <li><a href="#php4" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node4" data-toggle='tab'>Node</a></li>
+  <li><a href="#csharp4" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java4" data-toggle='tab'>Java</a></li>
+  <li><a href="#response4" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby4">
+    <pre>
+params = {"street1"=> "1234 Main Street", "street2"=> "apt 42", "state"=> "CA"}
+api.put('/account.json/address',params)</pre>
+  </div>
+  <div class="tab-pane" id="python4">
+    <pre>
+params = {"street1": "1234 Main Street", "street2": "apt 42", "state": "CA"}
+api.put('/account.json/address',params=params)</pre>
+  </div>
+    <div class="tab-pane" id="perl4">
+    <pre>
+my @params = ('street1=Main');
+$api->put("/account.json/address", @params);</pre>
+  </div>
+  <div class="tab-pane" id="php4">
+    <pre>
+$params = array("street1"=>"123 Main Street", "street2"=>"apt 42", "state"=>"CA");
+$api->put('/account.json/address',$params);</pre>
+  </div>
+  <div class="tab-pane" id="node4">
+  <pre>
+api.put('/account.json/address', { street1: '123 Main Street', street2: 'apt 42', state: 'CA' }, callback)
+function callback(err, response) {
+  if (err) return console.log(err)
+  console.log(response)
+}</pre>
+  </div>
+  <div class="tab-pane" id="csharp4">
+  <pre>
+api.Put("/account.json/address", "street1=1234 Main Street");
+</pre>
+  </div>
+  <div class="tab-pane" id="java4">
+  <pre>
+MaxCDNRequest data = MaxCDN.newRequest("street1", "Main St 12").append("street2", "Lake St 13");
+MaxCDNObject response = api.put("/account.json/address", data);
+Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
+</pre>
+</div>
   <div class="tab-pane" id="response4">
     <pre>
 {
