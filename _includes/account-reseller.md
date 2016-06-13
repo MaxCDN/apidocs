@@ -500,22 +500,20 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 {
     "code": 200,
     "data": {
-        "account": {
-            "alias": "aliasname",
-            "date_created": "2013-05-15 17:32:30",
-            "date_updated": "2013-05-15 19:43:36",
-            "edgerules_credits": "0",
-            "flex_credits": "-1",
-            "id": "#####",
-            "name": "MaxCDN sampleCode",
-            "secure_token_pull_credits": "0",
-            "server_id": "18",
-            "ssl_credits": "1",
-            "status": "2",
-            "storage_quota": "107374182400",
-            "storage_server_id": "11",
-            "zone_credits": "-1"
-        }
+		{ 
+		    "activity_stream": [ 
+		        { 
+		            "activity_message": "Push Zone Error: Zone Not Found [zone_id: 150545]", 
+		            "id": "26371", 
+		            "location": "US,United States,South Park,CO,80440,,719, 39.2252631,-106.0051282", 
+		            "timestamp": "2016-06-08 21:41:09", 
+		            "user_agent": "MaxCDN Beefcake API Client", 
+		            "user_email": "eric@cartman.io", 
+		            "user_id": "27640", 
+		            "user_ip": "192.168.10.1" 
+		        } 
+		    ] 
+		}
     }
 }</pre>
   </div>
