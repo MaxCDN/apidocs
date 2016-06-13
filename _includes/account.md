@@ -502,23 +502,21 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
   <div class="tab-pane" id="response110">
     <pre>
 {
-    "code": 200,
-    "data": {
-		{ 
-		    "activity_stream": [ 
-		        { 
-		            "activity_message": "Push Zone Error: Zone Not Found [zone_id: 150545]", 
-		            "id": "26371", 
-		            "location": "US,United States,South Park,CO,80440,,719, 39.2252631,-106.0051282", 
-		            "timestamp": "2016-06-08 21:41:09", 
-		            "user_agent": "MaxCDN Beefcake API Client", 
-		            "user_email": "eric@cartman.io", 
-		            "user_id": "27640", 
-		            "user_ip": "192.168.10.1" 
-		        } 
-		    ] 
-		}
-    }
+  "code": 200,
+  "data": {
+      "activity_stream": [
+          {
+              "activity_message": "Push Zone Error: Zone Not Found [zone_id: 150545]",
+              "id": "26371",
+              "location": "US,United States,South Park,CO,80440,,719, 39.2252631,-106.0051282",
+              "timestamp": "2016-06-08 21:41:09",
+              "user_agent": "MaxCDN Beefcake API Client",
+              "user_email": "eric@cartman.io",
+              "user_id": "27640",
+              "user_ip": "192.168.10.1"
+          }
+      ]
+  }
 }</pre>
   </div>
 </div>
