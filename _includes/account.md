@@ -430,7 +430,7 @@ Gets account activity.
 
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`page` | - | 1 | int | Pages of results to return |
+`page` | 1 | int | Pages of results to return |
 `page_size` | 50 | int | Number of results to return per page |
 `user_id` | - | int | User ID that performed the activity |
 `start` | now() - 90 days | ISO-8601 formatted date/time | The start of the range for activity to pull (restricted to last 90 days) |
