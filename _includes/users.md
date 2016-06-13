@@ -248,7 +248,6 @@ api.Post("/users.json", "firstname=" + fname + "&lastname=" + lname + "&password
 MaxCDNObject response = api.post("/users.json", data);
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);</pre>
 	</div>
-</div>
 
 	<div class="tab-pane" id="response6">
 		<pre>

@@ -449,34 +449,34 @@ Parameter | Description |
 
 ### Code Samples
 
-<ul class="nav nav-tabs" id="myTab1">
-  <li class="active"><a href="#ruby1" data-toggle='tab'>Ruby</a></li>
-  <li><a href="#python1" data-toggle='tab'>Python</a></li>
-  <li><a href="#perl1" data-toggle='tab'>Perl</a></li>
-  <li><a href="#php1" data-toggle='tab'>PHP</a></li>
-  <li><a href="#node1" data-toggle='tab'>Node</a></li>
-  <li><a href="#csharp1" data-toggle='tab'>.NET/C#</a></li>
-  <li><a href="#java1" data-toggle='tab'>Java</a></li>
-  <li><a href="#response1" data-toggle='tab'>Response</a></li>
+<ul class="nav nav-tabs" id="myTab110">
+  <li class="active"><a href="#ruby110" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python110" data-toggle='tab'>Python</a></li>
+  <li><a href="#perl110" data-toggle='tab'>Perl</a></li>
+  <li><a href="#php110" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node110" data-toggle='tab'>Node</a></li>
+  <li><a href="#csharp110" data-toggle='tab'>.NET/C#</a></li>
+  <li><a href="#java110" data-toggle='tab'>Java</a></li>
+  <li><a href="#response110" data-toggle='tab'>Response</a></li>
 </ul>
 
 <div class="tab-content">
-  <div class="tab-pane active" id="ruby1">
+  <div class="tab-pane active" id="ruby110">
     <pre>
 api.get("/clients/{id}/activity.json")</pre>
   </div>
-  <div class="tab-pane" id="python1">
+  <div class="tab-pane" id="python110">
     <pre>api.get("/clients/{id}/activity.json")</pre>
   </div>
-    <div class="tab-pane" id="perl1">
+    <div class="tab-pane" id="perl110">
     <pre>my $data = $api->get("/clients/{id}/activity.json");
 print $data->{'account'}{'name'};</pre>
   </div>
-  <div class="tab-pane" id="php1">
+  <div class="tab-pane" id="php110">
     <pre>
 $api->get('/clients/{id}/activity.json');</pre>
   </div>
-  <div class="tab-pane" id="node1">
+  <div class="tab-pane" id="node110">
   <pre>
 api.get('/clients/{id}/activity.json', callback)
 function callback(err, response) {
@@ -484,18 +484,18 @@ function callback(err, response) {
   console.log(response)
 }</pre>
   </div>
-    <div class="tab-pane" id="csharp1">
+    <div class="tab-pane" id="csharp110">
   <pre>
 api.Get("/clients/{id}/activity.json");
 </pre>
   </div>
-  <div class="tab-pane" id="java1">
+  <div class="tab-pane" id="java110">
   <pre>
 MaxCDNObject response = api.get("/clients/{id}/activity.json");
 Console.log(response.error ? "Error " + response.getErrorMessage()  : response.code);
 </pre>
 </div>
-  <div class="tab-pane" id="response1">
+  <div class="tab-pane" id="response110">
     <pre>
 {
     "code": 200,
