@@ -51,6 +51,7 @@
 
 
 ## Changelog
+  - **2016-06-13**  Added Activity Stream
   - **2016-05-19**  Updated docs for HTTP/2
   - **2015-09-10**  Updated docs for Reseller API
   - **2015-07-27**  Updated validation for `use_stale`
