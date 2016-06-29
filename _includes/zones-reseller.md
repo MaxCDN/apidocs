@@ -277,7 +277,7 @@ Parameter | Description |
 `use_stale` | Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down |
 `proxy_cache_lock` | When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `expires` | Set any request with a no "Cache-Control header" from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M |
 `disallow_robots` | Enable robots.txt |
 `disallow_robots_txt` | Use custom robots.txt |
@@ -473,7 +473,7 @@ Parameter | Default Value | Validation | Description |
 `use_stale` | 0 | List of status codes separated with space - empty character - (?use_stale=500 502 503 504 403 404) are accepted as a valid request. 0 or 1 are accepted by legacy but, these are not valid parameters any more. To disable use_stale you can pass 0 (as a part of the legacy) or empty string "".| Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down |
 `proxy_cache_lock` | 0 | only 0 or 1 accepted | When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin |
 `label` | - | length: 1-255 chars | Something that describes your zone |
-`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | - | length: 1-100 chars | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `expires` | 1d | length: 1-32 chars | Set any request with a no "Cache-Control header" from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M |
 `disallow_robots` | 0 | only 0 or 1 accepted | Enable robots.txt |
 `disallow_robots_txt` | - | length 1-255 chars | Use custom robots.txt |
@@ -504,7 +504,7 @@ Parameter | Description |
 `use_stale` | Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down |
 `proxy_cache_lock` | When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `expires` | Set any request with a no "Cache-Control header" from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M |
 `disallow_robots` | Enable robots.txt |
 `disallow_robots_txt` | Use custom robots.txt |
@@ -740,7 +740,7 @@ Parameter | Description |
 `use_stale` | Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down |
 `proxy_cache_lock` | When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `expires` | Set any request with a no "Cache-Control header" from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M |
 `disallow_robots` | Enable robots.txt |
 `disallow_robots_txt` | Use custom robots.txt |
@@ -897,7 +897,7 @@ Parameter | Default Value | Validation | Description |
 `use_stale` | 0 | List of status codes separated with space - empty character - (?use_stale=500 502 503 504 403 404) are accepted as a valid request. 0 or 1 are accepted by legacy but, these are not valid parameters any more. To disable use_stale you can pass 0 (as a part of the legacy) or empty string "". | Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down |
 `proxy_cache_lock` | 0 | only 0 or 1 accepted | When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin |
 `label` | - | length: 1-255 chars | Something that describes your zone |
-`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | - | length: 1-100 chars | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `expires` | 1d | length: 1-32 chars | Set any request with a no "Cache-Control header" from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M |
 `disallow_robots` | 0 | only 0 or 1 accepted | Enable robots.txt |
 `disallow_robots_txt` | - | length: 1-255 chars | Use custom robots.txt |
@@ -929,7 +929,7 @@ Parameter | Description |
 `use_stale` | Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down |
 `proxy_cache_lock` | When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `expires` | Set any request with a no "Cache-Control header" from the origin to stay on the server. Possible values are 1d, 7d, 1M, 12M |
 `disallow_robots` | Enable robots.txt |
 `disallow_robots_txt` | Use custom robots.txt |
@@ -2194,7 +2194,7 @@ Parameter | Description |
 `id` | Push Zone ID |
 `name` | Push Zone name |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `content_disposition` | Force files to download |
 `sslshared` | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
 `suspend` | Flag denoting if the zone has been suspended |
@@ -2327,7 +2327,7 @@ Parameter | Default Value | Validation | Description |
 `name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | Push Zone name |
 `password` | - | <span class="label important">required</span><br />length: 5-30 chars; | Push Zone FTP password |
 `label` | - | length: 1-255 chars | Something that describes your zone |
-`valid_referers` | - | length: 1-200 chars | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | - | length: 1-100 chars | LList of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
 `sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
 
@@ -2339,7 +2339,7 @@ Parameter | Description |
 `id` | Push Zone ID |
 `name` | Push Zone name |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `content_disposition` | Force files to download |
 `sslshared` | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
 `suspend` | Flag denoting if the zone has been suspended |
@@ -2529,7 +2529,7 @@ Parameter | Description |
 `id` | Push Zone ID |
 `name` | Push Zone name |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `content_disposition` | Force files to download |
 `sslshared` | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
 `suspend` | Flag denoting if the zone has been suspended |
@@ -2640,7 +2640,7 @@ Updates a push zone specified by the {zone_id} parameter
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
 `label` | - | length: 1-255 chars | Something that describes your zone |
-`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | - | length: 1-100 chars | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
 `sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
 `http2` | 0 | only 0 or 1 accepted | Enable HTTP/2 protocol on the zone (requires SSL) |
@@ -2653,7 +2653,7 @@ Parameter | Description |
 `id` | Push Zone ID |
 `name` | Push Zone name |
 `label` | Something that describes your zone |
-`valid_referers` | List of domains for http referrer protection (separated by space), only the domains in the list will be treated as valid referrers |
+`valid_referers` | List of domains for HTTP referrer access control (separated by space); prepending a referer with ! will block the referer from accessing the files on the zone; blocking and whitelisting referers cannot be activated at the same time |
 `content_disposition` | Force files to download |
 `sslshared` | Enable Shared SSL for your zone, so you can use HTTPS, using our SSL certificate for netdna-ssl.com |
 `suspend` | Flag denoting if the zone has been suspended |
