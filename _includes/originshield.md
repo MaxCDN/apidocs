@@ -46,7 +46,7 @@ api.post('/zones/pull/'+id+'/zoneshields.json', params)</pre>
   <div class="tab-pane" id="python102">
     <pre>
 id = '97167'
-params = {"location":"sjc"}
+params = {"location": "sjc"}
 api.post('/zones/pull/'+id+'/zoneshields.json', params)</pre>
   </div>
   <div class="tab-pane" id="perl102">
@@ -146,7 +146,7 @@ api.put('/zones/pull/'+id+'/zoneshields.json', params)</pre>
   <div class="tab-pane" id="python103">
     <pre>
 id = '97167'
-params = {"location":"sjc"}
+params = {"location": "sjc"}
 api.put('/zones/pull/'+id+'/zoneshields.json', params)</pre>
   </div>
   <div class="tab-pane" id="perl103">

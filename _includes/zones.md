@@ -231,9 +231,9 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response12">
     <pre>
 {
-  "code":200,"data":
+  "code": 200,"data":
     {
-      "count":"4"
+      "count": "4"
     }
 }</pre>
   </div>
@@ -526,7 +526,7 @@ api.post('/zones/pull.json',params)</pre>
   </div>
   <div class="tab-pane" id="python14">
     <pre>
-params = {"name":"newPullZone5","url":"http://somedomain.net"}
+params = {"name": "newPullZone5","url": "http://somedomain.net"}
 api.post('/zones/pull.json',data=params)</pre>
   </div>
     <div class="tab-pane" id="perl14">
@@ -674,7 +674,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response15">
     <pre>
 {
-  "code":200,"data":
+  "code": 200,"data":
     {
       "count": "3"
     }
@@ -934,7 +934,7 @@ api.put('/zones/pull.json/'+id,params)</pre>
   <div class="tab-pane" id="python17">
     <pre>
 id = '97167'
-params = {"label":"Some other description"}
+params = {"label": "Some other description"}
 api.put('/zones/pull.json/'+id,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl17">
@@ -1092,7 +1092,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response17-1">
     <pre>
 {
-  "code":200
+  "code": 200
 }
 </pre>
   </div>
@@ -1165,7 +1165,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response17-2">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -1237,7 +1237,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response18">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -1309,7 +1309,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response19">
     <pre>
 {
-  "code":200
+  "code": 200
 }
 </pre>
   </div>
@@ -1382,7 +1382,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response20">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -1709,7 +1709,7 @@ api.post('/zones/pull/'+id+'/customdomains.json', params)</pre>
   <div class="tab-pane" id="python23">
     <pre>
 id = '97167'
-params = {"custom_domain":"cdn.somedomain13.com"}
+params = {"custom_domain": "cdn.somedomain13.com"}
 api.post('/zones/pull/'+id+'/customdomains.json', params)</pre>
   </div>
     <div class="tab-pane" id="perl23">
@@ -1911,7 +1911,7 @@ api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
     <pre>
 zoneId = '97167'
 domainId = '79182'
-params = {"custom_domain":"cdn.somenewdomain41.com"}
+params = {"custom_domain": "cdn.somenewdomain41.com"}
 api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl25">
@@ -2047,7 +2047,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response26">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -2243,7 +2243,7 @@ api.post('/zones/push.json',params)</pre>
   </div>
   <div class="tab-pane" id="python28">
     <pre>
-params = {"name":"newPushZone6","password":"password"}
+params = {"name": "newPushZone6","password": "password"}
 api.post('/zones/push.json',data=params)</pre>
   </div>
     <div class="tab-pane" id="perl28">
@@ -2555,7 +2555,7 @@ api.put('/zones/push.json/'+id,params)</pre>
   <div class="tab-pane" id="python31">
     <pre>
 id = '96182'
-params = {"label":"Some other description"}
+params = {"label": "Some other description"}
 api.put('/zones/push.json/'+id,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl31">
@@ -2694,7 +2694,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response32">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -2766,7 +2766,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
   <div class="tab-pane" id="response33">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -2839,7 +2839,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response34">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -2987,7 +2987,7 @@ api.post('/zones/push/'+id+'/customdomains.json', params)</pre>
   <div class="tab-pane" id="python36">
     <pre>
 id = '96182'
-params = {"custom_domain":"cdn.somedomain15.com"}
+params = {"custom_domain": "cdn.somedomain15.com"}
 api.post('/zones/push/'+id+'/customdomains.json', params)</pre>
   </div>
     <div class="tab-pane" id="perl36">
@@ -3189,7 +3189,7 @@ api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
     <pre>
 zoneId = '96182'
 domainId = '79320'
-params = {"custom_domain":"cdn.somenewdomain40.com"}
+params = {"custom_domain": "cdn.somenewdomain40.com"}
 api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl38">
@@ -3327,7 +3327,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response39">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -3511,7 +3511,7 @@ api.post('/zones/vod.json',params)</pre>
   </div>
   <div class="tab-pane" id="python41">
     <pre>
-params = {"name":"newvodZone7","password":"password"}
+params = {"name": "newvodZone7","password": "password"}
 api.post('/zones/vod.json',data=params)</pre>
   </div>
     <div class="tab-pane" id="perl41">
@@ -3807,7 +3807,7 @@ api.put('/zones/vod.json/'+id,params)</pre>
   <div class="tab-pane" id="python44">
     <pre>
 id = '96187'
-params = {"label":"Some other description"}
+params = {"label": "Some other description"}
 api.put('/zones/vod.json/'+id,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl44">
@@ -3944,7 +3944,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response45">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -4016,7 +4016,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response46">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -4088,7 +4088,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response47">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -4236,7 +4236,7 @@ api.post('/zones/vod/'+id+'/customdomains.json', params)</pre>
   <div class="tab-pane" id="python49">
     <pre>
 id = '96187'
-params = {"custom_domain":"cdn.somedomain16.com","type":"vod-rtmp"}
+params = {"custom_domain": "cdn.somedomain16.com","type": "vod-rtmp"}
 api.post('/zones/vod/'+id+'/customdomains.json', params)</pre>
   </div>
     <div class="tab-pane" id="perl49">
@@ -4439,7 +4439,7 @@ api.put('/zones/vod/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
     <pre>
 zoneId = '96187'
 domainId = '79321'
-params = {"custom_domain":"cdn.somenewdomain401.com"}
+params = {"custom_domain": "cdn.somenewdomain401.com"}
 api.put('/zones/vod/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
   </div>
     <div class="tab-pane" id="perl51">
@@ -4576,7 +4576,7 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response52">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>
@@ -4659,17 +4659,17 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response61">
     <pre>
 {
-  "code":201,
+  "code": 201,
   "data":{
     "ssl":{
-      "id":1459,
-      "ssl_id":1234
-      "ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
-      "ssl_cabundle":null,
-      "date_expiration":"2014-01-24",
-      "anycast_ip_id":null,
-      "wildcard":1,
-      "domain":"*.idcreator.com"
+      "id": 1459,
+      "ssl_id": 1234
+      "ssl_crt": "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+      "ssl_cabundle": null,
+      "date_expiration": "2014-01-24",
+      "anycast_ip_id": null,
+      "wildcard": 1,
+      "domain": "*.idcreator.com"
     }
   }
 }
@@ -4805,16 +4805,16 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response62">
     <pre>
 {
-  "code":201,
+  "code": 201,
   "data":{
     "ssl":{
-      "id":1459,
-      "ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
-      "ssl_cabundle":null,
-      "date_expiration":"2014-01-24",
-      "anycast_ip_id":null,
-      "wildcard":1,
-      "domain":"*.idcreator.com"
+      "id": 1459,
+      "ssl_crt": "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+      "ssl_cabundle": null,
+      "date_expiration": "2014-01-24",
+      "anycast_ip_id": null,
+      "wildcard": 1,
+      "domain": "*.idcreator.com"
     }
   }
 }
@@ -4948,16 +4948,16 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response63">
     <pre>
 {
-  "code":201,
+  "code": 201,
   "data":{
     "ssl":{
-      "id":1459,
-      "ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
-      "ssl_cabundle":null,
-      "date_expiration":"2014-01-24",
-      "anycast_ip_id":null,
-      "wildcard":1,
-      "domain":"*.idcreator.com"
+      "id": 1459,
+      "ssl_crt": "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+      "ssl_cabundle": null,
+      "date_expiration": "2014-01-24",
+      "anycast_ip_id": null,
+      "wildcard": 1,
+      "domain": "*.idcreator.com"
     }
   }
 }
@@ -5042,59 +5042,59 @@ Console.log(response.error ? "Error " + response.getErrorMessage()  : response.c
 <div class="tab-pane" id="response64">
     <pre>
 {
-  "code":200,
+  "code": 200,
   "data":{
     "zone":{
-      "id":"90652",
-      "name":"newpullzonec5",
-      "username":"username",
-      "company_id":"1234",
-      "url":"http:\/\/someplace.net",
-      "port":"80",
-      "ip":"123.0.0.49",
-      "vhost":"someplace.net",
-      "type":"2",
-      "compress":"0",
-      "backend_compress":"0",
-      "queries":"1",
-      "max_cache_size":"50000",
-      "suspend":"0",
-      "cache_valid":"1d",
-      "content_encoding":"1",
-      "label":"",
-      "inactive":"0",
-      "valid_referers":null,
-      "key_zone_size":"50m",
-      "expires":null,
-      "disallow_robots":"0",
-      "disallow_robots_txt":null,
-      "canonical_link_headers":"0",
-      "content_disposition":"0",
-      "custom_domain_limit":"7",
-      "locked":"0",
-      "server_id":"123",
-      "ssl":0,
-      "sslshared":"0",
-      "creation_date":"2013-07-22 19:00:54",
-      "dsa_ip":null,
-      "geo_enabled":"0",
-      "set_host_header":null,
-      "ssl_id":0,
-      "dns_check":"1",
-      "hit_bandwidth_by_dir":"0",
-      "hit_bandwidth_by_custom_domain":"0",
-      "hit_bandwidth_by_file_name_status_code":"0",
-      "cache_version":"0",
-      "ignore_setcookie_header":"0",
-      "hide_setcookie_header":"0",
-      "ignore_cache_control":"0",
-      "use_stale":"0",
-      "proxy_cache_lock":"0",
-      "pseudo_streaming":"0",
-      "secret":null,
-      "upstream_enabled":"0",
-      "cdn_url":"newpullzonec5.username.netdna-cdn.com",
-      "tmp_url":"newpullzonec5.nycacorp.netdna-cdn.com"
+      "id": "90652",
+      "name": "newpullzonec5",
+      "username": "username",
+      "company_id": "1234",
+      "url": "http:\/\/someplace.net",
+      "port": "80",
+      "ip": "123.0.0.49",
+      "vhost": "someplace.net",
+      "type": "2",
+      "compress": "0",
+      "backend_compress": "0",
+      "queries": "1",
+      "max_cache_size": "50000",
+      "suspend": "0",
+      "cache_valid": "1d",
+      "content_encoding": "1",
+      "label": "",
+      "inactive": "0",
+      "valid_referers": null,
+      "key_zone_size": "50m",
+      "expires": null,
+      "disallow_robots": "0",
+      "disallow_robots_txt": null,
+      "canonical_link_headers": "0",
+      "content_disposition": "0",
+      "custom_domain_limit": "7",
+      "locked": "0",
+      "server_id": "123",
+      "ssl": 0,
+      "sslshared": "0",
+      "creation_date": "2013-07-22 19:00:54",
+      "dsa_ip": null,
+      "geo_enabled": "0",
+      "set_host_header": null,
+      "ssl_id": 0,
+      "dns_check": "1",
+      "hit_bandwidth_by_dir": "0",
+      "hit_bandwidth_by_custom_domain": "0",
+      "hit_bandwidth_by_file_name_status_code": "0",
+      "cache_version": "0",
+      "ignore_setcookie_header": "0",
+      "hide_setcookie_header": "0",
+      "ignore_cache_control": "0",
+      "use_stale": "0",
+      "proxy_cache_lock": "0",
+      "pseudo_streaming": "0",
+      "secret": null,
+      "upstream_enabled": "0",
+      "cdn_url": "newpullzonec5.username.netdna-cdn.com",
+      "tmp_url": "newpullzonec5.nycacorp.netdna-cdn.com"
     }
   }
 }

@@ -585,7 +585,7 @@ api.Delete("/clients/{id}/users.json/" + id);
   <div class="tab-pane" id="response9">
     <pre>
 {
-  "code":200
+  "code": 200
 }</pre>
   </div>
 </div>

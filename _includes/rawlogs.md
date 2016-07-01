@@ -83,7 +83,7 @@ api.get('/v3/reporting/logs.json?start=2014-01-30&end=2014-01-31&status=200')</p
   </div>
   <div class="tab-pane" id="python101">
     <pre>
-params = {"start":"2014-01-30", "end":"2014-01-31", "status":"200"}
+params = {"start": "2014-01-30", "end": "2014-01-31", "status": "200"}
 api.get('/v3/reporting/logs.json', data=params)</pre>
   </div>
   <div class="tab-pane" id="perl101">
@@ -112,58 +112,58 @@ api.Get("/v3/reporting/logs.json?start=2014-01-30&end=2014-01-31&status=200");
 <div class="tab-pane" id="response101">
     <pre>
 {
-  "limit":1000,
-  "page":1,
-  "total":3,
-  "next_page_key":"1234abcdef",
+  "limit": 1000,
+  "page": 1,
+  "total": 3,
+  "next_page_key": "1234abcdef",
   "records":[
     {
-      "bytes":175953,
-      "asn":"AS4804 Microplex PTY LTD",
-      "city":"Brisbane",
-      "continent":"OC",
-      "country":"AU",
-      "dma":"0",
-      "ip":"127.0.0.1",
-      "latitude":0,
-      "longitude":1.2345,
-      "cache_status":"HIT",
-      "hostname":"cdn.example.com",
-      "method":"GET",
-      "origin_time":"0",
-      "pop":"lax",
-      "protocol":"HTTP/1.1",
-      "query_string":"",
-      "scheme":"https",
-      "status_code":200,
-      "request_time":"2014-01-30T17:00:12Z",
-      "uri":"/content.png",
-      "user_agent":"Opera/9.80 (Windows NT 5.1; Edition DriverPack) Presto/2.12.388 Version/12.16",
-      "zone":"example"
+      "bytes": 175953,
+      "asn": "AS4804 Microplex PTY LTD",
+      "city": "Brisbane",
+      "continent": "OC",
+      "country": "AU",
+      "dma": "0",
+      "ip": "127.0.0.1",
+      "latitude": 0,
+      "longitude": 1.2345,
+      "cache_status": "HIT",
+      "hostname": "cdn.example.com",
+      "method": "GET",
+      "origin_time": "0",
+      "pop": "lax",
+      "protocol": "HTTP/1.1",
+      "query_string": "",
+      "scheme": "https",
+      "status_code": 200,
+      "request_time": "2014-01-30T17:00:12Z",
+      "uri": "/content.png",
+      "user_agent": "Opera/9.80 (Windows NT 5.1; Edition DriverPack) Presto/2.12.388 Version/12.16",
+      "zone": "example"
     },
     {
-      "bytes":175953,
-      "asn":"AS4804 Microplex PTY LTD",
-      "city":"Brisbane",
-      "continent":"OC",
-      "country":"AU",
-      "dma":"0",
-      "ip":"127.0.0.1",
-      "latitude":0.0,
-      "longitude":0.12345,
-      "cache_status":"HIT",
-      "hostname":"cdn.example.com",
-      "method":"GET",
-      "origin_time":"0",
-      "pop":"lax",
-      "protocol":"HTTP/1.1",
-      "query_string":"ver=1.2",
-      "scheme":"https",
-      "status_code":200,
-      "request_time":"2014-01-30T17:00:12Z",
-      "uri":"/sample/test.swf",
-      "user_agent":"Opera/9.80 (Windows NT 5.1; Edition DriverPack) Presto/2.12.388 Version/12.16",
-      "zone":"example"
+      "bytes": 175953,
+      "asn": "AS4804 Microplex PTY LTD",
+      "city": "Brisbane",
+      "continent": "OC",
+      "country": "AU",
+      "dma": "0",
+      "ip": "127.0.0.1",
+      "latitude": 0.0,
+      "longitude": 0.12345,
+      "cache_status": "HIT",
+      "hostname": "cdn.example.com",
+      "method": "GET",
+      "origin_time": "0",
+      "pop": "lax",
+      "protocol": "HTTP/1.1",
+      "query_string": "ver=1.2",
+      "scheme": "https",
+      "status_code": 200,
+      "request_time": "2014-01-30T17:00:12Z",
+      "uri": "/sample/test.swf",
+      "user_agent": "Opera/9.80 (Windows NT 5.1; Edition DriverPack) Presto/2.12.388 Version/12.16",
+      "zone": "example"
     }
   ]
 }</pre>
